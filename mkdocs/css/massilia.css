@@ -432,5 +432,5 @@ a.footnote-ref::after {
 
 #conteneur div {
   flex:1;
-  /* margin:auto; */
+  margin:auto;
 }
