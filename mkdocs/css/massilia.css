@@ -1,0 +1,438 @@
+:root {
+  /* TABLEAUX THÈME CLAIR : VALEURS PAR DÉFAUT */
+  --table-header-background: #b2d5ec;
+  --table-row-odd-background: #e3f0f8;
+  --table-row-even-background: #ffffff;
+  --table-header-border: #888;
+  --table-code-background: #CCC;
+
+  /* ADMONITIONS THÈME CLAIR : VALEURS PAR DÉFAUT */
+  --md-admonition-python-title-background: rgb(81, 164, 231);
+  --md-admonition-python-border-color: rgb(55, 116, 167);
+
+  /* EN VALEUR */
+  --env-background-color: rgba(220,220,220,0.6);
+  --env-border-color: rgba(0, 0, 0, .6);
+
+  /* ENCADRE */
+  --enc-color: inherit;
+  --enc-border-color:#111111;
+  --enc-box-shadow: 5px 5px 5px #222;
+
+  /* FLUO */
+  --fluo-jaune-background-color: #ffff7f;
+
+  /* IMAGE-SHADOW */
+  --img-shadow-box: 5px 5px 10px #222;
+  --img-shadow-background-color: inherit;
+}
+
+/* Theme Général MkDocs */
+.md-grid {
+  /* max-width: 61 rem; */
+  max-width: 95%;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+/* IMPORT LED BRIGHT */
+@font-face {
+  font-family: "24 LED Bright";
+  src: url("24_LED_Bright.ttf") format("truetype"),
+       url("24_LED_Bright.woff2") format("woff2");
+}
+
+/* STYLE WEB AVEC I,II pour h1 puis Styling pour h2 */
+h1 {
+  font-family: "24 LED Bright";
+  text-align: center;
+  color:#5a9ac5 !important;
+}
+
+h2 { /* Sous-Paragraphes */
+  color: #5a9ac5;
+  font-size: 2em;
+  font-weight: bold;
+  /* counter-reset: h3counter; */
+}
+
+h2:after {
+  content:"";
+  position: relative;
+  display: block;
+  width: 100%;
+  bottom: 0em;
+  border-top: 2px solid #78B5DE;
+}
+
+h2:target {
+  /* font-size:2em; */
+  color: #f16fb5;
+  font-weight: 700;
+}
+
+/* h2:target:before {
+  top: 7em;
+} */
+
+h2:target:after {
+  border-top: 2px solid #f16fb5;
+}
+
+/* STYLE WEB avec I,I,III puis Styling pour h2 et h3 */
+h3 { /* Sous-Paragraphes */
+  display: inline-block;
+  color: #5a9ac5;
+  padding-right: 0.5em;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+h3:before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbLeft.png") no-repeat;
+  background-size:100%;
+  top: 0.1em;
+  right: 0.7em;
+}
+
+h3:after {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbRight.png") no-repeat;
+  background-size:100%;
+  top: 0.1em;
+  left: -0.7em;
+}
+
+h3:target {
+  color: #f16fb5;
+  /* font-weight: 500; */
+  padding-left: 2em;
+}
+
+h3:target:before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbLeftTarget.png") no-repeat;
+  background-size:100%;
+  top: 6em;
+  /* left: -2em; */
+  right: 2em;
+}
+
+h3:target:after {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbRightTarget.png") no-repeat;
+  background-size:100%;
+  top: 0.1em;
+  left: 0.6em;
+  /* scroll-margin-top:100px; */
+}
+
+ /* STYLE WEB avec I,I,III puis Styling pour h2, h3, h4 */
+h4 { /* Sous-Sous-Paragraphes */
+  color: #5a9ac5;
+  line-height: 1em;
+  padding-right:0.5em;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+h4:before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 40px;
+  height: 20px;
+  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/main.png") no-repeat;
+  background-size:100%;
+  top: 0.3em;
+  right: 0.3em;
+}
+
+h4:target {
+  color: #f16fb5;
+  font-weight: 700;
+  padding-left: 2em;
+}
+
+h4:target:before {
+  top: 6.7em;
+  /* left: -2.5em; */
+  right: 2.5em;
+}
+
+
+/* CLEAR */
+
+div.clear, clear {
+  display:block;
+  clear: both;
+  margin-top: 1em;
+}
+
+/* TABLEAUX */
+
+/* TABLEAUX THEME CLAIR : PAR DÉFAUT*/
+
+table:not(.highlighttable)
+ {
+  display: inline-block !important;
+  width: auto !important;
+  box-shadow: 7px 7px 7px;
+  border: solid 1.2px var(--table-header-border);
+}
+
+table:not(.highlighttable) th, 
+table:not(.highlighttable) th:not(code table th)
+ {
+  background-color: var(--table-header-background);
+  border: solid 1.2px var(--table-header-border);
+  /* color: inherit !important; // pour Réponses en rouge */
+}
+
+table:not(.highlighttable) tr:nth-child(odd),
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr) {
+  background-color: var(--table-row-odd-background);
+}
+
+table:not(.highlighttable) tr:nth-child(even),
+table:not(.highlighttable) tr:nth-child(even):not(code table tr) {
+  background-color: var(--table-row-even-background);
+}
+
+table:not(.highlighttable) td,
+table:not(.highlighttable) td:not(code table td) {
+  white-space: nowrap;
+  border: solid 1.2px var(--table-header-border);
+}
+
+table:not(.highlighttable) code,
+table:not(.highlighttable) code:not(code table code) {
+  background-color: var(--table-code-background) !important;
+}
+
+/* COLORS */
+ div.red, red, div.rouge, rouge, 
+ div.bred, bred, div.brouge, brouge {
+   color:red;
+ }
+ 
+ div.blue, blue, div.bleu, bleu,
+ div.bblue, bblue, div.bblue, bbleu {
+   color:blue;
+ }
+ 
+ div.purple, purple, div.violet, violet,
+ div.bpurple, bpurple, div.bviolet, bviolet {
+   color:purple;
+ }
+ 
+ div.green, green, div.vert, vert,
+ div.bgreen, bgreen, div.bvert, bvert {
+   color:green;
+ }
+ 
+ div.grey, grey, div.gris, gris,
+ div.bgrey, bgrey, div.bgris, bgris {
+   color:#bbb;
+   font-weight: 600;
+ }
+ 
+ div.black, black, div.noir, noir,
+ div.bblack, bblack, div.bnoir, bnoir {
+   color:black;
+ }
+ 
+ div.bred, bred, div.brouge, brouge,
+ div.bblue, bblue, div.bbleu, bbleu,
+ div.bpurple, bpurple, div.bviolet, bviolet,
+ div.bgreen, bgreen, div.bvert, bvert,
+ div.bgrey, bgrey, div.bgris, bgris,
+ div.bblack, bblack, div.bnoir, bnoir {
+   font-weight: 700;
+ }
+
+ /* ENCADREMENTS */
+encadre, #encadre, .encadre, enc
+{
+  display: inline-block;
+  color: var(--enc-color);
+  border: 1px solid var(--enc-border-color);
+   /* background-color: rgba(200,200,200,0.5); */
+  background-color: transparent;
+  border-radius:10px;
+  box-shadow: var(--enc-box-shadow);
+  margin-bottom: 0.3em;
+  padding: 0.5em 0.7em 0.5em 0.7em;
+}
+
+/* EN VALEUR */
+
+envaleurshadow, #envaleurshadow, .envaleurshadow,
+valsha, #valsha, .valsha, envsha, #envsha, .envsha
+{
+  display:inline-block;
+  background-color: rgba(220,220,220,0.6);
+  border-radius: 7px;
+  padding: 0 0.5em;
+  border-bottom: 2px solid var(--env-border-color);
+  border-right: 2px solid var(--env-border-color);
+  box-shadow: 5px 5px 3px var(--env-border-color);
+}
+
+envaleur, #envaleur, .envaleur,
+val, #val, .val , env, #env, .env
+{
+  display:inline-block;
+  /* background-color: rgba(220,220,220,0.6); */
+  background-color: var(--env-background-color);
+  border-radius: 7px;
+  padding: 0 0.5em;
+  border-bottom: 2px solid var(--env-border-color);
+  border-right: 2px solid var(--env-border-color);
+  font-weight:500;
+   /* box-shadow: 5px 5px 3px rgba(0, 0, 0, .4); */
+}
+
+/* FLUO */
+
+fluo, fjaune {
+  background-color: var(--fluo-jaune-background-color);
+  border-radius: 5px;
+  padding: 0.1em;
+}
+
+/* IMAGES */
+
+img.shadow, img.box,
+iframe.shadow, iframe.box {
+  margin: auto;
+  padding:5px;
+  /* width:100%; */
+  box-shadow: var(--img-shadow-box);
+  background-color: var(--img-shadow-background-color);
+  border-radius: 7px;
+}
+
+figcaption {
+  margin-top:0.5em;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* .noshadow, .noboxshadow {
+  box-shadow: none;
+  border-radius:7px;
+} */
+
+/* External Link in Left Menu */
+.md-nav__link {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.md-nav__link .MathJax {
+  margin-left:  0.1em;
+  margin-right: 0.1em;
+}
+
+i.fa-external-link-alt {
+  margin-left:0.35em;
+}
+
+/* CODE BLOCKS */
+
+div.nolinenums table.highlighttable tbody tr td.linenos,
+div.nolines table.highlighttable tbody tr td.linenos
+ {
+  display:none;
+} 
+
+/* MATHJAX */
+
+/* .MJX-TEX {
+  font-size: 1.2em;
+  } */
+
+/* BLOCKQUOTES */
+
+/* USAGE:
+> Bla bla Bla (citation)
+>
+> Auteur */
+
+blockquote p {
+  display: inline;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+blockquote p:first-of-type {
+  quotes: '\AB' '\201C' '\201D' '\2018' '\2019';
+}
+
+blockquote p:first-of-type::before {
+  content: "Citation: " open-quote;
+  font-size: 1.6em;
+  margin-right: 0.1rem;
+}
+
+blockquote p:last-of-type {
+  quotes: '\BB' '\201C' '\201D' '\2018' '\2019';
+  font-style: italic;
+  font-size: 1.6em;
+}
+
+blockquote p:last-of-type::before {
+  content: close-quote "\000A" "\2014" " ";
+  white-space: pre;
+  margin-left: 0.1rem;
+  font-style: normal;
+}
+
+/* FOOTNOTES */
+
+a.footnote-ref::before {
+  content: "[";
+  margin-right: 0.1em;
+  margin-left: 0.05em;
+}
+
+a.footnote-ref::after {
+  content: "]";
+  margin-left: 0.1em;
+}
+
+#conteneur {
+  display:flex !important;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#conteneur div {
+  flex:1;
+  /* margin:auto; */
+}
+
+p {color: red;}
