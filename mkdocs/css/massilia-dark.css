@@ -3,12 +3,22 @@
 [data-md-color-scheme="slate"] {
   /* HEADERS MASSILIA */
   --h1: #d86363;
+  
   --h2: #d86363;
+  --h2-line: #db8282;
   --h2-target: #ff1947;
+
   --h3: #d86363;
   --h3-target: #ff1947;
+  --h3-left-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeft-dark.png");
+  --h3-left-target-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeftTarget-dark.png");
+  --h3-right-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRight-dark.png");
+  --h3-right-target-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRightTarget-dark.png");
+  
   --h4: #d86363;
   --h4-target: #ff1947;
+  --h4-left-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png";
+  --h4-left-target-img: var(--h4-left-img);  
 
 /* TABLEAUX */
 --table-header-background: #f53633;

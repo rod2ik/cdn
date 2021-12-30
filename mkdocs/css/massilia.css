@@ -1,14 +1,18 @@
 :root {
   /* HEADERS MASSILIA */
   --h1: #5a9ac5;
+
   --h2: #5a9ac5;
+  --h2-line: #78B5DE;
   --h2-target: #f16fb5;
+
   --h3: #5a9ac5;
   --h3-target: #f16fb5;
-  --h3-left-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeft.png";
-  --h3-left-target-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeftTarget.png";
-  --h3-right-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRight.png";
-  --h3-right-target-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRightTarget.png";
+  --h3-left-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeft.png");
+  --h3-left-target-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeftTarget.png");
+  --h3-right-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRight.png");
+  --h3-right-target-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRightTarget.png");
+
   --h4: #5a9ac5;
   --h4-target: #f16fb5;
   --h4-left-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png";
@@ -77,7 +81,7 @@ h2:after {
   display: block;
   width: 100%;
   bottom: 0em;
-  border-top: 2px solid #78B5DE;
+  border-top: 2px solid var(--h2-line);
 }
 
 h2:target {
@@ -110,8 +114,8 @@ h3:before {
   content: "";
   width: 25px;
   height: 25px;
-  background: url(var(--h3-left-img)) no-repeat;
-  background-size:100%;
+  background: var(--h3-left-img) no-repeat;
+  background-size: 100%;
   top: 0.1em;
   right: 0.7em;
 }
@@ -122,8 +126,8 @@ h3:after {
   content: "";
   width: 25px;
   height: 25px;
-  background: url(var(--h3-right-img)) no-repeat;
-  background-size:100%;
+  background: var(--h3-right-img) no-repeat;
+  background-size: 100%;
   top: 0.1em;
   left: -0.7em;
 }
@@ -134,15 +138,15 @@ h3:target {
   padding-left: 2em;
 }
 
-.md-typeset h3:target:before {
+h3:target:before {
   display: inline-block;
   position: relative;
   content: "";
   width: 25px;
   height: 25px;
-  background: url(var(--h3-left-target-img)) no-repeat;
+  background: var(--h3-left-target-img) no-repeat;
   background-size: 100%;
-  top: 3.5em;
+  /* top: 0.0em; */
   /* left: -2em; */
   right: 2em;
 }
@@ -153,7 +157,7 @@ h3:target:after {
   content: "";
   width: 25px;
   height: 25px;
-  background: url(var(--h3-right-target-img)) no-repeat;
+  background: var(--h3-right-target-img) no-repeat;
   background-size: 100%;
   top: 0.1em;
   left: 0.6em;
@@ -176,7 +180,7 @@ h4:before {
   content: "";
   width: 40px;
   height: 20px;
-  background: url(var(--h4-left-img)) no-repeat;
+  background: var(--h4-left-img) no-repeat;
   background-size: 100%;
   top: 0.3em;
   right: 0.3em;
