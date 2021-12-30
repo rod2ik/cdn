@@ -1,32 +1,43 @@
 /* THEME SOMBRE*/
 
 [data-md-color-scheme="slate"] {
-  /* TABLEAUX */
-  --table-header-background: #0081d6;
-  --table-header-border: #eee;
-  --table-row-odd-background: rgb(92, 177, 235);
-  --table-row-even-background: rgba(172, 172, 172, 0.67);
-  --table-code-background: rgba(83, 83, 83, 0.87);
+  /* HEADERS MASSILIA */
+  --h1: #d86363;
+  --h2: #d86363;
+  --h2-target: #ff1947;
+  --h3: #d86363;
+  --h3-target: #ff1947;
+  --h4: #d86363;
+  --h4-target: #ff1947;
 
-  /* ADMONITIONS */
-  --md-admonition-python-title-background: rgb(55, 116, 167);
-  --md-admonition-python-border-color: rgb(60, 152, 228);
+/* TABLEAUX */
+--table-header-background: #f53633;
+--table-header-border: #eee;
+--table-row-odd-background: #d86363;
+--table-row-even-background: rgba(172, 172, 172, 0.67);
+--table-code-background: rgba(83, 83, 83, 0.87);
 
-  /* EN VALEUR */
-  --env-background-color: rgba(140,140,150,0.6);
-  --env-border-color: rgba(190, 190, 190, .7);
+/* ADMONITIONS */
+--md-admonition-python-title-background: rgb(55, 116, 167);
+--md-admonition-python-border-color: rgb(60, 152, 228);
 
-  /* ENCADRE */
-  --enc-color:#fff;
-  --enc-border-color:#fff;
-  --enc-box-shadow: 3px 3px 5px #ccc;
-  
-  /* FLUO */
-  --fluo-jaune-background-color: #85833f;
+/* EN VALEUR */
+--env-background-color: rgba(140,140,150,0.6);
+--env-border-color: rgba(190, 190, 190, .7);
 
-  /* IMAGE SHADOW */
-  --img-shadow-box: 5px 5px 10px #fff;
-  --img-shadow-background-color: #fff;
+/* ENCADRE */
+--enc-color:#fff;
+--enc-border-color:#fff;
+--enc-box-shadow: 3px 3px 5px #ccc;
+
+/* FLUO */
+--fluo-jaune-background-color: #85833f;
+
+/* IMAGE SHADOW */
+--img-shadow-box: 5px 5px 10px #fff;
+--img-shadow-background-color: #fff;
 
 }
+
+
 

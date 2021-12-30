@@ -1,0 +1,24 @@
+/* MERMAID THEME SOMBRE*/
+
+[data-md-color-scheme="slate"] {
+  /* CUSTOM MERMAID VARIABLES */
+  --mermaid-box-stroke: #f04441;
+  --mermaid-box-fill: #2e303e;
+  --mermaid-arrows: #eaeaea;
+  --mermaid-labelbox-fill: #3b0f0e;
+  --mermaid-rect-line-odd-fill: #804746;
+  --mermaid-relationship-fill: #e23e3c;
+  /* --mermaid-labelbox-stroke: none; */
+
+  /* MKDOCS MATERIAL MERMAID VARIABLES */
+  --mermaid-font-family: verdana, arial, sans-serif;
+  --md-mermaid-edge-color: var(--mermaid-box-stroke);
+  --md-mermaid-node-fg-color: var(--mermaid-box-stroke);
+  --md-mermaid-label-fg-color: var(--mermaid-arrows);
+  /* --md-mermaid-label-bg-color: var(--mermaid-box-fill); */
+  --md-mermaid-label-bg-color: var(--mermaid-labelbox-fill);
+
+  --md-mermaid-node-bg-color: var(--mermaid-box-fill);
+  --md-mermaid-node-fg-color: var(--mermaid-box-stroke);
+
+}

@@ -1,0 +1,379 @@
+:root {
+  /* MERMAID THÈME CLAIR : VALEURS PAR DÉFAUT */
+  /* CUSTOM MERMAID VARIABLES */
+  --mermaid-box-stroke: #526cfe;
+  --mermaid-box-fill: #ffffff;
+  --mermaid-arrows: #333;
+  --mermaid-edgelabel-bgcolor: #e8e8e8;
+  --mermaid-labelbox-fill: #c1cbff;
+  --mermaid-relationship-fill: #7a90fc;
+  --mermaid-rect-line-odd-fill: #dfe4ff;
+  --mermaid-labelbox-stroke: none;
+
+  /* MKDOCS MATERIAL MERMAID VARIABLES */
+  --mermaid-font-family: verdana, arial, sans-serif;
+  --md-mermaid-edge-color: var(--mermaid-box-stroke);
+  --md-mermaid-node-fg-color: var(--mermaid-dark-box-border-color);
+  --md-mermaid-label-fg-color: var(--mermaid-arrows);
+  --md-mermaid-label-bg-color: var(--mermaid-labelbox-fill);
+  --md-mermaid-node-bg-color: var(--mermaid-box-fill);
+  --md-mermaid-node-fg-color: var(--mermaid-box-stroke);
+
+}
+
+[id^="mermaid-"] {
+  font-family:"trebuchet ms",verdana,arial,sans-serif;
+  font-size:16px;
+  fill:#333;}
+
+[id^="mermaid-"] .error-icon{
+  fill:#552222;
+}
+
+[id^="mermaid-"] .error-text{
+  fill:#552222;stroke:#552222;
+}
+
+[id^="mermaid-"] .edge-thickness-normal{
+  stroke-width:2px;
+}
+
+[id^="mermaid-"] .edge-thickness-thick{
+  stroke-width:3.5px;
+}
+
+[id^="mermaid-"] .edge-pattern-solid{
+  stroke-dasharray:0;
+}
+
+[id^="mermaid-"] .edge-pattern-dashed{
+  stroke-dasharray:3;
+}
+
+[id^="mermaid-"] .edge-pattern-dotted{
+  stroke-dasharray:2;
+}
+
+[id^="mermaid-"] .marker{
+  fill:var(--mermaid-arrows);
+  stroke:var(--mermaid-arrows);
+}
+
+[id^="mermaid-"] .marker.cross{
+  stroke:var(--mermaid-arrows);
+}
+
+[id^="mermaid-"] svg{
+  font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;
+}
+
+[id^="mermaid-"] .label{
+  font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;
+}
+
+[id^="mermaid-"] .cluster-label text{
+  fill:#333;
+}
+
+[id^="mermaid-"] .cluster-label span{
+  color:#333;
+}
+
+[id^="mermaid-"] .label text, [id^="mermaid-"] span{
+  fill:#333;color:#333;
+}
+
+[id^="mermaid-"] .node rect, [id^="mermaid-"] .node circle, [id^="mermaid-"] .node ellipse, 
+[id^="mermaid-"] .node polygon, [id^="mermaid-"] .node path {
+  fill:#ECECFF;
+  stroke:#9370DB;
+  stroke-width:1px;
+}
+
+[id^="mermaid-"] .node .label{
+  text-align:center;
+}
+
+[id^="mermaid-"] .node.clickable{
+  cursor:pointer;
+}
+
+[id^="mermaid-"] .arrowheadPath{
+  fill:var(--mermaid-arrows) !important;
+}
+
+[id^="mermaid-"] .edgePath .path{
+  stroke:var(--mermaid-arrows) !important;
+  stroke-width:2.0px;
+}
+
+[id^="mermaid-"] .flowchart-link{
+  stroke:var(--mermaid-arrows) !important;
+  fill:none;
+}
+
+[id^="mermaid-"] .edgeLabel{
+  background-color:var(--mermaid-edgelabel-bgcolor) !important;
+  text-align:center;
+}
+
+[id^="mermaid-"] .edgeLabel rect{
+  opacity:0.5;
+  background-color:var(--mermaid-edgelabel-bgcolor) !important;
+  fill:var(--mermaid-edgelabel-bgcolor) !important;
+}
+
+[id^="mermaid-"] .cluster rect{
+  fill:#ffffde;
+  stroke:#aaaa33;
+  stroke-width:1px;
+}
+
+[id^="mermaid-"] .cluster text{
+  fill:#333;
+}
+
+[id^="mermaid-"] .cluster span{
+  color:#333;
+}
+
+[id^="mermaid-"] div.mermaidTooltip{
+  position:absolute;
+  text-align:center;
+  max-width:200px;
+  padding:2px;
+  font-family:"trebuchet ms",verdana,arial,sans-serif;
+  font-size:12px;background:hsl(80, 100%, 96.2745098039%);
+  border:1px solid #aaaa33;
+  border-radius:2px;
+  pointer-events:none;
+  z-index:100;
+}
+
+[id^="mermaid-"] .node circle, [id^="mermaid-"] .node ellipse, 
+[id^="mermaid-"] .node path, [id^="mermaid-"] .node polygon, [id^="mermaid-"] .node rect {
+  fill:var(--md-mermaid-node-bg-color) !important;
+  stroke:var(--md-mermaid-node-fg-color) !important;
+}
+
+[id^="mermaid-"] marker{
+  fill:var(--md-mermaid-edge-color) !important;
+}
+
+[id^="mermaid-"] .edgeLabel .label rect{
+  fill:transparent;
+}
+
+[id^="mermaid-"] .label{
+  color: var(--md-mermaid-label-fg-color) !important;
+  font-family:var(--md-mermaid-font-family) !important;
+}
+
+[id^="mermaid-"] .label foreignobject{
+  line-height:normal;
+  overflow:visible;
+}
+
+[id^="mermaid-"] .label div .edgeLabel{
+  color:var(--md-mermaid-label-fg-color);
+}
+
+[id^="mermaid-"] .edgeLabel, [id^="mermaid-"] .edgeLabel rect{
+  fill: var(--md-mermaid-label-bg-color);
+  stroke: var(--md-mermaid-edge-color) !important;
+  background-color: var(--md-mermaid-label-bg-color);
+}
+
+[id^="mermaid-"] .edgePath .arrowheadPath{
+  fill:var(--md-mermaid-edge-color);
+  stroke:none;
+}
+
+[id^="mermaid-"] .cluster rect{
+  fill: var(--md-default-fg-color--lightest);
+  stroke: var(--md-default-fg-color--lighter);
+}
+
+[id^="mermaid-"] g.classGroup line, [id^="mermaid-"] g.classGroup rect{
+  fill:var(--md-mermaid-node-bg-color) !important;
+  stroke:var(--md-mermaid-node-fg-color) !important;
+}
+
+[id^="mermaid-"] g.classGroup text{
+  fill:var(--md-mermaid-label-fg-color) !important;
+  font-family:var(--md-mermaid-font-family) !important;
+}
+
+[id^="mermaid-"] g.classGroup text tspan.title {
+  background-color: var(--mermaid-labelbox-fill) !important;
+}
+
+[id^="mermaid-"] .classLabel .box{
+  fill: var(--md-mermaid-label-bg-color) !important;
+  background-color: var(--md-mermaid-label-bg-color) !important;
+  opacity:1;
+}
+
+[id^="mermaid-"] .classLabel .label{
+  fill:var(--md-mermaid-label-fg-color)! important;
+  font-family:var(--md-mermaid-font-family) !important;
+}
+
+[id^="mermaid-"] .relation{
+  stroke:var(--md-mermaid-edge-color) !important;
+}
+
+[id^="mermaid-"] .cardinality{
+  fill:var(--md-mermaid-label-fg-color);font-family:var(--md-mermaid-font-family);
+}
+
+[id^="mermaid-"] .cardinality text{
+  fill:inherit!important;
+}
+
+[id^="mermaid-"] #compositionEnd,[id^="mermaid-"] #compositionStart,
+[id^="mermaid-"] #dependencyEnd, [id^="mermaid-"] #dependencyStart,
+[id^="mermaid-"] #extensionEnd,[id^="mermaid-"] #extensionStart {
+  fill:var(--md-mermaid-edge-color)!important;stroke:var(--md-mermaid-edge-color)!important;
+}
+
+[id^="mermaid-"] #aggregationEnd,[id^="mermaid-"] #aggregationStart{
+  fill:var(--md-mermaid-label-bg-color)!important;stroke:var(--md-mermaid-edge-color)!important;
+}
+
+[id^="mermaid-"] g.stateGroup rect{
+  fill:var(--md-mermaid-node-bg-color);stroke:var(--md-mermaid-node-fg-color);
+}
+
+[id^="mermaid-"] g.stateGroup .state-title{
+  fill:var(--md-mermaid-label-fg-color)!important;font-family:var(--md-mermaid-font-family);
+}
+
+[id^="mermaid-"] g.stateGroup .composit{
+  fill:var(--md-mermaid-label-bg-color);
+}
+
+[id^="mermaid-"] .nodeLabel{
+  color:var(--md-mermaid-label-fg-color);font-family:var(--md-mermaid-font-family);
+}
+
+[id^="mermaid-"] .node circle.state-end,[id^="mermaid-"] .node circle.state-start,[id^="mermaid-"] .start-state{
+  fill:var(--md-mermaid-edge-color);stroke:none;
+}
+
+[id^="mermaid-"] .end-state-inner,[id^="mermaid-"] .end-state-outer{
+  fill:var(--md-mermaid-edge-color);
+}
+
+[id^="mermaid-"] .end-state-inner,[id^="mermaid-"] .node circle.state-end{
+  stroke:var(--md-mermaid-label-bg-color);
+}
+
+[id^="mermaid-"] .transition{stroke:var(--md-mermaid-edge-color);
+}
+
+[id^="mermaid-"] [id^=state-fork] rect,[id^="mermaid-"] [id^=state-join] rect{
+  fill:var(--md-mermaid-edge-color)!important;stroke:none!important;
+}
+
+[id^="mermaid-"] .statediagram-cluster.statediagram-cluster .inner{
+  fill:var(--md-default-bg-color);
+}
+
+[id^="mermaid-"] .statediagram-cluster rect{
+  fill:var(--md-mermaid-node-bg-color);stroke:var(--md-mermaid-node-fg-color);
+}
+
+[id^="mermaid-"] .statediagram-state rect.divider{
+  fill:var(--md-default-fg-color--lightest);stroke:var(--md-default-fg-color--lighter);
+}
+
+[id^="mermaid-"] .entityBox{
+  fill: var(--md-mermaid-label-bg-color) !important;
+  stroke: var(--md-mermaid-node-fg-color) !important;
+}
+
+[id^="mermaid-"] .attributeBoxOdd {
+  /* fill: var(--mermaid-labelbox-fill) !important; */
+  fill: var(--mermaid-rect-line-odd-fill) !important;
+  stroke: var(--md-mermaid-node-fg-color) !important;
+}
+
+[id^="mermaid-"] .attributeBoxEven {
+  fill: var(--mermaid-box-fill) !important;
+  stroke: var(--md-mermaid-node-fg-color) !important;
+}
+
+[id^="mermaid-"] .entityLabel{
+  fill:var(--md-mermaid-label-fg-color);font-family:var(--md-mermaid-font-family);
+}
+
+[id^="mermaid-"] .relationshipLabelBox{
+  fill:var(--md-mermaid-label-bg-color);fill-opacity:1;background-color:var(--md-mermaid-label-bg-color);opacity:1;
+}
+
+[id^="mermaid-"] .relationshipLabel{
+  fill:var(--mermaid-relationship-fill) !important;
+}
+
+[id^="mermaid-"] .relationshipLine{
+  stroke: var(--md-mermaid-edge-color) !important;
+}
+
+[id^="mermaid-"] #ONE_OR_MORE_END *,[id^="mermaid-"] #ONE_OR_MORE_START *,[id^="mermaid-"] #ONLY_ONE_END *,
+[id^="mermaid-"] #ONLY_ONE_START *,[id^="mermaid-"] #ZERO_OR_MORE_END *,[id^="mermaid-"] #ZERO_OR_MORE_START *,
+[id^="mermaid-"] #ZERO_OR_ONE_END *,[id^="mermaid-"] #ZERO_OR_ONE_START *{
+  stroke:var(--md-mermaid-edge-color)!important;
+}
+
+[id^="mermaid-"] #ZERO_OR_MORE_END circle,[id^="mermaid-"] #ZERO_OR_MORE_START circle,
+[id^="mermaid-"] .actor{
+  fill:var(--mermaid-box-fill) !important;
+}
+
+[id^="mermaid-"] .actor{
+  stroke:var(--mermaid-box-stroke) !important;
+}
+
+[id^="mermaid-"] text.actor>tspan{
+  fill:var(--md-mermaid-label-fg-color) !important;
+  font-family:var(--md-mermaid-font-family) !important;
+}
+
+[id^="mermaid-"] .actor-line,
+[id^="mermaid-"] .messageLine0,[id^="mermaid-"] .messageLine1{
+  stroke:var(--mermaid-arrows) !important;
+}
+
+[id^="mermaid-"] .loopText>tspan, [id^="mermaid-"] .messageText{
+  font-family:var(--md-mermaid-font-family) !important;
+}
+
+[id^="mermaid-"] #arrowhead path,
+[id^="mermaid-"] .loopText>tspan, [id^="mermaid-"] .messageText{
+  fill: var(--mermaid-arrows) !important;
+  stroke: var(--mermaid-arrows) !important;
+  /* stroke:none !important; */
+}
+
+[id^="mermaid-"] .loopLine{
+  stroke:var(--md-mermaid-node-fg-color) !important;
+}
+  
+[id^="mermaid-"] .labelBox, [id^="mermaid-"] .loopLine{
+  fill: var(--mermaid-labelbox-fill) !important;
+}
+
+[id^="mermaid-"] .labelBox{
+  stroke:var(--mermaid-labelbox-stroke) !important;
+}
+
+[id^="mermaid-"] .labelText,[id^="mermaid-"] .labelText>span{
+  fill:var(--md-mermaid-edge-color) !important;
+  /* fill:var(--md-mermaid-node-fg-color); */
+  font-family:var(--md-mermaid-font-family);
+}
+
+/* [id^="mermaid-"] :root{
+  --mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;
+} */

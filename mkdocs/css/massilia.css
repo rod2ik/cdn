@@ -1,10 +1,25 @@
 :root {
+  /* HEADERS MASSILIA */
+  --h1: #5a9ac5;
+  --h2: #5a9ac5;
+  --h2-target: #f16fb5;
+  --h3: #5a9ac5;
+  --h3-target: #f16fb5;
+  --h3-left-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeft.png";
+  --h3-left-target-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbLeftTarget.png";
+  --h3-right-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRight.png";
+  --h3-right-target-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/pcbRightTarget.png";
+  --h4: #5a9ac5;
+  --h4-target: #f16fb5;
+  --h4-left-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png";
+  --h4-left-target-img: var(--h4-left-img);
+
   /* TABLEAUX THÈME CLAIR : VALEURS PAR DÉFAUT */
-  --table-header-background: #b2d5ec;
-  --table-row-odd-background: #e3f0f8;
-  --table-row-even-background: #ffffff;
-  --table-header-border: #888;
-  --table-code-background: #CCC;
+  --table-header-background: #0081d6;
+  --table-header-border: #eee;
+  --table-row-odd-background: rgb(164, 208, 236);
+  --table-row-even-background: #fff;
+  --table-code-background: rgba(83, 83, 83, 0.87);
 
   /* ADMONITIONS THÈME CLAIR : VALEURS PAR DÉFAUT */
   --md-admonition-python-title-background: rgb(81, 164, 231);
@@ -46,11 +61,11 @@
 h1 {
   font-family: "24 LED Bright";
   text-align: center;
-  color:#5a9ac5 !important;
+  color: var(--h1) !important;
 }
 
 h2 { /* Sous-Paragraphes */
-  color: #5a9ac5;
+  color: var(--h2);
   font-size: 2em;
   font-weight: bold;
   /* counter-reset: h3counter; */
@@ -67,7 +82,7 @@ h2:after {
 
 h2:target {
   /* font-size:2em; */
-  color: #f16fb5;
+  color: var(--h2-target);
   font-weight: 700;
 }
 
@@ -76,13 +91,13 @@ h2:target {
 } */
 
 h2:target:after {
-  border-top: 2px solid #f16fb5;
+  border-top: 2px solid var(--h2-target);
 }
 
 /* STYLE WEB avec I,I,III puis Styling pour h2 et h3 */
 h3 { /* Sous-Paragraphes */
   display: inline-block;
-  color: #5a9ac5;
+  color: var(--h3);
   padding-right: 0.5em;
   font-weight: bold;
   font-size: 1em;
@@ -95,7 +110,7 @@ h3:before {
   content: "";
   width: 25px;
   height: 25px;
-  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbLeft.png") no-repeat;
+  background: url(var(--h3-left-img)) no-repeat;
   background-size:100%;
   top: 0.1em;
   right: 0.7em;
@@ -107,27 +122,27 @@ h3:after {
   content: "";
   width: 25px;
   height: 25px;
-  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbRight.png") no-repeat;
+  background: url(var(--h3-right-img)) no-repeat;
   background-size:100%;
   top: 0.1em;
   left: -0.7em;
 }
 
 h3:target {
-  color: #f16fb5;
+  color: var(--h3-target);
   /* font-weight: 500; */
   padding-left: 2em;
 }
 
-h3:target:before {
+.md-typeset h3:target:before {
   display: inline-block;
   position: relative;
   content: "";
   width: 25px;
   height: 25px;
-  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbLeftTarget.png") no-repeat;
-  background-size:100%;
-  top: 6em;
+  background: url(var(--h3-left-target-img)) no-repeat;
+  background-size: 100%;
+  top: 3.5em;
   /* left: -2em; */
   right: 2em;
 }
@@ -138,8 +153,8 @@ h3:target:after {
   content: "";
   width: 25px;
   height: 25px;
-  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/pcbRightTarget.png") no-repeat;
-  background-size:100%;
+  background: url(var(--h3-right-target-img)) no-repeat;
+  background-size: 100%;
   top: 0.1em;
   left: 0.6em;
   /* scroll-margin-top:100px; */
@@ -147,7 +162,7 @@ h3:target:after {
 
  /* STYLE WEB avec I,I,III puis Styling pour h2, h3, h4 */
 h4 { /* Sous-Sous-Paragraphes */
-  color: #5a9ac5;
+  color: var(--h4);
   line-height: 1em;
   padding-right:0.5em;
   font-weight: bold;
@@ -161,14 +176,14 @@ h4:before {
   content: "";
   width: 40px;
   height: 20px;
-  background: url("https://glcdn.rawgit.org/rod2ik/cdn/main/mkdocs/img/main.png") no-repeat;
-  background-size:100%;
+  background: url(var(--h4-left-img)) no-repeat;
+  background-size: 100%;
   top: 0.3em;
   right: 0.3em;
 }
 
 h4:target {
-  color: #f16fb5;
+  color: var(--h4-target);
   font-weight: 700;
   padding-left: 2em;
 }
@@ -178,7 +193,6 @@ h4:target:before {
   /* left: -2.5em; */
   right: 2.5em;
 }
-
 
 /* CLEAR */
 
@@ -325,7 +339,7 @@ fluo, fjaune {
 img.shadow, img.box,
 iframe.shadow, iframe.box {
   margin: auto;
-  padding:5px;
+  padding: 5px;
   /* width:100%; */
   box-shadow: var(--img-shadow-box);
   background-color: var(--img-shadow-background-color);
@@ -367,7 +381,7 @@ div.nolinenums table.highlighttable tbody tr td.linenos,
 div.nolines table.highlighttable tbody tr td.linenos
  {
   display:none;
-} 
+}
 
 /* MATHJAX */
 
@@ -427,7 +441,7 @@ a.footnote-ref::after {
 #conteneur {
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 #conteneur div {
