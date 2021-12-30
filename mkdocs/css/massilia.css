@@ -148,7 +148,7 @@ h3:target:before {
   background-size: 100%;
   /* top: 0.0em; */
   /* left: -2em; */
-  right: 2em;
+  /* right: 2em; */
 }
 
 h3:target:after {
@@ -193,9 +193,9 @@ h4:target {
 }
 
 h4:target:before {
-  top: 6.7em;
+  /* top: 0.0em; */
   /* left: -2.5em; */
-  right: 2.5em;
+  /* right: 1.5em; */
 }
 
 /* CLEAR */
