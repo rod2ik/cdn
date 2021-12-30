@@ -15,7 +15,7 @@
 
   --h4: #5a9ac5;
   --h4-target: #f16fb5;
-  --h4-left-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png";
+  --h4-left-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png");
   --h4-left-target-img: var(--h4-left-img);
 
   /* TABLEAUX THÈME CLAIR : VALEURS PAR DÉFAUT */

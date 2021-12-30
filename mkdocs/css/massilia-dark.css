@@ -17,7 +17,7 @@
   
   --h4: #d86363;
   --h4-target: #ff1947;
-  --h4-left-img: "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png";
+  --h4-left-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png");
   --h4-left-target-img: var(--h4-left-img);  
 
 /* TABLEAUX */
