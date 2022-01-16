@@ -1,24 +1,64 @@
-/* MERMAID THEME SOMBRE*/
-
 [data-md-color-scheme="slate"] {
+  /* MERMAID THEME SOMBRE*/
+  /* MERMAID THÈME CLAIR : VALEURS PAR DÉFAUT */
   /* CUSTOM MERMAID VARIABLES */
-  --mermaid-box-stroke: #f04441;
-  --mermaid-box-fill: #2e303e;
-  --mermaid-arrows: #eaeaea;
-  --mermaid-labelbox-fill: #3b0f0e;
-  --mermaid-rect-line-odd-fill: #804746;
-  --mermaid-relationship-fill: #e23e3c;
-  /* --mermaid-labelbox-stroke: none; */
+  --mermaid-typeset-color: #ddd;
+  /* --mermaid-box-border-color: var(--md-primary-fg-color); */
+  --mermaid-box-bgcolor: #1f2020;
+  --mermaid-box-border-color: #81B1DB;
+  --mermaid-box-text-color: var(--mermaid-typeset-color);
+  --mermaid-lines-color: var(--mermaid-typeset-color);
+  /* --mermaid-box-text-color: var(--md-typeset-color); */
 
-  /* MKDOCS MATERIAL MERMAID VARIABLES */
-  --mermaid-font-family: verdana, arial, sans-serif;
-  --md-mermaid-edge-color: var(--mermaid-box-stroke);
-  --md-mermaid-node-fg-color: var(--mermaid-box-stroke);
-  --md-mermaid-label-fg-color: var(--mermaid-arrows);
-  /* --md-mermaid-label-bg-color: var(--mermaid-box-fill); */
-  --md-mermaid-label-bg-color: var(--mermaid-labelbox-fill);
+  /* GRAPH / FLOWCHART COLORS */
+  --mermaid-flowchart-bgcolor: #1f2020;
+  --mermaid-flowchart-cluster-label-color: var(--mermaid-typeset-color);
+  --mermaid-cluster-subgraph-bgcolor: #1f2020a4;
+  --mermaid-label-bgcolor: #1f2020;
+  --mermaid-label-outside-bgcolor: #292929;
+  --mermaid-label-text-color: var(--mermaid-typeset-color);
+  --mermaid-label-border-color: #cecece;
+  
+  --mermaid-title-color: var(--mermaid-typeset-color);
+  --mermaid-legend-color: var(--mermaid-typeset-color);
 
-  --md-mermaid-node-bg-color: var(--mermaid-box-fill);
-  --md-mermaid-node-fg-color: var(--mermaid-box-stroke);
+  /* SEQUENCE DIAGRAM COLORS */
+  --mermaid-sequencediagram-bgcolor: var(--mermaid-flowchart-bgcolor);
+  --mermaid-sequencediagram-loop-bgcolor: #578cbb98;
+  --mermaid-sequencediagram-loop-border: #4f80ac;
+  --mermaid-sequencediagram-loop-brackettext-color: #81B1DB;
+  --mermaid-sequencediagram-note-bgcolor: hsla(49, 89%, 75%, 0.5);
+
+  /* CLASS DIAGRAM COLORS */
+  --mermaid-classdiagram-bgcolor: #1f2020a4;
+  
+  /* STATE DIAGRAM COLORS */
+  --mermaid-statediagram-title-bgcolor: #1f2020;
+  --mermaid-statediagram-inner-bgcolor: #444646a4;
+  --mermaid-statediagram-label-outside-bgcolor: #292929;
+  --mermaid-statediagram-box-bgcolor: #1f2020;
+
+  /* ER DIAGRAM COLORS */
+  --mermaid-erdiagram-bgcolor: #1f2020;
+  --mermaid-erdiagram-odd-bgcolor: #3b3d3d;
+  --mermaid-erdiagram-even-bgcolor: #1f2020;
+  --mermaid-erdiagram-labelbox-bgcolor: #1f2020a4;
+  
+  /* GANTT COLORS */
+  --mermaid-gantt-section-color: #ddd;
+  /* --mermaid-gantt-section-bgcolor: rgba(90, 166, 253, 0.568); */
+  --mermaid-gantt-done-task-color: #1fad36;
+  --mermaid-gantt-active-task-color: #da860a;
+  --mermaid-gantt-future-task-color: #d85b56;
+  --mermaid-gantt-exclude-range: #f7a0ff;
+
+  /* PIE CHART */
+
+  --mermaid-box-stroke-width: 2px;
+  --mermaid-classdiagram-stroke-width: calc(var(--mermaid-box-stroke-width)/1.2);
+  --mermaid-lines-stroke-width: 2px;
+  --mermaid-er-relationship-stroke-width: 1.2px;
+  --mermaid-relation-stroke-width: 1.1px;
+
 
 }
