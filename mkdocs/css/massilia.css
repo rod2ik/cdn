@@ -5,8 +5,8 @@
 /* IMPORT LED BRIGHT */
 @font-face {
   font-family: "24 LED Bright";
-  src: url("24_LED_Bright.ttf") format("truetype"),
-       url("24_LED_Bright.woff2") format("woff2");
+  src: url("../fonts/24_LED_Bright.ttf") format("truetype"),
+       url("../fonts/24_LED_Bright.woff2") format("woff2");
 }
 
 :root {
