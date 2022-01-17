@@ -27,14 +27,6 @@
 .md-typeset details.column.clear
 {
   clear:none;
-  float: left;
-  margin-bottom: .8rem;
-  margin-top: 0;
-  padding: 0.2rem;
-
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: none;
 }
 
 .md-typeset .admonition.col.clear + *:before,
