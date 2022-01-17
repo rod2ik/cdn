@@ -74,7 +74,7 @@
   stroke: var(--md-typeset-color) !important; */
   fill: var(--mermaid-lines-color) !important;
   stroke: var(--mermaid-lines-color) !important;
-  font-size: 1em !important;
+  font-size: 16px !important;
 }
 
 /* [id^="mermaid-"] svg {
