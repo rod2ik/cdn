@@ -1,3 +1,14 @@
+/* COLONNES PERSONNALISÉES */
+/* @import url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/columns.css"); */
+@import url("columns.css");
+
+/* IMPORT LED BRIGHT */
+@font-face {
+  font-family: "24 LED Bright";
+  src: url("24_LED_Bright.ttf") format("truetype"),
+       url("24_LED_Bright.woff2") format("woff2");
+}
+
 :root {
   /* HEADERS MASSILIA */
   --h1: #5a9ac5;
@@ -18,30 +29,30 @@
   --h4-left-img: url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/images/main.png");
   --h4-left-target-img: var(--h4-left-img);
 
-  /* TABLEAUX THÈME CLAIR : VALEURS PAR DÉFAUT */
+  /* TABLEAUX THÈME CLAIR MASSILIA : VALEURS PAR DÉFAUT */
   --table-header-background: #0081d6;
   --table-header-border: #eee;
   --table-row-odd-background: rgb(164, 208, 236);
   --table-row-even-background: #fff;
   --table-code-background: rgba(83, 83, 83, 0.87);
 
-  /* ADMONITIONS THÈME CLAIR : VALEURS PAR DÉFAUT */
+  /* ADMONITIONS THÈME CLAIR MASSILIA : VALEURS PAR DÉFAUT */
   --md-admonition-python-title-background: rgb(81, 164, 231);
   --md-admonition-python-border-color: rgb(55, 116, 167);
 
-  /* EN VALEUR */
+  /* EN VALEUR MASSILIA */
   --env-background-color: rgba(220,220,220,0.6);
   --env-border-color: rgba(0, 0, 0, .6);
 
-  /* ENCADRE */
+  /* ENCADRE MASSILIA */
   --enc-color: inherit;
   --enc-border-color:#111111;
   --enc-box-shadow: 5px 5px 5px #222;
 
-  /* FLUO */
+  /* FLUO MASSILIA */
   --fluo-jaune-background-color: #ffff7f;
 
-  /* IMAGE-SHADOW */
+  /* IMAGE-SHADOW MASSILIA */
   --img-shadow-box: 5px 5px 10px #222;
   --img-shadow-background-color: inherit;
 }
@@ -49,17 +60,11 @@
 /* Theme Général MkDocs */
 .md-grid {
   /* max-width: 61 rem; */
-  max-width: 95%;
+  max-width: 100rem;
   margin-right:auto;
   margin-left:auto;
 }
 
-/* IMPORT LED BRIGHT */
-@font-face {
-  font-family: "24 LED Bright";
-  src: url("24_LED_Bright.ttf") format("truetype"),
-       url("24_LED_Bright.woff2") format("woff2");
-}
 
 /* STYLE WEB AVEC I,II pour h1 puis Styling pour h2 */
 h1 {
@@ -192,11 +197,11 @@ h4:target {
   padding-left: 2em;
 }
 
-h4:target:before {
-  /* top: 0.0em; */
-  /* left: -2.5em; */
-  /* right: 1.5em; */
-}
+/* h4:target:before {
+  top: 0.0em;
+  left: -2.5em;
+  right: 1.5em;
+} */
 
 /* CLEAR */
 
@@ -356,6 +361,8 @@ figcaption {
 
 .center {
   display: block;
+  text-align: center;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -364,7 +371,7 @@ figcaption {
   border-radius:7px;
 } */
 
-/* External Link in Left Menu */
+/* EXTERNAL LINK in LEFT MENU */
 .md-nav__link {
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -378,6 +385,12 @@ figcaption {
 i.fa-external-link-alt {
   margin-left:0.35em;
 }
+
+/* MD-TOP LINK */
+a.md-top.md-icon {
+  top: 7em;
+}
+
 
 /* CODE BLOCKS */
 
@@ -442,6 +455,8 @@ a.footnote-ref::after {
   margin-left: 0.1em;
 }
 
+/* TESTS POUR FLEX */
+
 #conteneur {
   display:flex;
   flex-wrap: wrap;
@@ -452,3 +467,4 @@ a.footnote-ref::after {
   flex:1;
   margin:auto;
 }
+
