@@ -1,10 +1,14 @@
+@import url("mermaid-dark.css");
+
 :root {
   /* MERMAID THÈME CLAIR : VALEURS PAR DÉFAUT */
   /* CUSTOM MERMAID VARIABLES */
   --mermaid-typeset-color: #1f2020;
+  /* --mermaid-box-bgcolor: var(--mermaid-typeset-color); */
+  --mermaid-box-bgcolor: #bee4fc;
   /* --mermaid-box-border-color: var(--md-primary-fg-color); */
-  --mermaid-box-bgcolor: var(--mermaid-typeset-color);
-  --mermaid-box-border-color: #81B1DB;
+  /* --mermaid-box-border-color: #81B1DB; */
+  --mermaid-box-border-color: #2094f3;
   --mermaid-box-text-color: var(--mermaid-typeset-color);
   --mermaid-lines-color: var(--mermaid-typeset-color);
   /* --mermaid-box-text-color: var(--md-typeset-color); */
@@ -29,7 +33,8 @@
   --mermaid-sequencediagram-note-bgcolor: hsla(30, 5%, 92%, 0.5);
 
   /* CLASS DIAGRAM COLORS */
-  --mermaid-classdiagram-bgcolor: #d3d3d3;
+  /* --mermaid-classdiagram-bgcolor: var(--table-row-odd-background); */
+  --mermaid-classdiagram-bgcolor: #bee4fc;
   
   /* STATE DIAGRAM COLORS */
   --mermaid-statediagram-title-bgcolor: #bdcedd;
@@ -38,9 +43,9 @@
   --mermaid-statediagram-box-bgcolor: #b5b5b5;
 
   /* ER DIAGRAM COLORS */
-  --mermaid-erdiagram-bgcolor: #c1d2e0;
-  --mermaid-erdiagram-odd-bgcolor: #c5c5c5;
-  --mermaid-erdiagram-even-bgcolor: #dcdcdc;
+  --mermaid-erdiagram-bgcolor: #85c6ee;
+  --mermaid-erdiagram-odd-bgcolor: #bee4fc;
+  --mermaid-erdiagram-even-bgcolor: #f4faff;
   --mermaid-erdiagram-labelbox-bgcolor: #dadada;
   
   /* GANTT COLORS */

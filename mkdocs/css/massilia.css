@@ -1,3 +1,5 @@
+@import url("massilia-dark.css");
+@import url("massilia-maths.css");
 /* COLONNES PERSONNALISÉES */
 /* @import url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/columns.css"); */
 @import url("columns.css");
@@ -30,11 +32,15 @@
   --h4-left-target-img: var(--h4-left-img);
 
   /* TABLEAUX THÈME CLAIR MASSILIA : VALEURS PAR DÉFAUT */
-  --table-header-background: #0081d6;
+  /* --table-header-background: #0081d6; */
+  --table-header-background: #2094f3;
   --table-header-border: #eee;
-  --table-row-odd-background: rgb(164, 208, 236);
+  --table-row-odd-background: #bee4fc;
   --table-row-even-background: #fff;
-  --table-code-background: rgba(83, 83, 83, 0.87);
+  --table-code-background: #bdbbbbec;
+
+  /* CODES entre ``, PAGE NORMALE, HORS CODES DANS TABLEAUX ET HORS CODES SOURCES */
+  --code-normal: #bdbbbbec;
 
   /* ADMONITIONS THÈME CLAIR MASSILIA : VALEURS PAR DÉFAUT */
   --md-admonition-python-title-background: rgb(81, 164, 231);
@@ -236,9 +242,19 @@ table:not(.highlighttable) tr:nth-child(odd):not(code table tr) {
   background-color: var(--table-row-odd-background);
 }
 
+table:not(.highlighttable) tr:nth-child(odd):hover,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
+  background-color: var(--table-header-background);
+}
+
 table:not(.highlighttable) tr:nth-child(even),
 table:not(.highlighttable) tr:nth-child(even):not(code table tr) {
   background-color: var(--table-row-even-background);
+}
+
+table:not(.highlighttable) tr:nth-child(even):hover,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
+  background-color: var(--table-header-background);
 }
 
 table:not(.highlighttable) td,
@@ -250,6 +266,10 @@ table:not(.highlighttable) td:not(code table td) {
 table:not(.highlighttable) code,
 table:not(.highlighttable) code:not(code table code) {
   background-color: var(--table-code-background) !important;
+}
+
+.md-typeset code:not(table code) {
+  background-color:var(--code-normal) !important;
 }
 
 /* COLORS */

@@ -5,7 +5,8 @@
   --mermaid-typeset-color: #ddd;
   /* --mermaid-box-border-color: var(--md-primary-fg-color); */
   --mermaid-box-bgcolor: #1f2020;
-  --mermaid-box-border-color: #81B1DB;
+  /* --mermaid-box-border-color: #81B1DB; */
+  --mermaid-box-border-color: #ef5552;
   --mermaid-box-text-color: var(--mermaid-typeset-color);
   --mermaid-lines-color: var(--mermaid-typeset-color);
   /* --mermaid-box-text-color: var(--md-typeset-color); */
@@ -40,8 +41,8 @@
 
   /* ER DIAGRAM COLORS */
   --mermaid-erdiagram-bgcolor: #1f2020;
-  --mermaid-erdiagram-odd-bgcolor: #3b3d3d;
-  --mermaid-erdiagram-even-bgcolor: #1f2020;
+  --mermaid-erdiagram-odd-bgcolor: #1f2020;
+  --mermaid-erdiagram-even-bgcolor: #4c4e5e;
   --mermaid-erdiagram-labelbox-bgcolor: #1f2020a4;
   
   /* GANTT COLORS */

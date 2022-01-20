@@ -21,11 +21,18 @@
   --h4-left-target-img: var(--h4-left-img);  
 
 /* TABLEAUX */
---table-header-background: #f53633;
+/* --table-header-background: #f53633; */
+--table-header-background: #ef5552;
 --table-header-border: #eee;
---table-row-odd-background: #d86363;
---table-row-even-background: rgba(172, 172, 172, 0.67);
---table-code-background: rgba(83, 83, 83, 0.87);
+--table-row-odd-background: #e07977;
+/* --table-row-even-background: rgba(172, 172, 172, 0.67); */
+/* --table-row-even-background: #1f202083; */
+--table-row-even-background: hsla(var(--md-hue),15%,21%,1);
+--table-code-background: #1f2020;
+
+/* CODES entre ``, PAGE NORMALE, HORS CODES DANS TABLEAUX ET HORS CODES SOURCES */
+--code-normal: #1f2020;
+;
 
 /* ADMONITIONS */
 --md-admonition-python-title-background: rgb(55, 116, 167);
