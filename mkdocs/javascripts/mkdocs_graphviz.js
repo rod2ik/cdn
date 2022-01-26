@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-  console.log("MKDOCS GRAPHVIZ.JS LOADED");
+  // console.log("MKDOCS GRAPHVIZ.JS LOADED");
   
   var span = document.querySelector("[class='graphviz-light-dark']:first-of-type");
   var dataLibraryDefault = span.getAttribute("data-library-default");
@@ -14,8 +14,7 @@ window.addEventListener('load', function() {
   update_theme();
 
   function tag_default() {
-    console.log("TAG DEFAULTS");
-    console.log("TAG : NOT EQUAL");
+    // console.log("TAG DEFAULTS");
     if (dataDefault == dataLibraryDefault) { // if 'color' option has not been set in 'mkdocs.yml'
       document.querySelectorAll("svg.graphviz *[stroke*='"+dataDefault+"' i]")
       .forEach( el => {
@@ -29,9 +28,8 @@ window.addEventListener('load', function() {
   }
 
   function update_theme() {
-    console.log("UPDATE THEME...");
+    // console.log("UPDATE THEME...");
     let theme = document.querySelector("body").getAttribute("data-md-color-scheme");
-    console.log("UPDATE : NOT EQUAL");
     if (dataDefault == dataLibraryDefault) { // if 'color' option has not been set in 'mkdocs.yml'
       document.querySelectorAll("svg.graphviz *[class*='stroke-default']")
       .forEach( el => {
