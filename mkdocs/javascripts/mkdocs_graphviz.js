@@ -9,10 +9,6 @@ window.addEventListener('load', function() {
     dataLight="#000000";
   }
   var dataDark = span.getAttribute("data-dark");
-  console.log("dataLibraryDefault="+dataLibraryDefault);
-  console.log("dataDefault="+dataDefault);
-  console.log("dataLight="+dataLight);
-  console.log("dataDark="+dataDark);
 
   tag_default();
   update_theme();
