@@ -61,6 +61,7 @@
   /* IMAGE-SHADOW MASSILIA */
   --img-shadow-box: 5px 5px 10px #222;
   --img-shadow-background-color: inherit;
+
 }
 
 /* Theme Général MkDocs */
@@ -268,7 +269,7 @@ table:not(.highlighttable) code:not(code table code) {
   background-color: var(--table-code-background) !important;
 }
 
-.md-typeset code:not(table code) {
+.md-typeset code:not(table code, div.highlight pre[id*="_code_"] code) {
   background-color:var(--code-normal) !important;
 }
 
