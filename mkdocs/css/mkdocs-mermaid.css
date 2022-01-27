@@ -14,11 +14,11 @@
   /* --mermaid-box-text-color: var(--md-typeset-color); */
 
   /* GRAPH / FLOWCHART COLORS */
-  --mermaid-flowchart-bgcolor: #bebebe;
+  --mermaid-flowchart-bgcolor: #bee4fc;
   --mermaid-flowchart-cluster-label-color: var(--mermaid-typeset-color);
-  --mermaid-cluster-subgraph-bgcolor: #eaecee;
-  --mermaid-label-bgcolor: #e4e5e6;
-  --mermaid-label-outside-bgcolor: #292929;
+  --mermaid-cluster-subgraph-bgcolor: #ddf1fd;
+  --mermaid-label-bgcolor: #ddf1fd;
+  --mermaid-label-outside-bgcolor: #2094f3;
   --mermaid-label-text-color: var(--mermaid-typeset-color);
   --mermaid-label-border-color: #cecece;
   
@@ -37,13 +37,13 @@
   --mermaid-classdiagram-bgcolor: #bee4fc;
   
   /* STATE DIAGRAM COLORS */
-  --mermaid-statediagram-title-bgcolor: #bdcedd;
+  --mermaid-statediagram-title-bgcolor: #b0dffc;
   --mermaid-statediagram-inner-bgcolor: #e3e6e9;
   --mermaid-statediagram-label-outside-bgcolor: #292929;
-  --mermaid-statediagram-box-bgcolor: #b5b5b5;
+  --mermaid-statediagram-box-bgcolor: #bee4fc;
 
   /* ER DIAGRAM COLORS */
-  --mermaid-erdiagram-bgcolor: #85c6ee;
+  --mermaid-erdiagram-bgcolor: #96cff1;
   --mermaid-erdiagram-odd-bgcolor: #bee4fc;
   --mermaid-erdiagram-even-bgcolor: #f4faff;
   --mermaid-erdiagram-labelbox-bgcolor: #dadada;
@@ -51,7 +51,8 @@
   /* GANTT COLORS */
   --mermaid-gantt-section-color: #1f2020;
   /* --mermaid-gantt-section-bgcolor: rgba(90, 166, 253, 0.568); */
-  --mermaid-gantt-done-task-color: #42fa61;
+  --mermaid-gantt-done-task-color: 
+  #42fa61;
   --mermaid-gantt-active-task-color: #f8bc61;
   --mermaid-gantt-future-task-color: #fa7975;
   --mermaid-gantt-exclude-range: #f7a0ff;
