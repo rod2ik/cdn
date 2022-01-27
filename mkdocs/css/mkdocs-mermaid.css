@@ -1,4 +1,4 @@
-/* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+/* License: GNU GPLv3+, Rodrigo Schwencke (copyleft) */
 
 @import url("mkdocs-mermaid-dark.css");
 
@@ -18,7 +18,7 @@
   /* GRAPH / FLOWCHART COLORS */
   --mermaid-flowchart-bgcolor: #bee4fc;
   --mermaid-flowchart-cluster-label-color: var(--mermaid-typeset-color);
-  --mermaid-cluster-subgraph-bgcolor: #ddf1fd;
+  --mermaid-cluster-subgraph-bgcolor: #e9f3fa;
   --mermaid-label-bgcolor: #ddf1fd;
   --mermaid-label-outside-bgcolor: #2094f3;
   --mermaid-label-text-color: var(--mermaid-typeset-color);
@@ -29,10 +29,10 @@
 
   /* SEQUENCE DIAGRAM COLORS */
   --mermaid-sequencediagram-bgcolor: var(--mermaid-flowchart-bgcolor);
-  --mermaid-sequencediagram-loop-bgcolor: #578cbb98;
-  --mermaid-sequencediagram-loop-border: #4f80ac;
-  --mermaid-sequencediagram-loop-brackettext-color: #81B1DB;
-  --mermaid-sequencediagram-note-bgcolor: hsla(30, 5%, 92%, 0.5);
+  --mermaid-sequencediagram-loop-bgcolor: #f8ce82be;
+  --mermaid-sequencediagram-loop-border: #f7c15e;
+  --mermaid-sequencediagram-loop-brackettext-color: #55a9ee;
+  --mermaid-sequencediagram-note-bgcolor: #f8ce82be;
 
   /* CLASS DIAGRAM COLORS */
   /* --mermaid-classdiagram-bgcolor: var(--table-row-odd-background); */
@@ -40,21 +40,20 @@
   
   /* STATE DIAGRAM COLORS */
   --mermaid-statediagram-title-bgcolor: #b0dffc;
-  --mermaid-statediagram-inner-bgcolor: #e3e6e9;
-  --mermaid-statediagram-label-outside-bgcolor: #292929;
+  --mermaid-statediagram-inner-bgcolor: #e9f3fa;
+  --mermaid-statediagram-label-outside-bgcolor: #2094f3;
   --mermaid-statediagram-box-bgcolor: #bee4fc;
 
   /* ER DIAGRAM COLORS */
   --mermaid-erdiagram-bgcolor: #96cff1;
   --mermaid-erdiagram-odd-bgcolor: #bee4fc;
   --mermaid-erdiagram-even-bgcolor: #f4faff;
-  --mermaid-erdiagram-labelbox-bgcolor: #dadada;
+  --mermaid-erdiagram-labelbox-bgcolor: #bee4fc;
   
   /* GANTT COLORS */
   --mermaid-gantt-section-color: #1f2020;
   /* --mermaid-gantt-section-bgcolor: rgba(90, 166, 253, 0.568); */
-  --mermaid-gantt-done-task-color: 
-  #42fa61;
+  --mermaid-gantt-done-task-color:  #42fa61;
   --mermaid-gantt-active-task-color: #f8bc61;
   --mermaid-gantt-future-task-color: #fa7975;
   --mermaid-gantt-exclude-range: #f7a0ff;

@@ -29,8 +29,8 @@
   --mermaid-sequencediagram-bgcolor: var(--mermaid-flowchart-bgcolor);
   --mermaid-sequencediagram-loop-bgcolor: #578cbb98;
   --mermaid-sequencediagram-loop-border: #4f80ac;
-  --mermaid-sequencediagram-loop-brackettext-color: #81B1DB;
-  --mermaid-sequencediagram-note-bgcolor: hsla(49, 89%, 75%, 0.5);
+  --mermaid-sequencediagram-loop-brackettext-color: #e77b79;
+  --mermaid-sequencediagram-note-bgcolor: #e77b79;
 
   /* CLASS DIAGRAM COLORS */
   --mermaid-classdiagram-bgcolor: #1f2020a4;
