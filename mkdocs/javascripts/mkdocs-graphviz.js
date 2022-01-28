@@ -1,17 +1,20 @@
+/* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+
 window.addEventListener('load', function() {
   // console.log("MKDOCS GRAPHVIZ.JS LOADED");
-  
-  var span = document.querySelector("[class='graphviz-light-dark']:first-of-type");
-  var dataLibraryDefault = span.getAttribute("data-library-default");
-  var dataDefault = span.getAttribute("data-default");
-  var dataLight = span.getAttribute("data-light");
-  if ((dataLight == '#0')) {
-    dataLight="#000000";
-  }
-  var dataDark = span.getAttribute("data-dark");
 
-  tag_default();
-  update_theme();
+  var span = document.querySelector("[class='graphviz-light-dark']:first-of-type");
+  if (span !== null) { // at least one graphviz diagram in the page
+    var dataLibraryDefault = span.getAttribute("data-library-default");
+    var dataDefault = span.getAttribute("data-default");
+    var dataLight = span.getAttribute("data-light");
+    if ((dataLight == '#0')) {
+      dataLight="#000000";
+    }
+    var dataDark = span.getAttribute("data-dark");
+    tag_default();
+    update_theme();
+  } // else no grapviz diagram
 
   function tag_default() {
     // console.log("TAG DEFAULTS");
