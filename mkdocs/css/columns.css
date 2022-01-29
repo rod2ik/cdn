@@ -1,15 +1,17 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 /* ----------------------------------------------------------- */
-/* COLONNES / COLUMNS */
+/* COL / COLUMN / COLONNE */
 /* ----------------------------------------------------------- */
 
-.md-typeset .admonition.col,
-.md-typeset details.col,
-.md-typeset .admonition.colonne,
-.md-typeset details.colonne,
-.md-typeset .admonition.column,
-.md-typeset details.column
+/* FLOAT LEFT by DEFAULT */
+
+.md-typeset .admonition.col:not(.admonition.col.right),
+.md-typeset details.col:not(.admonition.col.right),
+.md-typeset .admonition.colonne:not(.admonition.colonne.right),
+.md-typeset details.colonne:not(.admonition.colonne.right),
+.md-typeset .admonition.column:not(.admonition.column.right),
+.md-typeset details.column:not(.admonition.column.right)
 {
   float: left;
   margin-bottom: .8rem;
@@ -20,6 +22,27 @@
   border-color: transparent;
   box-shadow: none;
 }
+
+/* FLOAT RIGHT if RIGHT class */
+
+.md-typeset .admonition.col.right,
+.md-typeset details.col.right,
+.md-typeset .admonition.colonne.right,
+.md-typeset details.colonne.right,
+.md-typeset .admonition.column.right,
+.md-typeset details.column.right
+{
+  float: right;
+  margin-bottom: .8rem;
+  margin-top: 0;
+  padding: 0.2rem;
+
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* CLEAR if ANY (LEFT or RIGHT) */
 
 .md-typeset .admonition.col.clear,
 .md-typeset details.col.clear,
