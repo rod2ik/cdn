@@ -1,3 +1,5 @@
+/* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+
 window.addEventListener('load', function() {
 
   // correct baseline alignment in mermaid graphs
@@ -24,17 +26,17 @@ window.addEventListener('load', function() {
     let stroke_color = get_var("--mermaid-lines-color");
     let bgcolor = get_var("--md-default-bg-color");
     // let stroke_width = get_var("--mermaid-box-stroke-width");
-    document.querySelectorAll("[id^='mermaid-'] .aggregation:not(#classDiagram-aggregationStart), [id^='mermaid-'] .extension, [id^='mermaid-'] .composition, [id^='mermaid-'] .dependency")
+    document.querySelectorAll("svg[id^='mermaid-'] .aggregation:not(#classDiagram-aggregationStart), svg[id^='mermaid-'] .extension, svg[id^='mermaid-'] .composition, svg[id^='mermaid-'] .dependency")
     .forEach( el => {
       el.style.setProperty("fill", stroke_color,"important");
       el.style.setProperty("stroke", stroke_color,"important");
     });
-    document.querySelectorAll("[id^='mermaid-'] #classDiagram-aggregationStart, [id^='mermaid-'] #classDiagram-aggregationEnd")
+    document.querySelectorAll("svg[id^='mermaid-'] #classDiagram-aggregationStart, svg[id^='mermaid-'] #classDiagram-aggregationEnd")
     .forEach( el => {
       el.style.setProperty("fill", bgcolor,"important");
       el.style.setProperty("stroke", stroke_color,"important");
     });
-    document.querySelectorAll("[id^='mermaid-'] path:not([id^='mermaid-'] .commit ~ path, [id^='mermaid-'] circle.face ~ g path)")
+    document.querySelectorAll("svg[id^='mermaid-'] path:not(svg[id^='mermaid-'] .commit ~ path, svg[id^='mermaid-'] circle.face ~ g path)")
     .forEach( el => {
       el.style.setProperty("stroke", stroke_color,"important");
     });
@@ -44,17 +46,22 @@ window.addEventListener('load', function() {
   function fix_graph_flowchart() {
     // console.log("FIX GRAPH : FLOWCHART");
     // Get width of the div child inside the foreignObject, otherwise section widths are cut 
-    document.querySelectorAll("[id^='mermaid-'] .cluster .label foreignObject")
+    document.querySelectorAll("svg[id^='mermaid-'] .cluster .label foreignObject")
     .forEach( el => {
       let div = el.firstChild;
       let width = div.offsetWidth;
       el.style.setProperty("width", (parseInt(width))+"px", "important");
     });
+    document.querySelectorAll("svg[id^='mermaid-'] .node path")
+    .forEach( el => { // only because of database boxes in flowcharts
+      let stroke = self.get_var("--mermaid-box-border-color")
+      el.style.setProperty("stroke", stroke, "important");
+    });
   }
 
   function resize_state_diagram() {
     // console.log("RESIZE STATE DIAGRAM");
-    document.querySelectorAll("[id^='mermaid-'].statediagram")
+    document.querySelectorAll("svg[id^='mermaid-'].statediagram")
     .forEach( el => {
       let maxwidth = getComputedStyle(el).maxWidth;
       el.style.setProperty("max-width", (parseInt(maxwidth)*0.6)+"px", "important");
@@ -64,11 +71,11 @@ window.addEventListener('load', function() {
   function fix_gantt() {
     // console.log("FIX GANTT");
     let box_text_color = get_var("--mermaid-box-text-color");
-    document.querySelectorAll("[id^='mermaid-'] [class*='activeText'], [id^='mermaid-'] [class*='doneText'], [id^='mermaid-'] [class*='taskTextOutsideRight']")
+    document.querySelectorAll("svg[id^='mermaid-'] [class*='activeText'], svg[id^='mermaid-'] [class*='doneText'], svg[id^='mermaid-'] [class*='taskTextOutsideRight']")
     .forEach( el => {
       el.style.setProperty("fill", box_text_color, "important");
     });
-    document.querySelectorAll("[id^='mermaid-'] text[class*='taskText']")
+    document.querySelectorAll("svg[id^='mermaid-'] text[class*='taskText']")
     .forEach( el => {
       el.setAttribute("dy", "3");
     });
@@ -77,7 +84,7 @@ window.addEventListener('load', function() {
   function fix_pie() {
     // console.log("FIX PIE");
     let box_text_color = get_var("--mermaid-box-text-color");
-    document.querySelectorAll("[id^='mermaid-'] [class*='activeText'], [id^='mermaid-'] [class*='doneText'], [id^='mermaid-'] [class*='taskTextOutsideRight']")
+    document.querySelectorAll("svg[id^='mermaid-'] [class*='activeText'], svg[id^='mermaid-'] [class*='doneText'], svg[id^='mermaid-'] [class*='taskTextOutsideRight']")
     .forEach( el => {
       el.style.setProperty("fill", box_text_color, "important");
     });
@@ -85,7 +92,7 @@ window.addEventListener('load', function() {
 
   function fix_git() {
     // console.log("FIX GIT");
-    document.querySelectorAll("[id^='mermaid-'] .commit foreignObject.node-label")
+    document.querySelectorAll("svg[id^='mermaid-'] .commit foreignObject.node-label")
     .forEach( el => {
       let span = el.firstChild.firstChild;
       let width = span.offsetWidth;

@@ -6,14 +6,10 @@
   /* MERMAID THÈME CLAIR : VALEURS PAR DÉFAUT */
   /* CUSTOM MERMAID VARIABLES */
   --mermaid-typeset-color: #1f2020;
-  /* --mermaid-box-bgcolor: var(--mermaid-typeset-color); */
   --mermaid-box-bgcolor: #bee4fc;
-  /* --mermaid-box-border-color: var(--md-primary-fg-color); */
-  /* --mermaid-box-border-color: #81B1DB; */
   --mermaid-box-border-color: #2094f3;
   --mermaid-box-text-color: var(--mermaid-typeset-color);
   --mermaid-lines-color: var(--mermaid-typeset-color);
-  /* --mermaid-box-text-color: var(--md-typeset-color); */
 
   /* GRAPH / FLOWCHART COLORS */
   --mermaid-flowchart-bgcolor: #bee4fc;
@@ -30,19 +26,27 @@
   /* SEQUENCE DIAGRAM COLORS */
   --mermaid-sequencediagram-bgcolor: var(--mermaid-flowchart-bgcolor);
   --mermaid-sequencediagram-loop-bgcolor: #f8ce82be;
-  --mermaid-sequencediagram-loop-border: #f7c15e;
+  --mermaid-sequencediagram-loop-border: #55a9ee;
   --mermaid-sequencediagram-loop-brackettext-color: #55a9ee;
   --mermaid-sequencediagram-note-bgcolor: #f8ce82be;
+  --mermaid-sequencediagram-sequencenumber-textcolor: #FFFFFF;
+  --mermaid-sequencediagram-sequencenumber-bgcolor: var(--mermaid-typeset-color);
+  --mermaid-sequencediagram-actorman-head-bgcolor: var(--mermaid-flowchart-bgcolor);
+  --mermaid-sequencediagram-actorman-line: var(--mermaid-box-border-color);
 
   /* CLASS DIAGRAM COLORS */
-  /* --mermaid-classdiagram-bgcolor: var(--table-row-odd-background); */
   --mermaid-classdiagram-bgcolor: #bee4fc;
   
   /* STATE DIAGRAM COLORS */
-  --mermaid-statediagram-title-bgcolor: #b0dffc;
-  --mermaid-statediagram-inner-bgcolor: #e9f3fa;
+  --mermaid-statediagram-title-bgcolor: #99d4f8;
+  --mermaid-statediagram-inner-bgcolor: #ffffff;
   --mermaid-statediagram-label-outside-bgcolor: #2094f3;
-  --mermaid-statediagram-box-bgcolor: #bee4fc;
+  --mermaid-statediagram-box-bgcolor: #99d4f8;
+  --mermaid-statediagram-cluster-divider: #2094f3;
+  --mermaid-statediagram-cluster-alt-inner-bgcolor: #d8ebf7;
+  --mermaid-statediagram-clusters-note-rect-bgcolor: none;
+  --mermaid-statediagram-clusters-note-rect-border: none;
+  --mermaid-statediagram-note-bgcolor: #f8bc61;
 
   /* ER DIAGRAM COLORS */
   --mermaid-erdiagram-bgcolor: #96cff1;
@@ -59,7 +63,9 @@
   --mermaid-gantt-exclude-range: #f7a0ff;
 
   /* PIE CHART */
+  /* TO DO? */
 
+  /* WIDTHS & STROKES */
   --mermaid-box-stroke-width: 2px;
   --mermaid-classdiagram-stroke-width: calc(var(--mermaid-box-stroke-width)/1.2);
   --mermaid-lines-stroke-width: 2px;
@@ -67,14 +73,16 @@
   --mermaid-relation-stroke-width: 1.1px;
 }
 
-/* ::selection {
-  color: red;
-  background-color: blue;
-} */
 
 /* ************************************************************************** */
 /* COMMONS */
 /* ************************************************************************** */
+
+/* MOUSE SELECTION */
+/* ::selection {
+  color: red;
+  background-color: blue;
+} */
 
 svg[id^="mermaid-"] {
   /* fill: var(--md-typeset-color) !important;
@@ -90,10 +98,10 @@ svg[id^="mermaid-"] svg {
 }
 
 /* COMMON BOX FILLS */
-svg[id^="mermaid-"] .node rect:not(rect.label-container), svg[id^="mermaid-"] .node circle:not(.node circle.state-start, .node circle.state-end, circle.label-container), 
+svg[id^="mermaid-"] .node rect:not(rect.label-container, .node.statediagram-note rect), svg[id^="mermaid-"] .node circle:not(.node circle.state-start, .node circle.state-end, circle.label-container), 
 svg[id^="mermaid-"] .node ellipse, svg[id^="mermaid-"] .node polygon, 
 svg[id^="mermaid-"] .node path, svg[id^="mermaid-"] polygon.label-container, 
-svg[id^="mermaid-"] rect:not(rect.journey-section, rect.task, .cluster rect, rect.section, rect.note, .legend rect, rect.er.relationshipLabelBox, rect.er.entityBox, rect.er.attributeBoxOdd, rect.er.attributeBoxEven, .statediagram-cluster rect.outer, rect.label-container, .statediagram-cluster rect.inner, rect.actor, rect[class^="activation"], .edgeLabel .label rect, rect.exclude-range)
+svg[id^="mermaid-"] rect:not(rect.journey-section, rect.task, .cluster rect, rect.section, rect.note, .legend rect, rect.er.relationshipLabelBox, rect.er.entityBox, rect.er.attributeBoxOdd, rect.er.attributeBoxEven, .statediagram-cluster rect.outer, rect.label-container, .statediagram-cluster rect.inner, rect.actor, rect[class^="activation"], .edgeLabel .label rect, rect.exclude-range, .clusters .note-cluster rect, .node.statediagram-note rect)
 {
   fill: var(--mermaid-box-bgcolor) !important;
 }
@@ -235,7 +243,7 @@ svg[id^="mermaid-"] line:not(line.divider) {
 }
 
 svg[id^="mermaid-"] marker[id^="arrowhead"] path, svg[id^="mermaid-"] marker[id^="crosshead"] path,
-svg[id^="mermaid-"] marker[id^="filledhead"] path, svg[id^="mermaid-"] marker[id^="sequencenumber"] path { 
+svg[id^="mermaid-"] marker[id^="filledhead"] path { 
   /* ARROWHEADS */
   fill: var(--mermaid-lines-color) !important;
 }
@@ -243,13 +251,26 @@ svg[id^="mermaid-"] marker[id^="filledhead"] path, svg[id^="mermaid-"] marker[id
 svg[id^="mermaid-"] .note {
   /* Sequence Diagrams Notes */
   fill: var(--mermaid-sequencediagram-note-bgcolor) !important;
-  /* stroke: var(--md-primary-fg-color) !important; */
   stroke: var(--mermaid-box-border-color) !important;
 }
 
 svg[id^="mermaid-"] .labelBox {   /* Loops Labels CSS */
   fill: var(--mermaid-sequencediagram-loop-bgcolor) !important;
   stroke: var(--mermaid-sequencediagram-loop-border) !important;
+}
+
+svg[id^="mermaid-"] marker[id^="sequencenumber"] { /* Sequence Number BgColor */
+  fill: var(--mermaid-sequencediagram-sequencenumber-bgcolor) !important;
+}
+
+svg[id^="mermaid-"] .sequenceNumber { /* Sequence Number Text */
+  fill: var(--mermaid-sequencediagram-sequencenumber-textcolor) !important;
+  stroke: var(--mermaid-sequencediagram-sequencenumber-textcolor) !important;
+}
+
+svg[id^="mermaid-"] .actor-man circle, svg[id^="mermaid-"] .actor-man line { /* Actor Man Circle */
+  fill: var(--mermaid-sequencediagram-actorman-head-bgcolor) !important;
+  stroke: var(--mermaid-sequencediagram-actorman-line) !important;
 }
 
 /* ************************************************************************** */
@@ -305,6 +326,10 @@ svg[id^="mermaid-"] .statediagram-cluster rect.outer { /* State Diagram Outer Bo
   stroke-width: var(--mermaid-box-stroke-width) !important;
 }
 
+svg[id^="mermaid-"] .statediagram-cluster.statediagram-cluster-alt rect.inner {
+  fill: var(--mermaid-statediagram-cluster-alt-inner-bgcolor) !important;
+}
+
 svg[id^="mermaid-"] .edge-thickness-normal:not(.edge-thickness-normal[class*="flowchart"]) { /* State Diagram Lines Stroke Width */
   stroke-width: calc(var(--mermaid-lines-stroke-width)*0.65) !important;
 }
@@ -318,6 +343,22 @@ svg[id^="mermaid-"] .node circle.state-end {
   fill: var(--mermaid-statediagram-box-bgcolor) !important;
   stroke: var(--mermaid-statediagram-box-bgcolor) !important;
 }
+
+svg[id^="mermaid-"] .node.statediagram-note rect {
+  fill: var(--mermaid-statediagram-note-bgcolor) !important;
+}
+
+svg[id^="mermaid-"] .clusters rect.divider {
+  stroke: var(--mermaid-statediagram-cluster-divider) !important;
+  opacity: 0.5 !important;
+}
+
+svg[id^="mermaid-"] .clusters .note-cluster rect {
+  fill: var(--mermaid-statediagram-clusters-note-rect-bgcolor) !important;
+  stroke: var(--mermaid-statediagram-clusters-note-rect-border) !important;
+}
+
+
 
 /* ************************************************************************** */
 /* ER DIAGRAMS */
@@ -412,7 +453,6 @@ svg[id^="mermaid-"] .classLabel .label {
 svg[id^="mermaid-"] .edgeLabel {
   background-color: var(--mermaid-label-bgcolor) !important;
 }
-
 
 /* ************************************************************************** */
 /* GANTT */

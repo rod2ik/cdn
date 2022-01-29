@@ -4,7 +4,7 @@
 @import url("massilia-maths.css");
 /* COLONNES PERSONNALISÉES */
 /* @import url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/columns.css"); */
-@import url("columns.css");
+@import url("mkdocs-columns.css");
 
 /* IMPORT LED BRIGHT */
 @font-face {
