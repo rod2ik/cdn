@@ -41,6 +41,7 @@ window.addEventListener('load', function() {
       el.style.setProperty("stroke", stroke_color,"important");
     });
     fix_gantt();
+    fix_graph_flowchart(); // for the Database trick
   }
 
   function fix_graph_flowchart() {
@@ -52,10 +53,15 @@ window.addEventListener('load', function() {
       let width = div.offsetWidth;
       el.style.setProperty("width", (parseInt(width))+"px", "important");
     });
+
     document.querySelectorAll("svg[id^='mermaid-'] .node path")
     .forEach( el => { // only because of database boxes in flowcharts
-      let stroke = self.get_var("--mermaid-box-border-color")
-      el.style.setProperty("stroke", stroke, "important");
+      // let stroke = get_var("--mermaid-box-border-color");
+      // following line should work, but it doesn't..
+      // el.style.setProperty("stroke", stroke, "important");
+      // trick to lower down the specificity, 
+      // and return to backward CSS rule (so won't be applied):
+      el.style.setProperty("stroke", "blue");
     });
   }
 
