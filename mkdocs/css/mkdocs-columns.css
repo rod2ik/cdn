@@ -55,15 +55,14 @@
   clear:none;
 }
 
-.md-typeset .admonition.col.clear + *:before,
-.md-typeset details.col.clear + *:before,
-.md-typeset .admonition.colonne.clear + *:before,
-.md-typeset details.colonne.clear + *:before,
-.md-typeset .admonition.column.clear + *:before,
-.md-typeset details.column.clear + *:before
+.md-typeset .admonition.col.clear + *,
+.md-typeset details.col.clear + *,
+.md-typeset .admonition.colonne.clear + *,
+.md-typeset details.colonne.clear + *,
+.md-typeset .admonition.column.clear + *,
+.md-typeset details.column.clear + *
 {
-  content: '';
-  display:block;
+  display: block;
   clear: both;
 }
 
