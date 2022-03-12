@@ -43,7 +43,7 @@
 
   /* TABLEAUX THÈME CLAIR MASSILIA : VALEURS PAR DÉFAUT */
   /* --table-header-background: #0081d6; */
-  --table-header-background: #2094f3;
+  --table-header-background: #0d8cf3;
   --table-header-border: #eee;
   --table-row-odd-background: #bee4fc;
   --table-row-even-background: #fff;
@@ -68,12 +68,17 @@
   --enc-border-color:#111111;
   --enc-box-shadow: 5px 5px 5px #222;
 
+  /* ROUGE BLEU TABLEAU */
+  --rb-color: #ee3939;
+
   /* FLUO MASSILIA */
   --fluo-jaune-background-color: #ffff7f;
 
   /* IMAGE-SHADOW MASSILIA */
   --img-shadow-box: 5px 5px 10px #222;
   --img-shadow-background-color: inherit;
+
+
 
 }
 
@@ -372,6 +377,11 @@ div.bblack, bblack, div.bnoir, bnoir {
   color:black;
 }
 
+div.rb, rb,
+dib.brb, brb {
+  color: var(--rb-color);
+}
+
 div.bred, bred, div.brouge, brouge,
 div.bblue, bblue, div.bbleu, bbleu,
 div.bpurple, bpurple, div.bviolet, bviolet,
@@ -379,9 +389,12 @@ div.bgreen, bgreen, div.bvert, bvert,
 div.byellow, byellow, div.bjaune, bjaune,
 div.borange, borange, div.borange, borange,
 div.bgrey, bgrey, div.bgris, bgris,
-div.bblack, bblack, div.bnoir, bnoir {
+div.bblack, bblack, div.bnoir, bnoir,
+div.brb, brb {
   font-weight: 700;
 }
+
+
 
  /* ENCADREMENTS */
 encadre, #encadre, .encadre, enc
