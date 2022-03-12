@@ -339,31 +339,37 @@ table:not(.highlighttable) code:not(code table code) {
 div.red, red, div.rouge, rouge, 
 div.bred, bred, div.brouge, brouge {
   color:red;
+  font-weight: 700;
 }
 
 div.blue, blue, div.bleu, bleu,
 div.bblue, bblue, div.bblue, bbleu {
   color:blue;
+  font-weight: 700;
 }
 
 div.purple, purple, div.violet, violet,
 div.bpurple, bpurple, div.bviolet, bviolet {
   color:purple;
+  font-weight: 700;
 }
 
 div.green, green, div.vert, vert,
 div.bgreen, bgreen, div.bvert, bvert {
   color:green;
+  font-weight: 700;
 }
 
 div.yellow, yellow, div.jaune, jaune,
 div.byellow, byellow, div.bjaune, bjaune {
   color:yellow;
+  font-weight: 700;
 }
 
 div.orange, orange, div.orange, orange,
 div.borange, borange, div.borange, borange {
   color:orange;
+  font-weight: 700;
 }
 
 div.grey, grey, div.gris, gris,
@@ -375,14 +381,16 @@ div.bgrey, bgrey, div.bgris, bgris {
 div.black, black, div.noir, noir,
 div.bblack, bblack, div.bnoir, bnoir {
   color:black;
+  font-weight: 700;
 }
 
 div.rb, rb,
 dib.brb, brb {
   color: var(--rb-color);
+  font-weight: 700;
 }
 
-div.bred, bred, div.brouge, brouge,
+/* div.bred, bred, div.brouge, brouge,
 div.bblue, bblue, div.bbleu, bbleu,
 div.bpurple, bpurple, div.bviolet, bviolet,
 div.bgreen, bgreen, div.bvert, bvert,
@@ -392,8 +400,7 @@ div.bgrey, bgrey, div.bgris, bgris,
 div.bblack, bblack, div.bnoir, bnoir,
 div.brb, brb {
   font-weight: 700;
-}
-
+} */
 
 
  /* ENCADREMENTS */
