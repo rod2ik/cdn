@@ -550,6 +550,7 @@ blockquote p {
   display: inline;
   font-style: italic;
   line-height: 1.5em;
+  font-size: 1.7em;
 }
 
 blockquote p:first-of-type {
@@ -558,14 +559,14 @@ blockquote p:first-of-type {
 
 blockquote p:first-of-type::before {
   content: "Citation: " open-quote;
-  font-size: 1.6em;
   margin-right: 0.1rem;
+  font-size: 0.65em;
 }
 
 blockquote p:last-of-type {
   quotes: '\BB' '\201C' '\201D' '\2018' '\2019';
   font-style: italic;
-  font-size: 1.6em;
+  font-size: 1em;
 }
 
 blockquote p:last-of-type::before {
@@ -573,6 +574,7 @@ blockquote p:last-of-type::before {
   white-space: pre;
   margin-left: 0.1rem;
   font-style: normal;
+  font-size: 1.2em;
 }
 
 /* FOOTNOTES */
