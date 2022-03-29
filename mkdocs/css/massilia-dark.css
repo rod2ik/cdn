@@ -39,6 +39,7 @@
 --table-row-even-background: hsla(var(--md-hue),15%,21%,1);
 --table-code-background: #1f2020;
 --table-link-color: #fff;
+--table-row-hover-bgcolor: #1d90ee;
 
 /* CODES entre ``, PAGE NORMALE, HORS CODES DANS TABLEAUX ET HORS CODES SOURCES */
 --code-normal: #1f2020;

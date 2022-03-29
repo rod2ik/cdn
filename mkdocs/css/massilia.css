@@ -49,6 +49,7 @@
   --table-row-even-background: #fff;
   --table-code-background: #bdbbbbec;
   --table-link-color: #111111;
+  --table-row-hover-bgcolor: #ee3939;
 
   /* CODES entre ``, PAGE NORMALE, HORS CODES DANS TABLEAUX ET HORS CODES SOURCES */
   --code-normal: #bdbbbbec;
@@ -307,7 +308,7 @@ table:not(.highlighttable) tr:nth-child(odd):not(code table tr) {
 
 table:not(.highlighttable) tr:nth-child(odd):hover,
 table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
-  background-color: var(--table-header-background);
+  background-color: var(--table-row-hover-bgcolor);
 }
 
 table:not(.highlighttable) tr:nth-child(even),
@@ -317,7 +318,7 @@ table:not(.highlighttable) tr:nth-child(even):not(code table tr) {
 
 table:not(.highlighttable) tr:nth-child(even):hover,
 table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
-  background-color: var(--table-header-background);
+  background-color: var(--table-row-hover-bgcolor);
 }
 
 table:not(.highlighttable) td,
