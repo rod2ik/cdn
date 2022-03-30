@@ -63,11 +63,13 @@
   --mermaid-gantt-exclude-range: #f7a0ff;
 
   /* PIE CHART */
-  /* TO DO? */
+  /* --mermaid-pie-border-color: #000;
+  --mermaid-pie-border-width: 2px; */
 
   /* WIDTHS & STROKES */
   --mermaid-box-stroke-width: 2px;
-  --mermaid-classdiagram-stroke-width: calc(var(--mermaid-box-stroke-width)/1.2);
+  /* --mermaid-classdiagram-stroke-width: calc(var(--mermaid-box-stroke-width)/1.2); */
+  --mermaid-classdiagram-stroke-width: 1px;
   --mermaid-lines-stroke-width: 2px;
   --mermaid-er-relationship-stroke-width: 1.2px;
   --mermaid-relation-stroke-width: 1.1px;
@@ -282,8 +284,8 @@ svg[id^="mermaid-"] [id^="classid-"] rect.outer.title-state {
 }
 
 svg[id^="mermaid-"] .relation {
-  /* stroke-width: calc(var(--mermaid-box-stroke-width)/1.2) !important; */
-  stroke-width: var(--mermaid-classdiagram-stroke-width) !important;
+  /* stroke-width: var(--mermaid-classdiagram-stroke-width) !important; */
+  stroke-width: 1px !important;
 }
 
 svg[id^="mermaid-"] .edgeTerminals .inner foreignObject, svg[id^="mermaid-"] .edgeTerminals .inner + foreignObject {
@@ -499,8 +501,16 @@ svg[id^="mermaid-"] .task:not(.legend ~ g .task[class*="task-type-"])[class*="ac
 /* PIE CHART */
 /* ************************************************************************** */
 
+/* svg[id^="mermaid-"] .pieTitleText, svg[id^="mermaid-"] text.slice {
+  fill: red !important;
+  stroke: red !important;
+} */
+
+/* FYI: Should be Applied with Javascript  */
+/* But Des Not Work because of mermaid.js */
 /* svg[id^="mermaid-"] .pieCircle {
-  color: #fff !important;
+  stroke: var(--mermaid-pie-border-color) !important;
+  stroke-width: var(--mermaid-pie-border-width) !important;
 } */
 
 /* ************************************************************************** */
