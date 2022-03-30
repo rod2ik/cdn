@@ -69,7 +69,7 @@
   /* WIDTHS & STROKES */
   --mermaid-box-stroke-width: 2px;
   /* --mermaid-classdiagram-stroke-width: calc(var(--mermaid-box-stroke-width)/1.2); */
-  --mermaid-classdiagram-stroke-width: 1px;
+  --mermaid-classdiagram-stroke-width: 1.2px;
   --mermaid-lines-stroke-width: 2px;
   --mermaid-er-relationship-stroke-width: 1.2px;
   --mermaid-relation-stroke-width: 1.1px;
