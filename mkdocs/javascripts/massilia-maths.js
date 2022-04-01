@@ -7,7 +7,8 @@ var replaceBy = {
   "exercice": "Exercice ",
   "example": "Exemple ",
   "method": "Méthode ",
-  "python": "Python "
+  "python": "Python ",
+  "notation": "Notation "
 }
 
 function toAdmonitionClassString(array) {
@@ -132,5 +133,18 @@ for (let i = 0; i < nbPy; i++) {
     py[i].firstElementChild.innerHTML = replaceBy["python"]+(i+1)+".";
   } else {
     py[i].firstElementChild.innerHTML = replaceBy["python"]+(i+1)+". "+py[i].firstElementChild.innerHTML
+  }
+}
+
+// Notation
+var notRendering = ["Not", "Nota", "Notation"];
+var admonitionNotation = toAdmonitionClassString(notRendering);
+var notation = document.querySelectorAll(admonitionNotation);
+nbNotation = notation.length;
+for (let i = 0; i < nbNotation; i++) {
+  if (notRendering.includes(notation[i].firstElementChild.innerHTML)) {
+    notation[i].firstElementChild.innerHTML = replaceBy["notation"]+(i+1)+".";
+  } else {
+    notation[i].firstElementChild.innerHTML = replaceBy["notation"]+(i+1)+". "+notation[i].firstElementChild.innerHTML
   }
 }
