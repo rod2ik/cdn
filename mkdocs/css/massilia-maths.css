@@ -347,7 +347,7 @@
 .md-typeset .admonition.notation,
 .md-typeset details.notation
  {
-  border-color: rgb(102, 174, 223);
+  border-color: rgb(238, 113, 255);
 }
 .md-typeset .not > .admonition-title,
 .md-typeset .not > summary,
@@ -356,8 +356,8 @@
 .md-typeset .notation > .admonition-title,
 .md-typeset .notation > summary
  {
-  background-color: rgba(102, 174, 223, 0.15);
-  border-color: rgb(102, 174, 223);
+  background-color: rgba(238, 113, 255, 0.25);
+  border-color: rgb(238, 113, 255);
 }
 .md-typeset .not > .admonition-title::before,
 .md-typeset .not > summary::before, 
@@ -366,7 +366,7 @@
 .md-typeset .notation > .admonition-title::before,
 .md-typeset .notation > summary::before
 {
-  background-color: rgb(26, 153, 238);
+  background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--not);
   mask-image: var(--md-admonition-icon--not);
 }
