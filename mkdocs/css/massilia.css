@@ -49,7 +49,8 @@
   --table-row-even-background: #fff;
   --table-code-background: #bdbbbbec;
   --table-link-color: #111111;
-  --table-row-hover-bgcolor: #ee3939;
+  /* --table-row-hover-bgcolor: #ee3939; */
+  --table-row-hover-bgcolor: #ef5552;
 
   /* CODES entre ``, PAGE NORMALE, HORS CODES DANS TABLEAUX ET HORS CODES SOURCES */
   --code-normal: #bdbbbbec;
