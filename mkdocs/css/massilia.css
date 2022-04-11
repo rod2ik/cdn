@@ -71,6 +71,7 @@
 
   /* ROUGE BLEU TABLEAU */
   --rb-color: #ee3939;
+  --inv-rb-color: #34a4ff;
 
   /* FLUO MASSILIA */
   --fluo-jaune-background-color: #ffff7f;
@@ -78,8 +79,6 @@
   /* IMAGE-SHADOW MASSILIA */
   --img-shadow-box: 5px 5px 10px #222;
   --img-shadow-background-color: inherit;
-
-
 
 }
 
@@ -311,6 +310,19 @@ table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
   background-color: var(--table-row-hover-bgcolor);
 }
 
+/* for RB tags on table hover --> inverse rb */
+table:not(.highlighttable) tr:nth-child(odd):hover div.rb,
+table:not(.highlighttable) tr:nth-child(odd):hover rb,
+table:not(.highlighttable) tr:nth-child(odd):hover div.brb,
+table:not(.highlighttable) tr:nth-child(odd):hover brb,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.rb,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover rb,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.brb,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover brb {
+  color: var(--inv-rb-color);
+  font-weight: 700;
+}
+
 table:not(.highlighttable) tr:nth-child(even),
 table:not(.highlighttable) tr:nth-child(even):not(code table tr) {
   background-color: var(--table-row-even-background);
@@ -319,6 +331,19 @@ table:not(.highlighttable) tr:nth-child(even):not(code table tr) {
 table:not(.highlighttable) tr:nth-child(even):hover,
 table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
   background-color: var(--table-row-hover-bgcolor);
+}
+
+/* for RB tags on table hover --> inverse rb */
+table:not(.highlighttable) tr:nth-child(even):hover div.rb,
+table:not(.highlighttable) tr:nth-child(even):hover rb,
+table:not(.highlighttable) tr:nth-child(even):hover div.brb,
+table:not(.highlighttable) tr:nth-child(even):hover brb,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.rb,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover rb,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.brb,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover brb {
+  color: var(--inv-rb-color);
+  font-weight: 700;
 }
 
 table:not(.highlighttable) td,

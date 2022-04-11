@@ -61,7 +61,9 @@
 --enc-box-shadow: 3px 3px 5px #ccc;
 
 /* ROUGE BLEU TABLEAU */
---rb-color: #1d90ee;
+/* --rb-color: #1d90ee; */
+--rb-color: #34a4ff;
+--inv-rb-color: #e92c29;
 
 /* FLUO */
 --fluo-jaune-background-color: #85833f;
