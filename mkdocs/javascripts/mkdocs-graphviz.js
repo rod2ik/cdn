@@ -61,7 +61,7 @@ window.addEventListener('load', function() {
         mutation.type !== "attributes" ||
         mutation.attributeName !== "data-md-color-scheme"
       ) {
-        return
+        continue
       }
       update_theme();
     }
