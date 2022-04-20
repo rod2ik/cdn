@@ -72,4 +72,6 @@
 --img-shadow-box: 5px 5px 10px #fff;
 --img-shadow-background-color: #fff;
 
+/* CODE HIGHLIGHT COLOR  */
+--md-code-hl-color: rgba(254, 60, 60, 0.23);
 }
