@@ -45,8 +45,8 @@
   /* --table-header-background: #0081d6; */
   --table-header-background: #0d8cf3;
   --table-header-border: #eee;
-  --table-row-odd-background: #bee4fc;
-  --table-row-even-background: #fff;
+  --table-row-odd-background: #fff;
+  --table-row-even-background: #bee4fc;
   --table-code-background: #bdbbbbec;
   --table-link-color: #111111;
   /* --table-row-hover-bgcolor: #ee3939; */
