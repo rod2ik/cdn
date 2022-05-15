@@ -8,7 +8,9 @@ var replaceBy = {
   "example": "Exemple ",
   "method": "Méthode ",
   "python": "Python ",
-  "notation": "Notation "
+  "notation": "Notation ",
+  "reponse": "Réponse ",
+  "corrige": "Corrigé "
 }
 
 function toAdmonitionClassString(array) {
@@ -146,5 +148,31 @@ for (let i = 0; i < nbNotation; i++) {
     notation[i].firstElementChild.innerHTML = replaceBy["notation"]+(i+1)+".";
   } else {
     notation[i].firstElementChild.innerHTML = replaceBy["notation"]+(i+1)+". "+notation[i].firstElementChild.innerHTML
+  }
+}
+
+// Réponse
+var repRendering = ["Rep", "Rép", "Reponse", "Réponse", "Answer"];
+var admonitionReponse = toAdmonitionClassString(repRendering);
+var reponse = document.querySelectorAll(admonitionReponse);
+nbReponse = reponse.length;
+for (let i = 0; i < nbReponse; i++) {
+  if (repRendering.includes(reponse[i].firstElementChild.innerHTML)) {
+    reponse[i].firstElementChild.innerHTML = replaceBy["reponse"]+(i+1)+".";
+  } else {
+    reponse[i].firstElementChild.innerHTML = replaceBy["reponse"]+(i+1)+". "+reponse[i].firstElementChild.innerHTML
+  }
+}
+
+// Corrigé
+var corRendering = ["Cor", "Corr", "Corrige", "Corrigé", "Correction"];
+var admonitionCorrige = toAdmonitionClassString(corRendering);
+var corrige = document.querySelectorAll(admonitionCorrige);
+nbCorrige = corrige.length;
+for (let i = 0; i < nbCorrige; i++) {
+  if (corRendering.includes(corrige[i].firstElementChild.innerHTML)) {
+    corrige[i].firstElementChild.innerHTML = replaceBy["corrige"]+(i+1)+".";
+  } else {
+    corrige[i].firstElementChild.innerHTML = replaceBy["corrige"]+(i+1)+". "+corrige[i].firstElementChild.innerHTML
   }
 }

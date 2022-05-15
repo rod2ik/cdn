@@ -74,6 +74,9 @@
   --rb-color: #ee3939;
   --inv-rb-color: #34a4ff;
 
+  /* COULEUR DES TEXTES CORRIGÉS */
+  --correction-color: #f82e2e;
+
   /* FLUO MASSILIA */
   --fluo-jaune-background-color: #ffff7f;
 

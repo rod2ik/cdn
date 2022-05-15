@@ -1,5 +1,12 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
+:root {
+  /* ROUGE BLEU TABLEAU */
+  --rb-color: #ee3939;
+  --rb-color-alpha: rgba(var(--rb-color), 0.5);
+  --inv-rb-color: #34a4ff;
+}
+
 /* def - DEFINITION */
 :root {
   --md-admonition-icon--def: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open" class="svg-inline--fa fa-book-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path></svg>');
@@ -369,4 +376,92 @@
   background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--not);
   mask-image: var(--md-admonition-icon--not);
+}
+
+/* rep - Réponse */
+:root {
+  --md-admonition-icon--rep: url('data:image/svg+xml;charset=utf-8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M694.4,201.1L215.1,680.4c-27.8,27.8-27.8,72.8,0,100.5c27.7,27.8,72.8,27.8,100.5,0l479.3-479.3L694.4,201.1z M666.9,173.7l-53.3-53.3c-1.5,1.1-2.9,2.1-4.3,3.5L130,603.1c-14.9,14.9-14.9,39.2,0,54.1c14.9,14.9,39.2,14.9,54.1,0l479.3-479.3C664.8,176.6,665.8,175.1,666.9,173.7z M821.3,328c-1.5,1.1-2.9,2.1-4.3,3.5L337.8,810.8c-14.9,14.9-14.9,39.2,0,54.1c14.9,14.9,39.2,14.9,54.1,0l479.3-479.3c1.3-1.3,2.4-2.8,3.5-4.2L821.3,328z"/><path d="M283.3,850.6c-153.1,0-131.2-131.2-131.2-131.2c-65.6,0-76.5-43.7-76.5-43.7L10,992.7l328-76.5C276.8,903,283.3,850.6,283.3,850.6z"/><path d="M959.8,154.1L843.2,37.5C803-2.8,737.7-2.8,697.5,37.5L646.9,88l262.3,262.3l50.5-50.5C1000.1,259.6,1000.1,194.3,959.8,154.1z"/></g></svg>');
+  --md-admonition-icon--reponse: var(--md-admonition-icon--rep);
+  --md-admonition-icon--answer: var(--md-admonition-icon--rep);
+}
+.md-typeset .admonition.rep,
+.md-typeset details.rep,
+.md-typeset .admonition.reponse,
+.md-typeset details.reponse,
+.md-typeset .admonition.answer,
+.md-typeset details.answer
+ {
+  border-color: #f82e2e;
+  color: var(--correction-color);
+  font-weight: 500;
+}
+.md-typeset .rep > .admonition-title,
+.md-typeset .rep > summary,
+.md-typeset .reponse > .admonition-title,
+.md-typeset .reponse > summary,
+.md-typeset .answer > .admonition-title,
+.md-typeset .answer > summary
+ {
+  background-color: #f82e2e24;
+  border-color: #f82e2e;
+  color: #f82e2e;
+}
+.md-typeset .rep > .admonition-title::before,
+.md-typeset .rep > summary::before, 
+.md-typeset .reponse > .admonition-title::before,
+.md-typeset .reponse > summary::before, 
+.md-typeset .answer > .admonition-title::before,
+.md-typeset .answer > summary::before
+{
+  background-color: #f82e2e;
+  -webkit-mask-image: var(--md-admonition-icon--cor);
+  mask-image: var(--md-admonition-icon--cor);
+}
+
+/* cor - corr - Corrigé */
+:root {
+  --md-admonition-icon--cor: url('data:image/svg+xml;charset=utf-8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M694.4,201.1L215.1,680.4c-27.8,27.8-27.8,72.8,0,100.5c27.7,27.8,72.8,27.8,100.5,0l479.3-479.3L694.4,201.1z M666.9,173.7l-53.3-53.3c-1.5,1.1-2.9,2.1-4.3,3.5L130,603.1c-14.9,14.9-14.9,39.2,0,54.1c14.9,14.9,39.2,14.9,54.1,0l479.3-479.3C664.8,176.6,665.8,175.1,666.9,173.7z M821.3,328c-1.5,1.1-2.9,2.1-4.3,3.5L337.8,810.8c-14.9,14.9-14.9,39.2,0,54.1c14.9,14.9,39.2,14.9,54.1,0l479.3-479.3c1.3-1.3,2.4-2.8,3.5-4.2L821.3,328z"/><path d="M283.3,850.6c-153.1,0-131.2-131.2-131.2-131.2c-65.6,0-76.5-43.7-76.5-43.7L10,992.7l328-76.5C276.8,903,283.3,850.6,283.3,850.6z"/><path d="M959.8,154.1L843.2,37.5C803-2.8,737.7-2.8,697.5,37.5L646.9,88l262.3,262.3l50.5-50.5C1000.1,259.6,1000.1,194.3,959.8,154.1z"/></g></svg>');
+  --md-admonition-icon--corr: var(--md-admonition-icon--cor);
+  --md-admonition-icon--corrige: var(--md-admonition-icon--cor);
+  --md-admonition-icon--correction: var(--md-admonition-icon--cor);
+}
+.md-typeset .admonition.cor,
+.md-typeset details.cor,
+.md-typeset .admonition.corr,
+.md-typeset details.corr,
+.md-typeset .admonition.corrige,
+.md-typeset details.corrige,
+.md-typeset .admonition.correction,
+.md-typeset details.correction
+ {
+  border-color: #f82e2e;
+  color: var(--correction-color);
+  font-weight: 500;
+}
+
+.md-typeset .cor > .admonition-title,
+.md-typeset .cor > summary,
+.md-typeset .corr > .admonition-title,
+.md-typeset .corr > summary,
+.md-typeset .corrige > .admonition-title,
+.md-typeset .corrige > summary,
+.md-typeset .correction > .admonition-title,
+.md-typeset .correction > summary
+ {
+   background-color: #f82e2e24;
+   border-color: #f82e2e;
+   color: #f82e2e;
+}
+.md-typeset .cor > .admonition-title::before,
+.md-typeset .cor > summary::before, 
+.md-typeset .corr > .admonition-title::before,
+.md-typeset .corr > summary::before, 
+.md-typeset .corrige > .admonition-title::before,
+.md-typeset .corrige > summary::before, 
+.md-typeset .correction > .admonition-title::before,
+.md-typeset .correction > summary::before
+{
+  background-color: #f82e2e;
+  -webkit-mask-image: var(--md-admonition-icon--cor);
+  mask-image: var(--md-admonition-icon--cor);
 }
