@@ -415,8 +415,13 @@ div.bblack, bblack, div.bnoir, bnoir {
 }
 
 div.rb, rb,
-dib.brb, brb {
+dib.brb, brb { /* Red Blue */
   color: var(--rb-color);
+  font-weight: 700;
+}
+
+div.irb, irb { /* Inverse Red Blue */
+  color: var(--inv-rb-color);
   font-weight: 700;
 }
 
