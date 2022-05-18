@@ -10,7 +10,8 @@ var replaceBy = {
   "python": "Python ",
   "notation": "Notation ",
   "reponse": "Réponse ",
-  "corrige": "Corrigé "
+  "corrige": "Corrigé ",
+  "jeretiens": "Je Retiens "
 }
 
 function toAdmonitionClassString(array) {
@@ -174,5 +175,18 @@ for (let i = 0; i < nbCorrige; i++) {
     corrige[i].firstElementChild.innerHTML = replaceBy["corrige"]+(i+1)+".";
   } else {
     corrige[i].firstElementChild.innerHTML = replaceBy["corrige"]+(i+1)+". "+corrige[i].firstElementChild.innerHTML
+  }
+}
+
+// Jeretiens
+var jeretiensRendering = ["Jeretiens", "Iremember"];
+var admonitionJeretiens = toAdmonitionClassString(jeretiensRendering);
+var jeretiens = document.querySelectorAll(admonitionJeretiens);
+nbJeretiens = jeretiens.length;
+for (let i = 0; i < nbJeretiens; i++) {
+  if (jeretiensRendering.includes(jeretiens[i].firstElementChild.innerHTML)) {
+    jeretiens[i].firstElementChild.innerHTML = replaceBy["jeretiens"]+(i+1)+".";
+  } else {
+    jeretiens[i].firstElementChild.innerHTML = replaceBy["jeretiens"]+(i+1)+". "+jeretiens[i].firstElementChild.innerHTML
   }
 }
