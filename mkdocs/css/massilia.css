@@ -71,8 +71,8 @@
   --enc-box-shadow: 5px 5px 5px #222;
 
   /* ROUGE BLEU TABLEAU */
-  --rb-color: #ee3939;
-  --inv-rb-color: #34a4ff;
+  --rbl-color: #ee3939;
+  --inv-rbl-color: #34a4ff;
 
   /* COULEUR DES TEXTES CORRIGÉS */
   --correction-color: #f82e2e;
@@ -289,7 +289,7 @@ div.clear, clear {
 /* TABLES LIGHT THEME, BY DEFAULT / TABLEAUX THEME CLAIR : PAR DÉFAUT*/
 
 table:not(.highlighttable)
- {
+{
   display: inline-block !important;
   width: auto !important;
   box-shadow: 7px 7px 7px;
@@ -314,16 +314,16 @@ table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
   background-color: var(--table-row-hover-bgcolor);
 }
 
-/* for RB tags on table hover --> inverse rb */
-table:not(.highlighttable) tr:nth-child(odd):hover div.rb,
-table:not(.highlighttable) tr:nth-child(odd):hover rb,
-table:not(.highlighttable) tr:nth-child(odd):hover div.brb,
-table:not(.highlighttable) tr:nth-child(odd):hover brb,
-table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.rb,
-table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover rb,
-table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.brb,
-table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover brb {
-  color: var(--inv-rb-color);
+/* for RBL tags on table hover --> inverse rb */
+table:not(.highlighttable) tr:nth-child(odd):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(odd):hover rbl,
+table:not(.highlighttable) tr:nth-child(odd):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(odd):hover brbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover rbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover brbl {
+  color: var(--inv-rbl-color);
   font-weight: 700;
 }
 
@@ -337,22 +337,25 @@ table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
   background-color: var(--table-row-hover-bgcolor);
 }
 
-/* for RB tags on table hover --> inverse rb */
-table:not(.highlighttable) tr:nth-child(even):hover div.rb,
-table:not(.highlighttable) tr:nth-child(even):hover rb,
-table:not(.highlighttable) tr:nth-child(even):hover div.brb,
-table:not(.highlighttable) tr:nth-child(even):hover brb,
-table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.rb,
-table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover rb,
-table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.brb,
-table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover brb {
-  color: var(--inv-rb-color);
+/* for RBL tags on table hover --> inverse rb */
+table:not(.highlighttable) tr:nth-child(even):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(even):hover rbl,
+table:not(.highlighttable) tr:nth-child(even):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(even):hover brbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover rbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover brbl {
+  color: var(--inv-rbl-color);
   font-weight: 700;
 }
 
 table:not(.highlighttable) td,
 table:not(.highlighttable) td:not(code table td) {
-  white-space: nowrap;
+  /* OLD */
+  /* white-space: nowrap; */
+  white-space: normal;
+  /* word-wrap: break-word; */
   border: solid 1.2px var(--table-header-border);
 }
 
@@ -414,29 +417,19 @@ div.bblack, bblack, div.bnoir, bnoir {
   font-weight: 700;
 }
 
-div.rb, rb,
-dib.brb, brb { /* Red Blue */
-  color: var(--rb-color);
+div.rbl, rbl,
+div.brbl, brbl { /* Red Blue */
+  /* display: inline-block;
+  white-space: normal; */
+  color: var(--rbl-color);
   font-weight: 700;
 }
 
-div.irb, irb { /* Inverse Red Blue */
-  color: var(--inv-rb-color);
+div.irb, irb,
+div.irbl, irbl { /* Inverse Red Blue */
+  color: var(--inv-rbl-color);
   font-weight: 700;
 }
-
-/* div.bred, bred, div.brouge, brouge,
-div.bblue, bblue, div.bbleu, bbleu,
-div.bpurple, bpurple, div.bviolet, bviolet,
-div.bgreen, bgreen, div.bvert, bvert,
-div.byellow, byellow, div.bjaune, bjaune,
-div.borange, borange, div.borange, borange,
-div.bgrey, bgrey, div.bgris, bgris,
-div.bblack, bblack, div.bnoir, bnoir,
-div.brb, brb {
-  font-weight: 700;
-} */
-
 
  /* ENCADREMENTS */
 encadre, #encadre, .encadre, enc

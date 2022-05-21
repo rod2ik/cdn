@@ -59,9 +59,9 @@
 --enc-box-shadow: 3px 3px 5px #ccc;
 
 /* ROUGE BLEU TABLEAU */
-/* --rb-color: #1d90ee; */
---rb-color: #34a4ff;
---inv-rb-color: #e92c29;
+/* --rbl-color: #1d90ee; */
+--rbl-color: #34a4ff;
+--inv-rbl-color: #e92c29;
 
 /* COULEUR DES TEXTES CORRIGÉS */
 --correction-color: #ffcecc;
