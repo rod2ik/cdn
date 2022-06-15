@@ -18,15 +18,18 @@ function toAdmonitionClassString(array) {
   var s = "";
   array.forEach(element => {
     s += ".admonition."+element.toLowerCase()+", "
+    s += "details."+element.toLowerCase()+", "
   });
   return s.substring(0,s.length-2).trim();
 } 
 
 // Définitions
-var defRendering = ["Def", "Definition", "Définition"];
+var defRendering = ["Def", "Définition", "Definition"];
 var admonitionDef = toAdmonitionClassString(defRendering);
+console.log(admonitionDef);
 var def = document.querySelectorAll(admonitionDef);
 var nbDef = def.length;
+console.log("NB Def="+nbDef);
 for (let i = 0; i < nbDef; i++) {
     if (defRendering.includes(def[i].firstElementChild.innerHTML)) {
       def[i].firstElementChild.innerHTML = replaceBy["definition"]+(i+1)+".";
