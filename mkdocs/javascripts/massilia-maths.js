@@ -17,8 +17,8 @@ var replaceBy = {
 function toAdmonitionClassString(array) {
   var s = "";
   array.forEach(element => {
-    s += ".admonition."+element.toLowerCase()+", "
-    s += "details."+element.toLowerCase()+", "
+    s += ".admonition."+element.toLowerCase()+", " // !!! Normal Admonitions
+    s += "details."+element.toLowerCase()+", "     // ??? Expandible Admonition Blocks
   });
   return s.substring(0,s.length-2).trim();
 } 
@@ -26,10 +26,8 @@ function toAdmonitionClassString(array) {
 // Définitions
 var defRendering = ["Def", "Définition", "Definition"];
 var admonitionDef = toAdmonitionClassString(defRendering);
-console.log(admonitionDef);
 var def = document.querySelectorAll(admonitionDef);
 var nbDef = def.length;
-console.log("NB Def="+nbDef);
 for (let i = 0; i < nbDef; i++) {
     if (defRendering.includes(def[i].firstElementChild.innerHTML)) {
       def[i].firstElementChild.innerHTML = replaceBy["definition"]+(i+1)+".";
