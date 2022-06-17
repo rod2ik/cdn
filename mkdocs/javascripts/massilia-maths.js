@@ -191,3 +191,12 @@ for (let i = 0; i < nbJeretiens; i++) {
     jeretiens[i].firstElementChild.innerHTML = replaceBy["jeretiens"]+(i+1)+". "+jeretiens[i].firstElementChild.innerHTML
   }
 }
+
+// Automatic Centering of Tables
+window.addEventListener('load', function() {
+  // console.log("THIS MKDOCS PAGE IS LOADED");
+  document.querySelectorAll(".md-typeset table")
+    .forEach( el => {
+    el.parentNode.classList.add("center");
+  });
+});
