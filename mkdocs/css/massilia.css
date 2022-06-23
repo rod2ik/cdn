@@ -292,6 +292,7 @@ table:not(.highlighttable)
 {
   /* display: inline-block !important; */
   width: auto !important;
+  margin-bottom: 0.5em !important;
   box-shadow: 7px 7px 7px;
   border: solid 1.2px var(--table-header-border);
 }
