@@ -90,10 +90,19 @@ window.addEventListener('load', function() {
   function fix_pie() {
     // console.log("FIX PIE");
     let box_text_color = get_var("--mermaid-box-text-color");
+    // let pie_border_color = get_var("--mermaid-pie-border-color");
+    // let pie_border_width = get_var("--mermaid-pie-border-width");
+
     document.querySelectorAll("svg[id^='mermaid-'] [class*='activeText'], svg[id^='mermaid-'] [class*='doneText'], svg[id^='mermaid-'] [class*='taskTextOutsideRight']")
     .forEach( el => {
       el.style.setProperty("fill", box_text_color, "important");
     });
+    // Ne fonctionne pas, car écrasé par le js de mermaid
+    // document.querySelectorAll("svg[id^='mermaid-'] .pieCircle")
+    // .forEach( el => {
+    //   el.style.setProperty("stroke", pie_border_color, "important");
+    //   el.style.setProperty("stroke-width", pie_border_width, "important");
+    // });
   }
 
   function fix_git() {

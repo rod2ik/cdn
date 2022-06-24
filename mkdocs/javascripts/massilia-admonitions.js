@@ -1,3 +1,5 @@
+/* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+
 var replaceBy = {
   "definition": "Définition ",
   "lemma": "Lemme ",
@@ -40,7 +42,7 @@ for (let i = 0; i < nbDef; i++) {
 var lemRendering = ["Lem", "Lemme", "Lemma"];
 var admonitionLem = toAdmonitionClassString(lemRendering);
 var lem = document.querySelectorAll(admonitionLem);
-nbLemmes = lem.length;
+var nbLemmes = lem.length;
 for (let i = 0; i < nbLemmes; i++) {
   if (lemRendering.includes(lem[i].firstElementChild.innerHTML)) {
     lem[i].firstElementChild.innerHTML = replaceBy["lemma"]+(i+1)+".";
@@ -53,7 +55,7 @@ for (let i = 0; i < nbLemmes; i++) {
 var pteRendering = ["Pte", "Propriete", "Propriété", "Property"];
 var admonitionPte = toAdmonitionClassString(pteRendering);
 var pte = document.querySelectorAll(admonitionPte);
-nbPtes = pte.length;
+var nbPtes = pte.length;
 for (let i = 0; i < nbPtes; i++) {
   if (pteRendering.includes(pte[i].firstElementChild.innerHTML)) {
     pte[i].firstElementChild.innerHTML = replaceBy["property"]+(i+1)+".";
@@ -66,7 +68,7 @@ for (let i = 0; i < nbPtes; i++) {
 var propRendering = ["Prop", "Proposition"];
 var admonitionProp = toAdmonitionClassString(propRendering);
 var prop = document.querySelectorAll(admonitionProp);
-nbProp = prop.length;
+var nbProp = prop.length;
 for (let i = 0; i < nbProp; i++) {
   if (propRendering.includes(prop[i].firstElementChild.innerHTML)) {
     prop[i].firstElementChild.innerHTML = replaceBy["proposition"]+(i+1)+".";
@@ -79,7 +81,7 @@ for (let i = 0; i < nbProp; i++) {
 var thmRendering = ["Thm", "Théorème", "Theoreme", "Theorem"];
 var admonitionThm = toAdmonitionClassString(thmRendering);
 var thm = document.querySelectorAll(admonitionThm);
-nbThm = thm.length;
+var nbThm = thm.length;
 for (let i = 0; i < nbThm; i++) {
   if (thmRendering.includes(thm[i].firstElementChild.innerHTML)) {
     thm[i].firstElementChild.innerHTML = replaceBy["theorem"]+(i+1)+".";
@@ -92,7 +94,7 @@ for (let i = 0; i < nbThm; i++) {
 var exRendering = ["Ex", "Exo", "Exercice"];
 var admonitionEx = toAdmonitionClassString(exRendering);
 var ex = document.querySelectorAll(admonitionEx);
-nbEx = ex.length;
+var nbEx = ex.length;
 for (let i = 0; i < nbEx; i++) {
   if (exRendering.includes(ex[i].firstElementChild.innerHTML)) {
     ex[i].firstElementChild.innerHTML = replaceBy["exercice"]+(i+1)+".";
@@ -105,7 +107,7 @@ for (let i = 0; i < nbEx; i++) {
 var expRendering = ["Exp", "Exemple", "Example"];
 var admonitionExp = toAdmonitionClassString(expRendering);
 var exp = document.querySelectorAll(admonitionExp);
-nbExp = exp.length;
+var nbExp = exp.length;
 for (let i = 0; i < nbExp; i++) {
   if (expRendering.includes(exp[i].firstElementChild.innerHTML)) {
     exp[i].firstElementChild.innerHTML = replaceBy["example"]+(i+1)+".";
@@ -118,7 +120,7 @@ for (let i = 0; i < nbExp; i++) {
 var mthRendering = ["Mth", "Méthode", "Methode", "Method"];
 var admonitionMth = toAdmonitionClassString(mthRendering);
 var mth = document.querySelectorAll(admonitionMth);
-nbMth = mth.length;
+var nbMth = mth.length;
 for (let i = 0; i < nbMth; i++) {
   if (mthRendering.includes(mth[i].firstElementChild.innerHTML)) {
     mth[i].firstElementChild.innerHTML = replaceBy["method"]+(i+1)+".";
@@ -131,7 +133,7 @@ for (let i = 0; i < nbMth; i++) {
 var pyRendering = ["Python", "Py"];
 var admonitionPy = toAdmonitionClassString(pyRendering);
 var py = document.querySelectorAll(admonitionPy);
-nbPy = py.length;
+var nbPy = py.length;
 for (let i = 0; i < nbPy; i++) {
   if (pyRendering.includes(py[i].firstElementChild.innerHTML)) {
     py[i].firstElementChild.innerHTML = replaceBy["python"]+(i+1)+".";
@@ -144,7 +146,7 @@ for (let i = 0; i < nbPy; i++) {
 var notRendering = ["Not", "Nota", "Notation"];
 var admonitionNotation = toAdmonitionClassString(notRendering);
 var notation = document.querySelectorAll(admonitionNotation);
-nbNotation = notation.length;
+var nbNotation = notation.length;
 for (let i = 0; i < nbNotation; i++) {
   if (notRendering.includes(notation[i].firstElementChild.innerHTML)) {
     notation[i].firstElementChild.innerHTML = replaceBy["notation"]+(i+1)+".";
@@ -157,7 +159,7 @@ for (let i = 0; i < nbNotation; i++) {
 var repRendering = ["Rep", "Rép", "Reponse", "Réponse", "Answer"];
 var admonitionReponse = toAdmonitionClassString(repRendering);
 var reponse = document.querySelectorAll(admonitionReponse);
-nbReponse = reponse.length;
+var nbReponse = reponse.length;
 for (let i = 0; i < nbReponse; i++) {
   if (repRendering.includes(reponse[i].firstElementChild.innerHTML)) {
     reponse[i].firstElementChild.innerHTML = replaceBy["reponse"]+(i+1)+".";
@@ -170,7 +172,7 @@ for (let i = 0; i < nbReponse; i++) {
 var corRendering = ["Cor", "Corr", "Corrige", "Corrigé", "Correction"];
 var admonitionCorrige = toAdmonitionClassString(corRendering);
 var corrige = document.querySelectorAll(admonitionCorrige);
-nbCorrige = corrige.length;
+var nbCorrige = corrige.length;
 for (let i = 0; i < nbCorrige; i++) {
   if (corRendering.includes(corrige[i].firstElementChild.innerHTML)) {
     corrige[i].firstElementChild.innerHTML = replaceBy["corrige"]+(i+1)+".";
@@ -183,7 +185,7 @@ for (let i = 0; i < nbCorrige; i++) {
 var jeretiensRendering = ["Jeretiens", "Iremember"];
 var admonitionJeretiens = toAdmonitionClassString(jeretiensRendering);
 var jeretiens = document.querySelectorAll(admonitionJeretiens);
-nbJeretiens = jeretiens.length;
+var nbJeretiens = jeretiens.length;
 for (let i = 0; i < nbJeretiens; i++) {
   if (jeretiensRendering.includes(jeretiens[i].firstElementChild.innerHTML)) {
     jeretiens[i].firstElementChild.innerHTML = replaceBy["jeretiens"]+(i+1)+".";
@@ -192,11 +194,3 @@ for (let i = 0; i < nbJeretiens; i++) {
   }
 }
 
-// Automatic Centering of Tables
-window.addEventListener('load', function() {
-  // console.log("THIS MKDOCS PAGE IS LOADED");
-  document.querySelectorAll(".md-typeset table")
-    .forEach( el => {
-    el.parentNode.classList.add("center");
-  });
-});

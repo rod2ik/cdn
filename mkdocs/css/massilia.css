@@ -1,10 +1,11 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 @import url("massilia-dark.css");
-@import url("massilia-maths.css");
+@import url("massilia-admonitions.css");
 /* COLONNES PERSONNALISÉES */
 /* @import url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/mkdocs-columns.css"); */
-@import url("mkdocs-columns.css");
+@import url("massilia-columns.css");
+@import url("massilia-mermaid.css");
 
 /* IMPORT LED BRIGHT */
 @font-face {
