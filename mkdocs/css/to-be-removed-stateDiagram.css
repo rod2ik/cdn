@@ -1,0 +1,53 @@
+#graph-div {
+  font-family:"trebuchet ms",verdana,arial,sans-serif;
+  font-size:16px;
+  fill:#ccc;}
+
+  #graph-div .error-icon{
+  fill:#a44141;
+}
+
+#graph-div .error-text{
+  fill:#ddd;stroke:#ddd;
+}
+
+#graph-div .edge-thickness-normal{
+  stroke-width:2px;
+}
+
+#graph-div .edge-thickness-thick{
+  stroke-width:3.5px;
+}
+
+#graph-div .edge-pattern-solid{
+  stroke-dasharray:0;
+}
+
+#graph-div .edge-pattern-dashed{
+  stroke-dasharray:3;
+}
+
+#graph-div .edge-pattern-dotted{
+  stroke-dasharray:2;
+}
+
+#graph-div .marker{
+  fill:lightgrey;
+  stroke:lightgrey;
+}
+
+#graph-div .marker.cross{
+  stroke:lightgrey;
+}
+
+#graph-div svg{
+  font-family:"trebuchet ms",verdana,arial,sans-serif;
+  font-size:16px;
+}
+
+#graph-div defs #statediagram-barbEnd {
+  fill:lightgrey;
+  stroke:lightgrey;
+}
+
+#graph-div g.stateGroup text{fill:#81B1DB;stroke:none;font-size:10px;}#graph-div g.stateGroup text{fill:#ccc;stroke:none;font-size:10px;}#graph-div g.stateGroup .state-title{font-weight:bolder;fill:#e0dfdf;}#graph-div g.stateGroup rect{fill:#1f2020;stroke:#81B1DB;}#graph-div g.stateGroup line{stroke:lightgrey;stroke-width:1;}#graph-div .transition{stroke:lightgrey;stroke-width:1;fill:none;}#graph-div .stateGroup .composit{fill:#333;border-bottom:1px;}#graph-div .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px;}#graph-div .state-note{stroke:hsl(180, 0%, 18.3529411765%);fill:hsl(180, 1.5873015873%, 28.3529411765%);}#graph-div .state-note text{fill:rgb(183.8476190475, 181.5523809523, 181.5523809523);stroke:none;font-size:10px;}#graph-div .stateLabel .box{stroke:none;stroke-width:0;fill:#1f2020;opacity:0.5;}#graph-div .edgeLabel .label rect{fill:#1f2020;opacity:0.5;}#graph-div .edgeLabel .label text{fill:#ccc;}#graph-div .label div .edgeLabel{color:#ccc;}#graph-div .stateLabel text{fill:#e0dfdf;font-size:10px;font-weight:bold;}#graph-div .node circle.state-start{fill:#f4f4f4;stroke:#f4f4f4;}#graph-div .node .fork-join{fill:#f4f4f4;stroke:#f4f4f4;}#graph-div .node circle.state-end{fill:hsl(180, 0%, 2.3529411765%);stroke:#333;stroke-width:1.5;}#graph-div .end-state-inner{fill:#333;stroke-width:1.5;}#graph-div .node rect{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#graph-div .node polygon{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#graph-div #statediagram-barbEnd{fill:lightgrey;}#graph-div .statediagram-cluster rect{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#graph-div .cluster-label,#graph-div .nodeLabel{color:#e0dfdf;}#graph-div .statediagram-cluster rect.outer{rx:5px;ry:5px;}#graph-div .statediagram-state .divider{stroke:#81B1DB;}#graph-div .statediagram-state .title-state{rx:5px;ry:5px;}#graph-div .statediagram-cluster.statediagram-cluster .inner{fill:#333;}#graph-div .statediagram-cluster.statediagram-cluster-alt .inner{fill:#555;}#graph-div .statediagram-cluster .inner{rx:0;ry:0;}#graph-div .statediagram-state rect.basic{rx:5px;ry:5px;}#graph-div .statediagram-state rect.divider{stroke-dasharray:10,10;fill:#555;}#graph-div .note-edge{stroke-dasharray:5;}#graph-div .statediagram-note rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:hsl(180, 0%, 18.3529411765%);stroke-width:1px;rx:0;ry:0;}#graph-div .statediagram-note rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:hsl(180, 0%, 18.3529411765%);stroke-width:1px;rx:0;ry:0;}#graph-div .statediagram-note text{fill:rgb(183.8476190475, 181.5523809523, 181.5523809523);}#graph-div .statediagram-note .nodeLabel{color:rgb(183.8476190475, 181.5523809523, 181.5523809523);}#graph-div .statediagram .edgeLabel{color:red;}#graph-div #dependencyStart,#graph-div #dependencyEnd{fill:lightgrey;stroke:lightgrey;stroke-width:1;}#graph-div :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}

@@ -19,14 +19,13 @@ var replaceBy = {
 function toAdmonitionClassString(array) {
   var s = "";
   array.forEach(element => {
-    s += ".admonition."+element.toLowerCase()+", " // !!! Normal Admonitions
-    s += "details."+element.toLowerCase()+", "     // ??? Expandible Admonition Blocks
+    s += ".admonition."+element.toLowerCase()+", "
   });
   return s.substring(0,s.length-2).trim();
 } 
 
 // Définitions
-var defRendering = ["Def", "Définition", "Definition"];
+var defRendering = ["Def", "Definition", "Définition"];
 var admonitionDef = toAdmonitionClassString(defRendering);
 var def = document.querySelectorAll(admonitionDef);
 var nbDef = def.length;
@@ -90,6 +89,19 @@ for (let i = 0; i < nbThm; i++) {
   }
 }
 
+// Python
+var pyRendering = ["Python", "Py"];
+var admonitionPy = toAdmonitionClassString(pyRendering);
+var py = document.querySelectorAll(admonitionPy);
+var nbPy = py.length;
+for (let i = 0; i < nbPy; i++) {
+  if (pyRendering.includes(py[i].firstElementChild.innerHTML)) {
+    py[i].firstElementChild.innerHTML = replaceBy["python"]+(i+1)+".";
+  } else {
+    py[i].firstElementChild.innerHTML = replaceBy["python"]+(i+1)+". "+py[i].firstElementChild.innerHTML
+  }
+}
+
 // Exercices
 var exRendering = ["Ex", "Exo", "Exercice"];
 var admonitionEx = toAdmonitionClassString(exRendering);
@@ -126,19 +138,6 @@ for (let i = 0; i < nbMth; i++) {
     mth[i].firstElementChild.innerHTML = replaceBy["method"]+(i+1)+".";
   } else {
     mth[i].firstElementChild.innerHTML = replaceBy["method"]+(i+1)+". "+mth[i].firstElementChild.innerHTML
-  }
-}
-
-// Python
-var pyRendering = ["Python", "Py"];
-var admonitionPy = toAdmonitionClassString(pyRendering);
-var py = document.querySelectorAll(admonitionPy);
-var nbPy = py.length;
-for (let i = 0; i < nbPy; i++) {
-  if (pyRendering.includes(py[i].firstElementChild.innerHTML)) {
-    py[i].firstElementChild.innerHTML = replaceBy["python"]+(i+1)+".";
-  } else {
-    py[i].firstElementChild.innerHTML = replaceBy["python"]+(i+1)+". "+py[i].firstElementChild.innerHTML
   }
 }
 
@@ -193,4 +192,3 @@ for (let i = 0; i < nbJeretiens; i++) {
     jeretiens[i].firstElementChild.innerHTML = replaceBy["jeretiens"]+(i+1)+". "+jeretiens[i].firstElementChild.innerHTML
   }
 }
-

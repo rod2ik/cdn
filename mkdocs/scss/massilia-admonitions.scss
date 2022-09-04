@@ -1,5 +1,5 @@
-@charset "UTF-8";
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+
 :root {
   /* ROUGE BLEU TABLEAU */
   --rb-color: #ee3939;
@@ -10,6 +10,7 @@
 /* ======================================================= */
 /*                   MATHS ADMONITIONS                     */
 /* ======================================================= */
+
 /* def - DEFINITION */
 :root {
   --md-admonition-icon--def: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open" class="svg-inline--fa fa-book-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path></svg>');
@@ -23,23 +24,24 @@
 .md-typeset .admonition.def,
 .md-typeset details.def,
 .md-typeset .admonition.definition,
-.md-typeset details.definition {
+.md-typeset details.definition
+ {
   border-color: rgb(43, 155, 70);
 }
-
 .md-typeset .def > .admonition-title,
 .md-typeset .def > summary,
 .md-typeset .definition > .admonition-title,
-.md-typeset .definition > summary {
+.md-typeset .definition > summary
+ {
   /* background-color: rgba(43, 155, 70, 0.15); */
   background-color: rgba(38, 226, 82, 0.212);
   border-color: rgb(43, 155, 70);
 }
-
 .md-typeset .def > .admonition-title::before,
-.md-typeset .def > summary::before,
+.md-typeset .def > summary::before, 
 .md-typeset .definition > .admonition-title::before,
-.md-typeset .definition > summary::before {
+.md-typeset .definition > summary::before 
+{
   background-color: rgb(43, 155, 70);
   -webkit-mask-image: var(--md-admonition-icon--def);
   mask-image: var(--md-admonition-icon--def);
@@ -51,32 +53,32 @@
   --md-admonition-icon--lemme: var(--md-admonition-icon--lem);
   --md-admonition-icon--lemma: var(--md-admonition-icon--lem);
 }
-
 .md-typeset .admonition.lem,
 .md-typeset details.lem,
 .md-typeset .admonition.lemme,
 .md-typeset details.lemme,
 .md-typeset .admonition.lemma,
-.md-typeset details.lemma {
+.md-typeset details.lemma
+{
   border-color: rgb(102, 174, 223);
 }
-
 .md-typeset .lem > .admonition-title,
 .md-typeset .lem > summary,
 .md-typeset .lemme > .admonition-title,
 .md-typeset .lemme > summary,
 .md-typeset .lemma > .admonition-title,
-.md-typeset .lemma > summary {
+.md-typeset .lemma > summary
+{
   background-color: rgba(102, 174, 223, 0.15);
   border-color: rgb(102, 174, 223);
 }
-
 .md-typeset .lem > .admonition-title::before,
-.md-typeset .lem > summary::before,
+.md-typeset .lem > summary::before, 
 .md-typeset .lemme > .admonition-title::before,
-.md-typeset .lemme > summary::before,
+.md-typeset .lemme > summary::before, 
 .md-typeset .lemma > .admonition-title::before,
-.md-typeset .lemma > summary::before {
+.md-typeset .lemma > summary::before 
+{
   background-color: rgb(26, 153, 238);
   -webkit-mask-image: var(--md-admonition-icon--pte);
   mask-image: var(--md-admonition-icon--pte);
@@ -88,30 +90,29 @@
   --md-admonition-icon--propriété: var(--md-admonition-icon--pte);
   --md-admonition-icon--propriete: var(--md-admonition-icon--pte);
 }
-
 .md-typeset .admonition.pte,
-.md-typeset details.pte,
+.md-typeset details.pte, 
 .md-typeset .admonition.propriete,
-.md-typeset details.propriete,
+.md-typeset details.propriete, 
 .md-typeset .admonition.propriété,
-.md-typeset details.propriété,
+.md-typeset details.propriété, 
 .md-typeset .admonition.property,
-.md-typeset details.property {
+.md-typeset details.property
+{
   border-color: rgb(102, 174, 223);
 }
-
 .md-typeset .pte > .admonition-title,
-.md-typeset .pte > summary,
+.md-typeset .pte > summary, 
 .md-typeset .propriete > .admonition-title,
-.md-typeset .propriete > summary,
+.md-typeset .propriete > summary, 
 .md-typeset .propriété > .admonition-title,
-.md-typeset .propriété > summary,
+.md-typeset .propriété > summary, 
 .md-typeset .property > .admonition-title,
-.md-typeset .property > summary {
+.md-typeset .property > summary
+{
   background-color: rgba(102, 174, 223, 0.15);
   border-color: rgb(102, 174, 223);
 }
-
 .md-typeset .pte > .admonition-title::before,
 .md-typeset .pte > summary::before,
 .md-typeset .propriete > .admonition-title::before,
@@ -119,7 +120,8 @@
 .md-typeset .propriété > .admonition-title::before,
 .md-typeset .propriété > summary::before,
 .md-typeset .property > .admonition-title::before,
-.md-typeset .property > summary::before {
+.md-typeset .property > summary::before
+{
   background-color: rgb(26, 153, 238);
   -webkit-mask-image: var(--md-admonition-icon--pte);
   mask-image: var(--md-admonition-icon--pte);
@@ -130,26 +132,26 @@
   --md-admonition-icon--prop: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="jedi" class="svg-inline--fa fa-jedi fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M535.95308,352c-42.64069,94.17188-137.64086,160-247.9848,160q-6.39844,0-12.84377-.29688C171.15558,506.9375,81.26481,442.23438,40.01474,352H79.93668L21.3272,293.40625a264.82522,264.82522,0,0,1-5.10938-39.42187,273.6653,273.6653,0,0,1,.5-29.98438H63.93665L22.546,182.625A269.79782,269.79782,0,0,1,130.51489,20.54688a16.06393,16.06393,0,0,1,9.28127-3,16.36332,16.36332,0,0,1,13.5,7.25,16.02739,16.02739,0,0,1,1.625,15.09374,138.387,138.387,0,0,0-9.84376,51.26563c0,45.10937,21.04691,86.57813,57.71884,113.73437a16.29989,16.29989,0,0,1,1.20313,25.39063c-26.54692,23.98437-41.17194,56.5-41.17194,91.57813,0,60.03124,42.95319,110.28124,99.89079,121.92187l2.5-65.26563L238.062,397a8.33911,8.33911,0,0,1-10-.75,8.025,8.025,0,0,1-1.39063-9.9375l20.125-33.76562-42.06257-8.73438a7.9898,7.9898,0,0,1,0-15.65625l42.06257-8.71875-20.10941-33.73438a7.99122,7.99122,0,0,1,11.35939-10.71874L268.437,295.64062,279.95265,7.67188a7.97138,7.97138,0,0,1,8-7.67188h.04687a8.02064,8.02064,0,0,1,7.95314,7.70312L307.48394,295.625l30.39068-20.67188a8.08327,8.08327,0,0,1,10,.8125,7.99866,7.99866,0,0,1,1.39062,9.90626L329.12461,319.4375l42.07819,8.73438a7.99373,7.99373,0,0,1,0,15.65624l-42.07819,8.71876,20.1094,33.73437a7.97791,7.97791,0,0,1-1.32812,9.92187A8.25739,8.25739,0,0,1,337.87462,397L310.7027,378.53125l2.5,65.34375c48.48446-9.40625,87.57828-48.15625,97.31267-96.5A123.52652,123.52652,0,0,0,371.9528,230.29688a16.30634,16.30634,0,0,1,1.20313-25.42188c36.65631-27.17188,57.6876-68.60938,57.6876-113.73438a138.01689,138.01689,0,0,0-9.85939-51.3125,15.98132,15.98132,0,0,1,1.60937-15.09374,16.36914,16.36914,0,0,1,13.5-7.23438,16.02453,16.02453,0,0,1,9.25,2.98438A271.26947,271.26947,0,0,1,553.25,182.76562L511.99992,224h46.9532C559.3125,229.76562,560,235.45312,560,241.26562a270.092,270.092,0,0,1-5.125,51.85938L495.98427,352Z"></path></svg>');
   --md-admonition-icon--proposition: var(--md-admonition-icon--prop);
 }
-
 .md-typeset .admonition.prop,
 .md-typeset details.prop,
 .md-typeset .admonition.proposition,
-.md-typeset details.proposition {
+.md-typeset details.proposition
+ {
   border-color: rgb(102, 174, 223);
 }
-
 .md-typeset .prop > .admonition-title,
 .md-typeset .prop > summary,
 .md-typeset .proposition > .admonition-title,
-.md-typeset .proposition > summary {
+.md-typeset .proposition > summary
+ {
   background-color: rgba(102, 174, 223, 0.15);
   border-color: rgb(102, 174, 223);
 }
-
 .md-typeset .prop > .admonition-title::before,
-.md-typeset .prop > summary::before,
+.md-typeset .prop > summary::before, 
 .md-typeset .proposition > .admonition-title::before,
-.md-typeset .proposition > summary::before {
+.md-typeset .proposition > summary::before
+{
   background-color: rgb(26, 153, 238);
   -webkit-mask-image: var(--md-admonition-icon--prop);
   mask-image: var(--md-admonition-icon--prop);
@@ -162,38 +164,38 @@
   --md-admonition-icon--theoreme: var(--md-admonition-icon--thm);
   --md-admonition-icon--theorem: var(--md-admonition-icon--thm);
 }
-
 .md-typeset .admonition.thm,
-.md-typeset details.thm,
+.md-typeset details.thm, 
 .md-typeset .admonition.théorème,
-.md-typeset details.théorème,
+.md-typeset details.théorème, 
 .md-typeset .admonition.theoreme,
-.md-typeset details.theoreme,
+.md-typeset details.theoreme, 
 .md-typeset .admonition.theorem,
-.md-typeset details.theorem {
+.md-typeset details.theorem
+{
   border-color: rgb(250, 156, 156);
 }
-
 .md-typeset .thm > .admonition-title,
-.md-typeset .thm > summary,
+.md-typeset .thm > summary, 
 .md-typeset .théorème > .admonition-title,
-.md-typeset .théorème > summary,
+.md-typeset .théorème > summary, 
 .md-typeset .theoreme > .admonition-title,
-.md-typeset .theoreme > summary,
+.md-typeset .theoreme > summary, 
 .md-typeset .theorem > .admonition-title,
-.md-typeset .theorem > summary {
+.md-typeset .theorem > summary
+{
   background-color: rgba(250, 156, 156, 0.25);
   border-color: rgb(250, 156, 156);
 }
-
 .md-typeset .thm > .admonition-title::before,
-.md-typeset .thm > summary::before,
+.md-typeset .thm > summary::before, 
 .md-typeset .théorème > .admonition-title::before,
-.md-typeset .théorème > summary::before,
+.md-typeset .théorème > summary::before, 
 .md-typeset .theoreme > .admonition-title::before,
-.md-typeset .theoreme > summary::before,
+.md-typeset .theoreme > summary::before, 
 .md-typeset .theorem > .admonition-title::before,
-.md-typeset .theorem > summary::before {
+.md-typeset .theorem > summary::before
+{
   background-color: rgb(250, 74, 74);
   -webkit-mask-image: var(--md-admonition-icon--thm);
   mask-image: var(--md-admonition-icon--thm);
@@ -205,20 +207,20 @@
   /* --md-admonition-icon--python: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="python" class="svg-inline--fa fa-python fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"></path></svg>'); */
   --md-admonition-icon--py: var(--md-admonition-icon--python);
 }
-
 .md-typeset .admonition.python,
-.md-typeset details.python {
+.md-typeset details.python
+{
   border-color: var(--md-admonition-python-border-color);
 }
-
 .md-typeset .python > .admonition-title,
-.md-typeset .python > summary {
+.md-typeset .python > summary
+{
   background-color: var(--md-admonition-python-title-background);
   border-color: rgb(255, 211, 67);
 }
-
 .md-typeset .python > .admonition-title::before,
-.md-typeset .python > summary::before {
+.md-typeset .python > summary::before
+{
   background-color: rgb(255, 211, 67);
   -webkit-mask-image: var(--md-admonition-icon--python);
   mask-image: var(--md-admonition-icon--python);
@@ -227,6 +229,7 @@
 /* ======================================================= */
 /*              GENERAL EDUCATIONAL ADMONITIONS            */
 /* ======================================================= */
+
 /* ex - exo - EXERCICES */
 :root {
   /* --md-admonition-icon--ex: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="steam-symbol" class="svg-inline--fa fa-steam-symbol fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M395.5 177.5c0 33.8-27.5 61-61 61-33.8 0-61-27.3-61-61s27.3-61 61-61c33.5 0 61 27.2 61 61zm52.5.2c0 63-51 113.8-113.7 113.8L225 371.3c-4 43-40.5 76.8-84.5 76.8-40.5 0-74.7-28.8-83-67L0 358V250.7L97.2 290c15.1-9.2 32.2-13.3 52-11.5l71-101.7c.5-62.3 51.5-112.8 114-112.8C397 64 448 115 448 177.7zM203 363c0-34.7-27.8-62.5-62.5-62.5-4.5 0-9 .5-13.5 1.5l26 10.5c25.5 10.2 38 39 27.7 64.5-10.2 25.5-39.2 38-64.7 27.5-10.2-4-20.5-8.3-30.7-12.2 10.5 19.7 31.2 33.2 55.2 33.2 34.7 0 62.5-27.8 62.5-62.5zm207.5-185.3c0-42-34.3-76.2-76.2-76.2-42.3 0-76.5 34.2-76.5 76.2 0 42.2 34.3 76.2 76.5 76.2 41.9.1 76.2-33.9 76.2-76.2z"></path></svg>'); */
@@ -234,35 +237,35 @@
   --md-admonition-icon--exo: var(--md-admonition-icon--ex);
   --md-admonition-icon--exercice: var(--md-admonition-icon--ex);
 }
-
 .md-typeset .admonition.ex,
-.md-typeset details.ex,
+.md-typeset details.ex, 
 .md-typeset .admonition.exo,
-.md-typeset details.exo,
+.md-typeset details.exo, 
 .md-typeset .admonition.exercice,
-.md-typeset details.exercice {
+.md-typeset details.exercice 
+{
   border-color: rgb(255, 188, 81);
 }
-
 .md-typeset .ex > .admonition-title,
 .md-typeset .ex > summary,
 .md-typeset .exo > .admonition-title,
 .md-typeset .exo > summary,
 .md-typeset .exercice > .admonition-title,
-.md-typeset .exercice > summary {
+.md-typeset .exercice > summary
+ {
   background-color: rgba(255, 188, 81, 0.25);
   border-color: rgb(255, 188, 81);
 }
-
 .md-typeset .ex > .admonition-title::before,
-.md-typeset .ex > summary::before,
+.md-typeset .ex > summary::before, 
 .md-typeset .exo > .admonition-title::before,
-.md-typeset .exo > summary::before,
+.md-typeset .exo > summary::before, 
 .md-typeset .exercice > .admonition-title::before,
-.md-typeset .exercice > summary::before {
+.md-typeset .exercice > summary::before
+{
   background-color: rgb(253, 167, 28);
   -webkit-mask-image: var(--md-admonition-icon--ex);
-  mask-image: var(--md-admonition-icon--ex);
+          mask-image: var(--md-admonition-icon--ex);
 }
 
 /* exp - EXEMPLE */
@@ -271,36 +274,36 @@
   --md-admonition-icon--exemple: var(--md-admonition-icon--exp);
   --md-admonition-icon--example: var(--md-admonition-icon--exp);
 }
-
 .md-typeset .admonition.exp,
-.md-typeset details.exp,
+.md-typeset details.exp, 
 .md-typeset .admonition.exemple,
 .md-typeset details.exemple,
 .md-typeset .admonition.example,
-.md-typeset details.example {
+.md-typeset details.example 
+{
   border-color: rgb(246, 231, 10);
 }
-
 .md-typeset .exp > .admonition-title,
 .md-typeset .exp > summary,
 .md-typeset .exemple > .admonition-title,
 .md-typeset .exemple > summary,
 .md-typeset .example > .admonition-title,
-.md-typeset .example > summary {
+.md-typeset .example > summary
+ {
   background-color: rgba(246, 231, 81, 0.25);
   border-color: rgb(246, 231, 10);
 }
-
 .md-typeset .exp > .admonition-title::before,
-.md-typeset .exp > summary::before,
+.md-typeset .exp > summary::before, 
 .md-typeset .exemple > .admonition-title::before,
 .md-typeset .exemple > summary::before,
 .md-typeset .example > .admonition-title::before,
-.md-typeset .example > summary::before {
+.md-typeset .example > summary::before
+{
   background-color: rgb(246, 231, 10);
   -webkit-mask-image: var(--md-admonition-icon--exp);
-  mask-image: var(--md-admonition-icon--exp);
-}
+          mask-image: var(--md-admonition-icon--exp);
+  }
 
 /* METHODES */
 :root {
@@ -309,38 +312,38 @@
   --md-admonition-icon--methode: var(--md-admonition-icon--mth);
   --md-admonition-icon--method: var(--md-admonition-icon--mth);
 }
-
 .md-typeset .admonition.mth,
-.md-typeset details.mth,
+.md-typeset details.mth, 
 .md-typeset .admonition.méthode,
-.md-typeset details.méthode,
+.md-typeset details.méthode, 
 .md-typeset .admonition.methode,
-.md-typeset details.methode,
+.md-typeset details.methode, 
 .md-typeset .admonition.method,
-.md-typeset details.method {
+.md-typeset details.method
+{
   border-color: rgb(238, 113, 255);
 }
-
 .md-typeset .mth > .admonition-title,
-.md-typeset .mth > summary,
+.md-typeset .mth > summary, 
 .md-typeset .méthode > .admonition-title,
-.md-typeset .méthode > summary,
+.md-typeset .méthode > summary, 
 .md-typeset .methode > .admonition-title,
-.md-typeset .methode > summary,
+.md-typeset .methode > summary, 
 .md-typeset .method > .admonition-title,
-.md-typeset .method > summary {
+.md-typeset .method > summary 
+{
   background-color: rgba(238, 113, 255, 0.25);
   border-color: rgb(238, 113, 255);
 }
-
 .md-typeset .mth > .admonition-title::before,
-.md-typeset .mth > summary::before,
+.md-typeset .mth > summary::before, 
 .md-typeset .méthode > .admonition-title::before,
-.md-typeset .méthode > summary::before,
+.md-typeset .méthode > summary::before, 
 .md-typeset .methode > .admonition-title::before,
-.md-typeset .methode > summary::before,
+.md-typeset .methode > summary::before, 
 .md-typeset .method > .admonition-title::before,
-.md-typeset .method > summary::before {
+.md-typeset .method > summary::before
+{
   background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--mth);
   mask-image: var(--md-admonition-icon--mth);
@@ -352,32 +355,32 @@
   --md-admonition-icon--nota: var(--md-admonition-icon--not);
   --md-admonition-icon--notation: var(--md-admonition-icon--not);
 }
-
 .md-typeset .admonition.not,
 .md-typeset details.not,
 .md-typeset .admonition.nota,
 .md-typeset details.nota,
 .md-typeset .admonition.notation,
-.md-typeset details.notation {
+.md-typeset details.notation
+ {
   border-color: rgb(238, 113, 255);
 }
-
 .md-typeset .not > .admonition-title,
 .md-typeset .not > summary,
 .md-typeset .nota > .admonition-title,
 .md-typeset .nota > summary,
 .md-typeset .notation > .admonition-title,
-.md-typeset .notation > summary {
+.md-typeset .notation > summary
+ {
   background-color: rgba(238, 113, 255, 0.25);
   border-color: rgb(238, 113, 255);
 }
-
 .md-typeset .not > .admonition-title::before,
-.md-typeset .not > summary::before,
+.md-typeset .not > summary::before, 
 .md-typeset .nota > .admonition-title::before,
-.md-typeset .nota > summary::before,
+.md-typeset .nota > summary::before, 
 .md-typeset .notation > .admonition-title::before,
-.md-typeset .notation > summary::before {
+.md-typeset .notation > summary::before
+{
   background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--not);
   mask-image: var(--md-admonition-icon--not);
@@ -389,35 +392,35 @@
   --md-admonition-icon--reponse: var(--md-admonition-icon--rep);
   --md-admonition-icon--answer: var(--md-admonition-icon--rep);
 }
-
 .md-typeset .admonition.rep,
 .md-typeset details.rep,
 .md-typeset .admonition.reponse,
 .md-typeset details.reponse,
 .md-typeset .admonition.answer,
-.md-typeset details.answer {
+.md-typeset details.answer
+ {
   border-color: #f82e2e;
   color: var(--correction-color);
   font-weight: 500;
 }
-
 .md-typeset .rep > .admonition-title,
 .md-typeset .rep > summary,
 .md-typeset .reponse > .admonition-title,
 .md-typeset .reponse > summary,
 .md-typeset .answer > .admonition-title,
-.md-typeset .answer > summary {
-  background-color: rgba(248, 46, 46, 0.1411764706);
+.md-typeset .answer > summary
+ {
+  background-color: #f82e2e24;
   border-color: #f82e2e;
   color: #f82e2e;
 }
-
 .md-typeset .rep > .admonition-title::before,
-.md-typeset .rep > summary::before,
+.md-typeset .rep > summary::before, 
 .md-typeset .reponse > .admonition-title::before,
-.md-typeset .reponse > summary::before,
+.md-typeset .reponse > summary::before, 
 .md-typeset .answer > .admonition-title::before,
-.md-typeset .answer > summary::before {
+.md-typeset .answer > summary::before
+{
   background-color: #f82e2e;
   -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--cor);
@@ -430,7 +433,6 @@
   --md-admonition-icon--corrige: var(--md-admonition-icon--cor);
   --md-admonition-icon--correction: var(--md-admonition-icon--cor);
 }
-
 .md-typeset .admonition.cor,
 .md-typeset details.cor,
 .md-typeset .admonition.corr,
@@ -438,7 +440,8 @@
 .md-typeset .admonition.corrige,
 .md-typeset details.corrige,
 .md-typeset .admonition.correction,
-.md-typeset details.correction {
+.md-typeset details.correction
+ {
   border-color: #f82e2e;
   color: var(--correction-color);
   font-weight: 500;
@@ -451,20 +454,21 @@
 .md-typeset .corrige > .admonition-title,
 .md-typeset .corrige > summary,
 .md-typeset .correction > .admonition-title,
-.md-typeset .correction > summary {
-  background-color: rgba(248, 46, 46, 0.1411764706);
-  border-color: #f82e2e;
-  color: #f82e2e;
+.md-typeset .correction > summary
+ {
+   background-color: #f82e2e24;
+   border-color: #f82e2e;
+   color: #f82e2e;
 }
-
 .md-typeset .cor > .admonition-title::before,
-.md-typeset .cor > summary::before,
+.md-typeset .cor > summary::before, 
 .md-typeset .corr > .admonition-title::before,
-.md-typeset .corr > summary::before,
+.md-typeset .corr > summary::before, 
 .md-typeset .corrige > .admonition-title::before,
-.md-typeset .corrige > summary::before,
+.md-typeset .corrige > summary::before, 
 .md-typeset .correction > .admonition-title::before,
-.md-typeset .correction > summary::before {
+.md-typeset .correction > summary::before
+{
   background-color: #f82e2e;
   -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--cor);
@@ -473,29 +477,30 @@
 /* je retiens / I remember*/
 :root {
   /* --md-admonition-icon--jeretiens: url('data:image/svg+xml;charset=utf-8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><g><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"><path d="M3900.4,5002c-203-40.2-406-195.4-501.8-385c-61.3-120.7-91.9-293-93.8-503.7c0-72.8-5.7-164.7-11.5-203l-11.5-70.9l-176.2,113c-478.8,310.3-848.5,444.4-1110.9,400.3c-645.5-105.3-915.5-879.1-469.2-1350.3c352.4-373.5,815.9-339,1541.8,116.8c90,57.5,172.4,103.4,180,103.4s9.6-40.2,5.7-90c-7.7-101.5-55.5-1195.2-74.7-1731.5l-13.4-339l-136-51.7c-360.1-139.8-637.8-308.4-837-507.6C1973.6,284.6,1851,31.8,1799.3-311c-139.8-921.3,371.6-1882.8,1513.1-2838.5l174.3-147.5l11.5-229.8c17.2-342.8,116.8-589.9,333.3-831.2c107.3-118.8,331.3-272,482.7-329.4c245.2-91.9,339-97.7,1618.4-90c1074.5,5.7,1204.7,9.6,1308.2,40.2c379.2,111.1,668.4,352.4,835.1,693.3c74.7,153.2,130.3,360.1,132.2,480.8c0,32.6,7.7,65.1,17.2,70.9c30.6,19.2,227.9,478.8,306.5,712.5c40.2,124.5,95.8,327.5,120.7,448.2c40.2,199.2,44.1,266.2,42.1,708.7c-3.8,498-24.9,844.7-76.6,1254.5c-84.3,668.4-191.5,973-421.4,1208.6c-170.5,176.2-390.7,256.7-704.9,256.7h-155.1l-46,105.3c-57.5,132.1-233.7,325.6-377.3,411.8c-164.7,99.6-316,132.1-620.6,134.1H6034l-47.9,111.1c-32.6,74.7-90,151.3-182,243.3c-229.8,231.7-406.1,296.9-789.1,296.9h-235.6v413.7c0,323.7,5.7,411.8,24.9,404.1c11.5-3.8,95.8-53.6,185.8-109.2c381.2-233.7,724-363.9,953.8-363.9c298.8,0,597.6,195.4,727.8,475c46,97.7,51.7,132.2,51.7,329.4c0,208.8-3.8,227.9-61.3,348.6c-151.3,321.8-517.1,515.2-852.3,455.8c-216.4-40.2-488.4-160.9-821.7-365.8c-101.5-61.3-189.6-113-195.4-113c-5.8,0-13.4,136-17.2,302.6c-5.7,281.6-9.6,306.4-59.4,408c-107.3,218.3-296.9,369.7-526.7,417.5C4074.7,5025,4021,5026.9,3900.4,5002z M4201.1,4668.8c180-76.6,272-241.3,272-492.2v-130.2h-427.1h-429l9.6,159c13.4,254.7,103.4,408,281.6,469.3C3994.2,4705.2,4120.6,4701.3,4201.1,4668.8z M2349,3988.8c222.2-80.4,783.4-396.5,783.4-440.5c0-46-612.9-381.2-823.6-452c-339-113-653.1,78.5-683.8,413.7c-19.2,206.8,95.8,400.3,291.1,490.3C2046.3,4061.6,2157.4,4059.7,2349,3988.8z M6120.2,4006.1c304.5-137.9,400.3-515.2,193.5-766.1c-136-162.8-352.4-216.4-586.1-141.7c-206.8,67-814,402.2-814,450.1c0,23,285.4,201.1,496.1,312.2C5756.3,4044.4,5949.8,4084.6,6120.2,4006.1z M4469.2,3554.1l-5.7-168.5l-434.8-5.8l-436.7-3.8v159c0,88.1,5.7,166.6,13.4,172.4c5.7,7.7,204.9,13.4,440.5,13.4h429L4469.2,3554.1z M4473.1,1642.6c0-1394.3,0-1426.9,38.3-1465.2c55.5-55.5,120.7-65.1,189.6-30.7c32.6,17.2,61.3,34.5,63.2,36.4c3.8,1.9,9.6,430.9,15.3,951.9l9.6,948.1l178.1,5.7c379.2,11.5,622.5-120.7,756.6-411.8c42.1-90,42.1-111.1,51.7-1022.8c9.6-882.9,11.5-934.7,46-973c51.7-55.5,162.8-53.6,218.3,3.8c42.1,44.1,42.1,51.7,46,896.4l5.7,850.4l229.8-1.9c187.7-1.9,250.9-11.5,344.8-46c136-53.6,285.4-193.5,354.3-335.2c47.9-95.8,47.9-99.6,57.5-810.2l9.6-716.3l46-36.4c44.1-36.4,124.5-47.9,183.9-24.9c78.5,30.7,86.2,91.9,86.2,718.2v595.7l178.1-7.7c149.4-5.7,191.5-15.3,264.3-57.5c245.2-143.6,354.3-385,438.6-971.1c59.4-423.3,78.5-672.3,90-1227.7c11.5-574.6,0-699.1-99.6-1043.8c-67-231.7-132.2-358.2-241.3-459.7c-116.8-109.2-201.1-143.7-404.1-159c-178.1-15.3-231.7-42.1-252.8-130.2c-17.2-65.1,36.4-157.1,95.8-172.4c28.7-7.7,136-7.7,241.3-1.9l191.5,9.6l-13.4-107.2c-49.8-436.7-365.8-798.7-771.9-883c-134.1-28.7-2428.6-28.7-2551.2,0c-224.1,51.7-482.7,235.6-611,436.7c-74.7,114.9-130.2,275.8-147.5,421.4c-11.5,105.3-9.6,113,28.7,126.4c61.3,19.2,105.3,120.7,80.4,183.9c-9.6,28.7-116.8,130.3-245.2,231.8C2822-2350.9,2327.9-1715,2153.6-1073.3c-57.5,214.5-70.9,580.3-26.8,792.9c80.4,400.3,321.8,670.4,802.5,900.2c113,53.6,208.8,95.8,212.6,91.9c5.7-7.6,24.9-616.7,28.7-873.4c0-97.7,7.7-126.4,42.1-159c57.5-53.6,159-49.8,214.5,5.7l44.1,44.1l11.5,881c9.6,793,55.6,2101.1,82.4,2359.7l9.6,99.6h450.1h448.2V1642.6z"/></g></g></svg>'); */
-  --md-admonition-icon--jeretiens: url("../images/jeretiens.svg");
+  --md-admonition-icon--jeretiens: url('../images/jeretiens.svg');
   --md-admonition-icon--iremember: var(--md-admonition-icon--jeretiens);
 }
-
 .md-typeset .admonition.jeretiens,
 .md-typeset details.jeretiens,
 .md-typeset .admonition.iremember,
-.md-typeset details.iremember {
+.md-typeset details.iremember
+ {
   border-color: #f82e2e;
 }
 
 .md-typeset .jeretiens > .admonition-title,
 .md-typeset .jeretiens > summary,
 .md-typeset .iremember > .admonition-title,
-.md-typeset .iremember > summary {
-  background-color: rgba(248, 46, 46, 0.6156862745);
-  border-color: #f82e2e;
+.md-typeset .iremember > summary
+ {
+   background-color: #f82e2e9d;
+   border-color: #f82e2e;
 }
-
 .md-typeset .jeretiens > .admonition-title::before,
-.md-typeset .jeretiens > summary::before,
+.md-typeset .jeretiens > summary::before, 
 .md-typeset .iremember > .admonition-title::before,
-.md-typeset .iremember > summary::before {
+.md-typeset .iremember > summary::before
+{
   background-color: var(--md-admonition-fg-color);
   -webkit-mask-image: var(--md-admonition-icon--jeretiens);
   mask-image: var(--md-admonition-icon--jeretiens);

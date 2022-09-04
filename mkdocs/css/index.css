@@ -262,68 +262,97 @@ div.clear, clear {
 
 /* TABLES / TABLEAUX */
 /* TABLES LIGHT THEME, BY DEFAULT / TABLEAUX THEME CLAIR : PAR DÉFAUT*/
-/* ====================================================================== */
-/*                   Normal (NON Maths) XTables                           */
-/* ====================================================================== */
-table:not(.math):not(.maths):not(.math-table):not(.maths-table) {
+table:not(.math):not(.maths) {
   max-width: 100% !important;
   border: solid 1.2px var(--table-header-border) !important;
   border-collapse: separate !important;
   font-size: 0.87rem !important;
 }
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) {
+table:not(.math):not(.maths):not(.highlighttable) {
   /* display: inline-block !important; */
   width: auto !important;
   margin-bottom: 0.5em !important;
   box-shadow: 7px 7px 7px;
 }
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) th, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) th:not(code table th) {
-  font-weight: 700 !important;
+
+table:not(.highlighttable) th,
+table:not(.highlighttable) th:not(code table th) {
   border: solid 1.2px var(--table-header-border);
 }
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) th, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) th:not(code table th) {
+
+table:not(.highlighttable):not(.shrink):not(.little):not(.reduire)::not(.reduite):not(.petit) th,
+table:not(.highlighttable):not(.shrink):not(.little):not(.reduire)::not(.reduite):not(.petit) th:not(code table th) {
   min-width: 3rem;
   padding: 0.9375rem 1.25rem;
 }
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) th, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) th:not(code table th) {
+
+table:not(.highlighttable):not([class*=nocolor]) th,
+table:not(.highlighttable):not([class*=nocolor]) th:not(code table th) {
   background-color: var(--table-header-background);
 }
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) tr:nth-child(even), table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) tr:nth-child(even):not(code table tr) {
-  background-color: var(--table-row-even-background);
-}
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
-  background-color: var(--table-row-hover-bgcolor);
-  /* for RBL tags on table hover --> inverse rbl */
-}
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover div.rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover div.brbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover brbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.brbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover brbl {
-  color: var(--inv-rbl-color);
-  font-weight: 700;
-}
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
-  background-color: var(--table-row-hover-bgcolor);
-  /* for RBL tags on table hover --> inverse rbl */
-}
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover div.rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover div.brbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover brbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover rbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.brbl, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover brbl {
-  color: var(--inv-rbl-color);
-  font-weight: 700;
-}
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) td, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) td:not(code table td) {
-  white-space: normal;
-  border: solid 1.2px var(--table-header-border);
-  vertical-align: middle;
-}
-table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) code, table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) code:not(code table code) {
-  background-color: var(--table-code-background) !important;
-}
-table:not(.math):not(.maths):not(.math-table):not(.maths-table) .md-typeset code:not(table code, div.highlight pre[id*=_code_] code) {
-  background-color: var(--code-normal) !important;
+
+table:not(.highlighttable):not([class*=nocolor]) tr:nth-child(odd),
+table:not(.highlighttable):not([class*=nocolor]) tr:nth-child(odd):not(code table tr) {
+  background-color: var(--table-row-odd-background);
 }
 
-/* ====================================================================== */
-/*                           Maths XTables                                */
-/* ====================================================================== */
-table.math, table.maths, table.math-table, table.maths-table {
-  color: red;
+table:not(.highlighttable) tr:nth-child(odd):hover,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
+  background-color: var(--table-row-hover-bgcolor);
+}
+
+/* for RBL tags on table hover --> inverse rb */
+table:not(.highlighttable) tr:nth-child(odd):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(odd):hover rbl,
+table:not(.highlighttable) tr:nth-child(odd):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(odd):hover brbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover rbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(odd):not(code table tr):hover brbl {
+  color: var(--inv-rbl-color);
+  font-weight: 700;
+}
+
+table:not(.highlighttable):not([class*=nocolor]) tr:nth-child(even),
+table:not(.highlighttable):not([class*=nocolor]) tr:nth-child(even):not(code table tr) {
+  background-color: var(--table-row-even-background);
+}
+
+table:not(.highlighttable) tr:nth-child(even):hover,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
+  background-color: var(--table-row-hover-bgcolor);
+}
+
+/* for RBL tags on table hover --> inverse rb */
+table:not(.highlighttable) tr:nth-child(even):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(even):hover rbl,
+table:not(.highlighttable) tr:nth-child(even):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(even):hover brbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.rbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover rbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.brbl,
+table:not(.highlighttable) tr:nth-child(even):not(code table tr):hover brbl {
+  color: var(--inv-rbl-color);
+  font-weight: 700;
+}
+
+table:not(.highlighttable) td,
+table:not(.highlighttable) td:not(code table td) {
+  /* OLD */
+  /* white-space: nowrap; */
+  white-space: normal;
+  /* word-wrap: break-word; */
+  border: solid 1.2px var(--table-header-border);
+}
+
+table:not(.highlighttable) code,
+table:not(.highlighttable) code:not(code table code) {
+  background-color: var(--table-code-background) !important;
+}
+
+.md-typeset code:not(table code, div.highlight pre[id*=_code_] code) {
+  background-color: var(--code-normal) !important;
 }
 
 /* COLORS */
