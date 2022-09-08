@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
   }
 
   function fix_graph_flowchart() {
-    // console.log("FIX GRAPH : FLOWCHART");
+    console.log("FIX GRAPH : FLOWCHART");
     // Get width of the div child inside the foreignObject, otherwise section widths are cut 
     document.querySelectorAll("svg[id^='mermaid-'] .cluster .label foreignObject")
     .forEach( el => {
@@ -109,7 +109,7 @@ window.addEventListener('load', function() {
   const mutationCallback = (mutationsList) => {
     for (const mutation of mutationsList) {
       if (
-        mutation.type !== "attributes" ||
+        mutation.type !== "attributes" &&
         mutation.attributeName !== "data-md-color-scheme"
       ) {
         return
