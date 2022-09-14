@@ -1,5 +1,4 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
-export {}
 
 window.addEventListener('load', function() {
     // console.log("THIS MKDOCS PAGE IS LOADED");
@@ -18,7 +17,6 @@ window.addEventListener('load', function() {
             getLastTrOf(table).remove();
         }
     });
-
 })
 
 function tableHasClass(table, klass) {

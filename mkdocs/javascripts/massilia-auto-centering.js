@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-    // console.log("Then THIS MKDOCS PAGE IS LOADED");
+    // console.log("Then massilia-auto-centering PAGE IS LOADED");
 
     /* ====================================================================== */
     /*                    Automatic Centering of Tables                       */
@@ -20,6 +20,13 @@ window.addEventListener('load', function() {
     /*                    Automatic Centering of iFrames                      */
     /* ====================================================================== */
     document.querySelectorAll(".md-content iframe")
+      .forEach( el => {
+      el.classList.add("center");
+    });
+    /* ====================================================================== */
+    /*                    Automatic Centering of videos                       */
+    /* ====================================================================== */
+    document.querySelectorAll(".md-content div.video-js")
       .forEach( el => {
       el.classList.add("center");
     });

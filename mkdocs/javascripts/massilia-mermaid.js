@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-
+  console.log("Then massilia-mermaid PAGE IS LOADED");
   // correct baseline alignment in mermaid graphs
   document.querySelectorAll("svg[id^='mermaid'] .messageText")
   .forEach( el => {
@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
   }
 
   function fix_graph_flowchart() {
-    console.log("FIX GRAPH : FLOWCHART");
+    // console.log("FIX GRAPH : FLOWCHART");
     // Get width of the div child inside the foreignObject, otherwise section widths are cut 
     document.querySelectorAll("svg[id^='mermaid-'] .cluster .label foreignObject")
     .forEach( el => {

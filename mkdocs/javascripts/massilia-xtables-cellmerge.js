@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-    // console.log("THIS MKDOCS PAGE IS LOADED");
+    // console.log("Page xtables-cellmerge IS LOADED");
 
     /* ====================================================================== */
     /*                    Cell Merge in Tables                                */
@@ -19,13 +19,14 @@ window.addEventListener('load', function() {
                 Array.from(headBody.children).forEach( (row, i) => {
                     Array.from(row.children).forEach( (col, j) => {
                         var text = col.innerHTML.trim();
-                        if(!text.length) { // text is void
-                            var prev = getPrev(col);
-                            if (prev) {
-                                colspans2.push([prev, col]);
-                            } /* else { console.log("null prev of void text :", prev) } */
-                        } // text.length
-                        else if ((text === "^" || text === "&#94;") && prevRow) {
+                        // if(!text.length) { // text is void
+                        //     var prev = getPrev(col);
+                        //     if (prev) {
+                        //         colspans2.push([prev, col]);
+                        //     } /* else { console.log("null prev of void text :", prev) } */
+                        // } // text.length
+                        // else if ((text === "^" || text === "&#94;") && prevRow) {
+                        if ((text === "^" || text === "&#94;") && prevRow) {
                             var prev = prevRow.children[j];
                             if (prev) {
                                 rowspans.push([prev, col]);
@@ -39,15 +40,14 @@ window.addEventListener('load', function() {
                           } // else if 2
                     }); // forEach col
                     prevRow = row
-                }); // forEcah row
+                }); // forEach row
             }); // forEach headBody
-        // }); // forEach table
-
-        });
+        }); // forEach table
+        // });
         for (let i = rowspans.length -1; i >= 0; i--){
             let _a = rowspans[i], prev = _a[0], col = _a[1];
             let rowspan = (parseInt(prev.getAttribute("rowspan"), 10) || 1) +
-              (parseInt(col.getAttribute("rowspan"), 10) || 1);
+            (parseInt(col.getAttribute("rowspan"), 10) || 1);
             prev.setAttribute("rowspan", rowspan);
             prev.style.verticalAlign = "middle";
             col.remove();
@@ -68,44 +68,7 @@ window.addEventListener('load', function() {
             prev.style.verticalAlign = "middle";
             col.remove();
         }
-    }
-
-    // /* ====================================================================== */
-    // /*                       Classes with Tables                              */
-    // /* ====================================================================== */
-    // const shrinkArray = ["shrink", "little", "reduite", "reduire", "petit"];
-    // const mathArray = ["math", "maths", "math-table"];
-    // document.querySelectorAll(".md-typeset table")
-    // .forEach( table => {
-    //     // transform last row into table classes
-    //     if (lastRowContainsClasses(table)) {
-    //         let arrayOfClasses = getLastTdContentOf(table).replace(/{:/, "")
-    //         .replace(/{/, "").replace(/}/, "").replaceAll(/\./g, "")
-    //         .replace(/\s\s+/g, ' ').trim().split(" ");
-    //         table.classList.add(...arrayOfClasses);
-    //         getLastTrOf(table).remove();
-    //     }
-    //     Array.from(table.querySelectorAll("thead th")).forEach(th => {
-    //         th.style.fontWeight = "700";
-    //     });
-    //     if (Array.from(table.classList).some(klass => mathArray.includes(klass))) {
-    //         formatMathTable(table);
-    //     }
-    //     // Not Shrink class
-    //     if (!Array.from(table.classList).some(klass => shrinkArray.includes(klass))) {
-    //         Array.from(table.querySelectorAll("thead th")).forEach(th => {
-    //             th.style.minWidth = "3rem";
-    //             th.style.padding = ".9375em 1.25em";
-    //         });
-    //         Array.from(table.querySelectorAll("tbody td")).forEach(td => {
-    //             td.style.padding = ".9375em 1.25em";
-    //             td.style.verticalAlign = "middle";
-    //         });
-    //     }
-    // });
-    // // the nocolor class is treated directly in CSS
-
-        
+    } // End if TXablesArray
     
 }); // End of load page
 

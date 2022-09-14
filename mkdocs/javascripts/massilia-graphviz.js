@@ -58,7 +58,7 @@ window.addEventListener('load', function() {
   const mutationCallback = (mutationsList) => {
     for (const mutation of mutationsList) {
       if (
-        mutation.type !== "attributes" ||
+        mutation.type !== "attributes" &&
         mutation.attributeName !== "data-md-color-scheme"
       ) {
         return
