@@ -26,10 +26,12 @@ window.addEventListener('load', function() {
   /* ====================================================================== */
   /*                    Automatic Centering of videos                       */
   /* ====================================================================== */
+  // Any video tag
   document.querySelectorAll(".md-content video")
     .forEach( el => {
     el.classList.add("center");
   });
+  // Videos of the video-js library
   document.querySelectorAll(".md-content div.video-js")
     .forEach( el => {
     el.classList.add("center");
