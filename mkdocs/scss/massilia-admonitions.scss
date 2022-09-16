@@ -16,7 +16,9 @@
 /* def - DEFINITION */
 :root {
   --md-admonition-icon--def: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open" class="svg-inline--fa fa-book-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path></svg>');
+  --md-admonition-icon--déf: var(--md-admonition-icon--def);
   --md-admonition-icon--definition: var(--md-admonition-icon--def);
+  --md-admonition-icon--définition: var(--md-admonition-icon--def);
 }
 
 .md-typeset .admonition {
@@ -25,15 +27,23 @@
 
 .md-typeset .admonition.def,
 .md-typeset details.def,
+.md-typeset .admonition.déf,
+.md-typeset details.déf,
 .md-typeset .admonition.definition,
-.md-typeset details.definition
+.md-typeset details.definition,
+.md-typeset .admonition.définition,
+.md-typeset details.définition
  {
   border-color: rgb(43, 155, 70);
 }
 .md-typeset .def > .admonition-title,
 .md-typeset .def > summary,
+.md-typeset .déf > .admonition-title,
+.md-typeset .déf > summary,
 .md-typeset .definition > .admonition-title,
-.md-typeset .definition > summary
+.md-typeset .definition > summary,
+.md-typeset .définition > .admonition-title,
+.md-typeset .définition > summary
  {
   /* background-color: rgba(43, 155, 70, 0.15); */
   background-color: rgba(38, 226, 82, 0.212);
@@ -41,8 +51,12 @@
 }
 .md-typeset .def > .admonition-title::before,
 .md-typeset .def > summary::before, 
+.md-typeset .déf > .admonition-title::before,
+.md-typeset .déf > summary::before, 
 .md-typeset .definition > .admonition-title::before,
-.md-typeset .definition > summary::before 
+.md-typeset .definition > summary::before,
+.md-typeset .définition > .admonition-title::before,
+.md-typeset .définition > summary::before 
 {
   background-color: rgb(43, 155, 70);
   -webkit-mask-image: var(--md-admonition-icon--def);
@@ -94,6 +108,8 @@
 }
 .md-typeset .admonition.pte,
 .md-typeset details.pte, 
+.md-typeset .admonition.pté,
+.md-typeset details.pté, 
 .md-typeset .admonition.propriete,
 .md-typeset details.propriete, 
 .md-typeset .admonition.propriété,
@@ -105,6 +121,8 @@
 }
 .md-typeset .pte > .admonition-title,
 .md-typeset .pte > summary, 
+.md-typeset .pté > .admonition-title,
+.md-typeset .pté > summary, 
 .md-typeset .propriete > .admonition-title,
 .md-typeset .propriete > summary, 
 .md-typeset .propriété > .admonition-title,
@@ -117,6 +135,8 @@
 }
 .md-typeset .pte > .admonition-title::before,
 .md-typeset .pte > summary::before,
+.md-typeset .pté > .admonition-title::before,
+.md-typeset .pté > summary::before,
 .md-typeset .propriete > .admonition-title::before,
 .md-typeset .propriete > summary::before,
 .md-typeset .propriété > .admonition-title::before,
@@ -510,6 +530,8 @@
 }
 .md-typeset .admonition.rep,
 .md-typeset details.rep,
+.md-typeset .admonition.rép,
+.md-typeset details.rép,
 .md-typeset .admonition.reponse,
 .md-typeset details.reponse,
 .md-typeset .admonition.answer,
@@ -521,6 +543,8 @@
 }
 .md-typeset .rep > .admonition-title,
 .md-typeset .rep > summary,
+.md-typeset .rép > .admonition-title,
+.md-typeset .rép > summary,
 .md-typeset .reponse > .admonition-title,
 .md-typeset .reponse > summary,
 .md-typeset .answer > .admonition-title,
@@ -532,6 +556,8 @@
 }
 .md-typeset .rep > .admonition-title::before,
 .md-typeset .rep > summary::before, 
+.md-typeset .rép > .admonition-title::before,
+.md-typeset .rép > summary::before, 
 .md-typeset .reponse > .admonition-title::before,
 .md-typeset .reponse > summary::before, 
 .md-typeset .answer > .admonition-title::before,
