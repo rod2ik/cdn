@@ -5,6 +5,8 @@
   --rb-color: #ee3939;
   --rb-color-alpha: rgba(var(--rb-color), 0.5);
   --inv-rb-color: #34a4ff;
+  --md-admonition-proof-qed-icon: url(../images/cqfd-light.svg);
+  --md-admonition-proof-dashed-border-color: rgb(170,170,170);
 }
 
 /* ======================================================= */
@@ -199,6 +201,120 @@
   background-color: rgb(250, 74, 74);
   -webkit-mask-image: var(--md-admonition-icon--thm);
   mask-image: var(--md-admonition-icon--thm);
+}
+
+/* Proof - Preuve - Demo - Démo - Démonstration - Demonstration */
+:root {
+  --md-admonition-icon--proof: url('data:image/svg+xml;charset=utf-8,<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300.471px" height="300.471px" viewBox="0 0 300.471 300.471" style="enable-background:new 0 0 300.471 300.471;" xml:space="preserve"><g><path d="M32.487,274.56h26.339c4.766,0,8.642-3.878,8.642-8.642v-26.336c0-4.77-3.876-8.648-8.642-8.648H32.487c-4.767,0-8.642,3.879-8.642,8.648v26.336C23.845,270.682,27.721,274.56,32.487,274.56z"/><path d="M171.919,67.767h26.341c4.764,0,8.637-3.879,8.637-8.645V32.786c0-4.767-3.873-8.645-8.637-8.645h-26.341c-4.77,0-8.643,3.878-8.643,8.645v26.336C163.281,63.888,167.16,67.767,171.919,67.767z"/><path d="M102.203,136.697h26.338c4.767,0,8.642-3.878,8.642-8.645v-26.336c0-4.767-3.875-8.645-8.642-8.645h-26.338c-4.767,0-8.643,3.878-8.643,8.645v26.336C93.561,132.819,97.442,136.697,102.203,136.697z"/><path d="M243.402,205.629h26.342c4.769,0,8.642-3.879,8.642-8.643V170.65c0-4.77-3.873-8.647-8.642-8.647h-26.342c-4.764,0-8.637,3.878-8.637,8.647v26.336C234.766,201.75,238.644,205.629,243.402,205.629z"/><path d="M0,26.512v247.447c0,14.639,11.871,26.512,26.512,26.512h247.447c14.639,0,26.512-11.873,26.512-26.512V26.512C300.471,11.874,288.598,0,273.959,0H26.512C11.865,0,0,11.869,0,26.512z M229.463,32.786c0-7.7,6.245-13.947,13.95-13.947h26.336c7.699,0,13.944,6.242,13.944,13.947v26.336c0,7.7-6.239,13.947-13.944,13.947h-26.336c-7.7,0-13.95-6.243-13.95-13.947V32.786z M229.463,101.717c0-7.7,6.245-13.947,13.95-13.947h26.336c7.699,0,13.944,6.242,13.944,13.947v26.336c0,7.7-6.239,13.947-13.944,13.947h-26.336c-7.7,0-13.95-6.242-13.95-13.947V101.717z M229.463,170.65c0-7.705,6.245-13.949,13.95-13.949h26.336c7.699,0,13.944,6.244,13.944,13.949v26.336c0,7.694-6.239,13.944-13.944,13.944h-26.336c-7.7,0-13.95-6.239-13.95-13.944V170.65z M229.463,239.582c0-7.705,6.245-13.95,13.95-13.95h26.336c7.699,0,13.944,6.245,13.944,13.95v26.336c0,7.694-6.239,13.944-13.944,13.944h-26.336c-7.7,0-13.95-6.239-13.95-13.944V239.582z M157.979,32.786c0-7.7,6.239-13.947,13.944-13.947h26.336c7.7,0,13.95,6.242,13.95,13.947v26.336c0,7.7-6.245,13.947-13.95,13.947h-26.341c-7.7,0-13.945-6.243-13.945-13.947V32.786H157.979z M157.979,101.717c0-7.7,6.239-13.947,13.944-13.947h26.336c7.7,0,13.95,6.242,13.95,13.947v26.336c0,7.7-6.245,13.947-13.95,13.947h-26.341c-7.7,0-13.945-6.242-13.945-13.947v-26.336H157.979z M157.979,170.65c0-7.705,6.239-13.949,13.944-13.949h26.336c7.7,0,13.95,6.244,13.95,13.949v26.336c0,7.694-6.245,13.944-13.95,13.944h-26.341c-7.7,0-13.945-6.239-13.945-13.944V170.65H157.979z M157.979,239.582c0-7.705,6.239-13.95,13.944-13.95h26.336c7.7,0,13.95,6.245,13.95,13.95v26.336c0,7.694-6.245,13.944-13.95,13.944h-26.341c-7.7,0-13.945-6.239-13.945-13.944v-26.336H157.979z M88.258,32.786c0-7.7,6.24-13.947,13.945-13.947h26.338c7.697,0,13.945,6.242,13.945,13.947v26.336c0,7.7-6.242,13.947-13.945,13.947h-26.338c-7.697,0-13.945-6.243-13.945-13.947V32.786z M88.258,101.717c0-7.7,6.24-13.947,13.945-13.947h26.338c7.697,0,13.945,6.242,13.945,13.947v26.336c0,7.7-6.242,13.947-13.945,13.947h-26.338c-7.697,0-13.945-6.242-13.945-13.947V101.717z M88.258,170.65c0-7.705,6.24-13.949,13.945-13.949h26.338c7.697,0,13.945,6.244,13.945,13.949v26.336c0,7.694-6.242,13.944-13.945,13.944h-26.338c-7.697,0-13.945-6.239-13.945-13.944V170.65z M88.258,239.582c0-7.705,6.24-13.95,13.945-13.95h26.338c7.697,0,13.945,6.245,13.945,13.95v26.336c0,7.694-6.242,13.944-13.945,13.944h-26.338c-7.697,0-13.945-6.239-13.945-13.944V239.582z M18.543,32.786c0-7.7,6.239-13.947,13.944-13.947h26.339c7.697,0,13.944,6.242,13.944,13.947v26.336c0,7.7-6.242,13.947-13.944,13.947H32.487c-7.7,0-13.944-6.243-13.944-13.947V32.786z M18.543,101.717c0-7.7,6.239-13.947,13.944-13.947h26.339c7.697,0,13.944,6.242,13.944,13.947v26.336c0,7.7-6.242,13.947-13.944,13.947H32.487c-7.7,0-13.944-6.242-13.944-13.947V101.717z M18.543,170.65c0-7.705,6.239-13.949,13.944-13.949h26.339c7.697,0,13.944,6.244,13.944,13.949v26.336c0,7.694-6.242,13.944-13.944,13.944H32.487c-7.7,0-13.944-6.239-13.944-13.944V170.65z M18.543,239.582c0-7.705,6.239-13.95,13.944-13.95h26.339c7.697,0,13.944,6.245,13.944,13.95v26.336c0,7.694-6.242,13.944-13.944,13.944H32.487c-7.7,0-13.944-6.239-13.944-13.944V239.582z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>');
+  --md-admonition-icon--preuve: var(--md-admonition-icon--proof);
+  --md-admonition-icon--demo: var(--md-admonition-icon--proof);
+  --md-admonition-icon--démo: var(--md-admonition-icon--proof);
+  --md-admonition-icon--demonstration: var(--md-admonition-icon--proof);
+  --md-admonition-icon--démonstration: var(--md-admonition-icon--proof);
+  --md-admonition-icon-proof-color: #000;
+}
+.md-typeset .admonition.proof,
+.md-typeset details.proof, 
+.md-typeset .admonition.preuve,
+.md-typeset details.preuve,
+.md-typeset .admonition.démo,
+.md-typeset details.démo, 
+.md-typeset .admonition.demo,
+.md-typeset details.demo, 
+.md-typeset .admonition.démonstration,
+.md-typeset details.démonstration, 
+.md-typeset .admonition.demonstration,
+.md-typeset details.demonstration
+{
+  border-color: var(--md-admonition-proof-dashed-border-color);
+  border-style: dashed;
+}
+
+.md-typeset div.admonition.proof,
+.md-typeset div.admonition.preuve,
+.md-typeset div.admonition.démo,
+.md-typeset div.admonition.demo,
+.md-typeset div.admonition.démonstration,
+.md-typeset div.admonition.demonstration
+{
+  position: relative;
+}
+
+.md-typeset div.admonition.proof::after,
+.md-typeset div.admonition.preuve::after,
+.md-typeset div.admonition.démo::after,
+.md-typeset div.admonition.demo::after,
+.md-typeset div.admonition.démonstration::after,
+.md-typeset div.admonition.demonstration::after
+{
+  content: "";
+  display: inline-block;
+  border-bottom: 4px solid var(--md-admonition-proof-dashed-border-color);
+  border-style: dashed;
+  width: min(50px, 7%);
+  position: absolute;
+  bottom: 0px;
+  left:0px;
+}
+
+.md-typeset .admonition.proof > p:last-of-type::after,
+.md-typeset details.proof > p:last-of-type::after, 
+.md-typeset .admonition.preuve > p:last-of-type::after,
+.md-typeset details.preuve > p:last-of-type::after,
+.md-typeset .admonition.démo > p:last-of-type::after,
+.md-typeset details.démo > p:last-of-type::after, 
+.md-typeset .admonition.demo > p:last-of-type::after,
+.md-typeset details.demo > p:last-of-type::after, 
+.md-typeset .admonition.démonstration > p:last-of-type::after,
+.md-typeset details.démonstration > p:last-of-type::after, 
+.md-typeset .admonition.demonstration > p:last-of-type::after,
+.md-typeset details.demonstration > p:last-of-type::after
+{
+  content: "";
+  display: inline-block;
+  background-image: var(--md-admonition-proof-qed-icon);
+  background-size: 20px 20px;
+  // background-color: blue;
+  // color:red;
+  position: absolute;
+  width:20px;
+  height:20px;
+  right:2px;
+  bottom:2px;
+}
+
+.md-typeset .proof > .admonition-title,
+.md-typeset .proof > summary, 
+.md-typeset .preuve > .admonition-title,
+.md-typeset .preuve > summary, 
+.md-typeset .démo > .admonition-title,
+.md-typeset .démo > summary, 
+.md-typeset .demo > .admonition-title,
+.md-typeset .demo > summary, 
+.md-typeset .demonstration > .admonition-title,
+.md-typeset .demonstration > summary, 
+.md-typeset .démonstration > .admonition-title,
+.md-typeset .démonstration > summary
+{
+  background-color: rgba(127, 127, 127, 0.25);
+  border-color: rgb(117, 117, 117);
+}
+.md-typeset .proof > .admonition-title::before,
+.md-typeset .proof > summary::before, 
+.md-typeset .preuve > .admonition-title::before,
+.md-typeset .preuve > summary::before, 
+.md-typeset .démo > .admonition-title::before,
+.md-typeset .démo > summary::before, 
+.md-typeset .demo > .admonition-title::before,
+.md-typeset .demo > summary::before, 
+.md-typeset .démonstration > .admonition-title::before,
+.md-typeset .démonstration > summary::before, 
+.md-typeset .demonstration > .admonition-title::before,
+.md-typeset .demonstration > summary::before
+{
+  background-color: var(--md-admonition-icon-proof-color);
+  -webkit-mask-image: var(--md-admonition-icon--proof);
+  mask-image: var(--md-admonition-icon--proof);
 }
 
 /* PYTHON */
