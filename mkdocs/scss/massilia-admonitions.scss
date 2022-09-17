@@ -250,22 +250,22 @@
   border-style: dashed;
 }
 
-.md-typeset div.admonition.proof,
-.md-typeset div.admonition.preuve,
-.md-typeset div.admonition.démo,
-.md-typeset div.admonition.demo,
-.md-typeset div.admonition.démonstration,
-.md-typeset div.admonition.demonstration
+.md-typeset .proof,
+.md-typeset .preuve,
+.md-typeset .démo,
+.md-typeset .demo,
+.md-typeset .démonstration,
+.md-typeset .demonstration
 {
   position: relative;
 }
 
-.md-typeset div.admonition.proof::after,
-.md-typeset div.admonition.preuve::after,
-.md-typeset div.admonition.démo::after,
-.md-typeset div.admonition.demo::after,
-.md-typeset div.admonition.démonstration::after,
-.md-typeset div.admonition.demonstration::after
+.md-typeset .proof::after,
+.md-typeset .preuve::after,
+.md-typeset .démo::after,
+.md-typeset .demo::after,
+.md-typeset .démonstration::after,
+.md-typeset .demonstration::after
 {
   content: "";
   display: inline-block;
@@ -277,17 +277,34 @@
   left:0px;
 }
 
-.md-typeset .admonition.proof > p:last-of-type::after,
+.md-typeset details.proof::after,
+.md-typeset details.preuve::after,
+.md-typeset details.démo::after,
+.md-typeset details.demo::after,
+.md-typeset details.démonstration::after,
+.md-typeset details.demonstration::after
+{
+  content: "";
+  display: inline-block;
+  border-bottom: 4px solid var(--md-admonition-proof-dashed-border-color);
+  border-style: dashed;
+  width: min(50px, 7%);
+  position: absolute;
+  bottom: 0px;
+  left:0px;  
+}
+
+.md-typeset .proof > p:last-of-type::after,
 .md-typeset details.proof > p:last-of-type::after, 
-.md-typeset .admonition.preuve > p:last-of-type::after,
+.md-typeset .preuve > p:last-of-type::after,
 .md-typeset details.preuve > p:last-of-type::after,
-.md-typeset .admonition.démo > p:last-of-type::after,
+.md-typeset .démo > p:last-of-type::after,
 .md-typeset details.démo > p:last-of-type::after, 
-.md-typeset .admonition.demo > p:last-of-type::after,
+.md-typeset .demo > p:last-of-type::after,
 .md-typeset details.demo > p:last-of-type::after, 
-.md-typeset .admonition.démonstration > p:last-of-type::after,
+.md-typeset .démonstration > p:last-of-type::after,
 .md-typeset details.démonstration > p:last-of-type::after, 
-.md-typeset .admonition.demonstration > p:last-of-type::after,
+.md-typeset .demonstration > p:last-of-type::after,
 .md-typeset details.demonstration > p:last-of-type::after
 {
   content: "";

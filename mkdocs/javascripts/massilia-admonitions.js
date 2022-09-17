@@ -6,6 +6,7 @@ var replaceBy = {
   "property": "Propriété ",
   "proposition": "Proposition ",
   "theorem": "Théorème ",
+  "proof": "Preuve ",
   "exercice": "Exercice ",
   "example": "Exemple ",
   "method": "Méthode ",
@@ -19,13 +20,14 @@ var replaceBy = {
 function toAdmonitionClassString(array) {
   var s = "";
   array.forEach(element => {
-    s += ".admonition."+element.toLowerCase()+", "
+    s += ".admonition."+element.toLowerCase()+", ";
+    s += "details."+element.toLowerCase()+", ";
   });
   return s.substring(0,s.length-2).trim();
 } 
 
 // Définitions
-var defRendering = ["Def", "Definition", "Définition"];
+var defRendering = ["Def", "Déf", "Definition", "Définition"];
 var admonitionDef = toAdmonitionClassString(defRendering);
 var def = document.querySelectorAll(admonitionDef);
 var nbDef = def.length;
@@ -51,7 +53,7 @@ for (let i = 0; i < nbLemmes; i++) {
 }
 
 // Propriétés
-var pteRendering = ["Pte", "Propriete", "Propriété", "Property"];
+var pteRendering = ["Pte", "Pté", "Propriete", "Propriété", "Property"];
 var admonitionPte = toAdmonitionClassString(pteRendering);
 var pte = document.querySelectorAll(admonitionPte);
 var nbPtes = pte.length;
@@ -86,6 +88,19 @@ for (let i = 0; i < nbThm; i++) {
     thm[i].firstElementChild.innerHTML = replaceBy["theorem"]+(i+1)+".";
   } else {
     thm[i].firstElementChild.innerHTML = replaceBy["theorem"]+(i+1)+". "+thm[i].firstElementChild.innerHTML
+  }
+}
+
+// Théorèmes
+var proofRendering = ["Proof", "Demo", , "Demonstration", "Preuve", "Démo", "Démonstration" ];
+var admonitionProof = toAdmonitionClassString(proofRendering);
+var proof = document.querySelectorAll(admonitionProof);
+var nbProof = proof.length;
+for (let i = 0; i < nbProof; i++) {
+  if (proofRendering.includes(proof[i].firstElementChild.innerHTML)) {
+    proof[i].firstElementChild.innerHTML = replaceBy["proof"]+(i+1)+".";
+  } else {
+    proof[i].firstElementChild.innerHTML = replaceBy["proof"]+(i+1)+". "+proof[i].firstElementChild.innerHTML
   }
 }
 
