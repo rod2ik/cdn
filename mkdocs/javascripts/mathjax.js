@@ -1,6 +1,6 @@
 window.MathJax = {
   loader: {
-    load: ['[tex]/tagformat/tikz/tkz-tab']
+    load: [ '[tex]/tagformat', '[tex]/mathtools', '[tex]/cancel', '[tex]/textmacros', '[tex]/bbox', '[tex]/physics' ]
   },
   startup: {
     pageReady: () => {
@@ -13,11 +13,25 @@ window.MathJax = {
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
     processEnvironments: true,
-    packages: {'[+]': ['tagformat', 'tikz', 'tkz-tab']},
-    tagSide: 'left',
+    packages: {'[+]': ['tagformat', 'mathtools', 'cancel', 'textmacros', 'bbox', 'physics' ]},
+    tags: 'ams',
+    tagSide: 'right',
     macros: {
+      mN: '{\\mathbb N}',
+      mZ: '{\\mathbb Z}',
+      mD: '{\\mathbb D}',
+      mQ: '{\\mathbb Q}',
+      mR: '{\\mathbb R}',
+      mC: '{\\mathbb C}',
+      imp: '{\\Rightarrow}',
+      iimp: '{\\Longrightarrow}',
+      ssi: '{\\Leftrightarrow}',
+      sssi: '{\\Longleftrightarrow}',
       RR: '{\\bf R}',
       bold: ['{\\bf #1}',1]
+    },
+    textmacros: {
+      packages: {'[+]': ['bbox']}
     },
 
     // options: {
@@ -30,7 +44,7 @@ window.MathJax = {
     // },
 
     tagformat: {
-       tag: (n) => '[' + n + ']'
+       tag: (n) => '(' + n + ')'
     }
   }
 };
