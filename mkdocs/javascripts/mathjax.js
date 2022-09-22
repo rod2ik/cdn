@@ -35,7 +35,8 @@ window.MathJax = {
       bluebox: ['{\\bbox[5px, border: 2px solid blue]\{#1\}}',1],
       purplebox: ['{\\bbox[5px, border: 2px solid purple]\{#1\}}',1],
       blackbox: ['{\\bbox[5px, border: 2px solid black]\{#1\}}',1],
-      box: ['{\\bbox[5px, border: 2px solid #1] \{#2\}}', 2]
+      box: ['{\\bbox[5px, border: 2px solid #1] \{#2\}}', 2],
+      enc: ['{\\bbox[5px, border: 2px solid #1] \{#2\}}', 2]
     },
     textmacros: {
       packages: {'[+]': ['bbox']}
