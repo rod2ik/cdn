@@ -37,6 +37,12 @@ window.MathJax = {
       greencolor: ['{\\color\{green\} #1}',1],
       purplecolor: ['{\\color\{purple\} #1}',1],
       blackcolor: ['{\\color\{black\} #1}',1],
+      liminf: ['{\\displaystyle \\lim_\{#1\\to+\\infty\} #2}',2],
+      limninf: ['{\\displaystyle \\lim_\{n\\to+\\infty\} #1}',1],
+      limxinf: ['{\\displaystyle \\lim_\{x\\to+\\infty\} #1}',1],
+      limxminf: ['{\\displaystyle \\lim_\{x\\to-\\infty\} #1}',1],
+      limxa: ['{\\displaystyle \\lim_\{x\\to #1\} #2}',2],
+      // \displaystyle \lim_{x\to+\infty} x^2=+\infty$
       redbox: ['{\\bbox[5px, border: 2px solid red]\{#1\}}',1],
       greenbox: ['{\\bbox[5px, border: 2px solid green]\{#1\}}',1],
       bluebox: ['{\\bbox[5px, border: 2px solid blue]\{#1\}}',1],
