@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
       if ((table.parentElement instanceof HTMLDivElement && table.parentElement.classList.contains("md-typeset__table")) 
       && (table.parentElement.parentElement instanceof HTMLDivElement && table.parentElement.parentElement.classList.contains("md-typeset__scrollwrap"))) {
           table.parentElement.parentElement.classList.add("center");
-      } else { // HTML Table tag in Markdown
+      } else if (!table.classList.contains("highlighttable") || !table.parentElement.classList.contains("highlight")) { // HTML Table tag in Markdown, but not code tables
           table.classList.add("center");
       }
   });
