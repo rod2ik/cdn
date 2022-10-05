@@ -443,9 +443,13 @@ fluo, fjaune {
 }
 
 /* IMAGES */
-img.shadow, img.box,
+.md-typeset figure img {
+  clear: both;
+  display: block;
+}
+
+img.shadow, img.ombre, img.encadree, img.box,
 iframe.shadow, iframe.box {
-  margin: auto;
   padding: 5px;
   /* width:100%; */
   box-shadow: var(--img-shadow-box);
@@ -453,15 +457,25 @@ iframe.shadow, iframe.box {
   border-radius: 7px;
 }
 
-figcaption {
+.md-typeset figcaption {
+  display: block;
+  clear: both;
   margin-top: 0.5em;
 }
 
 .center, .center *:not(table *) {
-  /* display: inline-block; */
   text-align: center;
-  /* width: 100%; */
   margin: 0 auto;
+}
+
+.left, .left *:not(table *):not(figure figcaption) {
+  float: left;
+  margin-right: 0.8em !important;
+}
+
+.right, .right *:not(table *):not(figure figcaption) {
+  float: right;
+  margin-left: 0.8em !important;
 }
 
 /* .noshadow, .noboxshadow {
