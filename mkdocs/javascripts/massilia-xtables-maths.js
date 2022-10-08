@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-    // console.log("massilia-xtables-maths PAGE IS LOADED");
+    // console.log("massilia-xtables-maths PAGE LOADED");
 
     /* ====================================================================== */
     /*                       Maths Tables in Mkdocs                           */

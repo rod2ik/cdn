@@ -1,6 +1,8 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
+    // console.log("massilia-tablesort-config PAGE LOADED");
+
   document$.subscribe(function() {
     var tables = document.querySelectorAll("article table[class~='sort'], article table[class~='sortable'], article table[class~='tri'], article table[class~='trier'], article table[class~='triable']")
     // console.log("tables à trier", tables);

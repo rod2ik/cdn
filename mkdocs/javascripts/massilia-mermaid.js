@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-  // console.log("massilia-mermaid PAGE IS LOADED");
+  // console.log("massilia-mermaid PAGE LOADED");
 
   // correct baseline alignment in mermaid graphs
   document.querySelectorAll("svg[id^='mermaid'] .messageText")

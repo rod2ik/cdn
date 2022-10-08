@@ -1,3 +1,5 @@
+/* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+
 window.MathJax = {
   loader: {
     load: [ '[tex]/tagformat', '[tex]/colortbl', '[tex]/extpfeil', '[tex]/mathtools', '[tex]/empheq', '[tex]/cases', '[tex]/cancel', '[tex]/textmacros', '[tex]/bbox', '[tex]/physics', '[tex]/unicode' ]

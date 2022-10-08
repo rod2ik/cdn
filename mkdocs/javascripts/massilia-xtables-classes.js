@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-    // console.log("massilia-xtables-classes PAGE IS LOADED");
+    // console.log("massilia-xtables-classes PAGE LOADED");
 
     /* ====================================================================== */
     /*                       Classes with Tables                              */
