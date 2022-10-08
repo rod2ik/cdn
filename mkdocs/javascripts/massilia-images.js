@@ -1,30 +1,21 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-    console.log("MASSILIA IMAGES.JS LOADED");
+    console.log("massilia-images PAGE LOADED");
 
     /* ====================================================================== */
     /*                       Get Images                              */
     /* ====================================================================== */
     document.querySelectorAll(".md-typeset p img")
     .forEach( img => {
-        // XXX
-        let naturalWidth = img.naturalWidth;
+        // get Infos
         let imgWidthAttribute = img.getAttribute("width");
         let altText = img.getAttribute("alt");
         let imgClassList = img.classList;
         let parentP = img.parentElement;
         let parentOfParentP = img.parentElement.parentElement;
 
-        console.log("img=",img);
-        console.log("img natural width=",naturalWidth);
-        console.log("img get attribute width=",imgWidthAttribute);
-        console.log("type of get attribute width=",typeof imgWidthAttribute);
-        console.log("alt text=",altText);
-        console.log("parentP=",parentP);
-        console.log("imgClassList=",imgClassList);
-
-        // XX
+        // create HTML container Elements
         let figure = this.document.createElement("figure");
         let figcaption = this.document.createElement("figcaption");
         let altTextElement = this.document.createTextNode(altText);
@@ -39,7 +30,9 @@ window.addEventListener('load', function() {
         figcaption.appendChild(altTextElement);
         figcaption.style.display = "block";
         figure.appendChild(figcaption);
-        parentOfParentP.replaceChild(figure,parentP);
+        if (parentOfParentP) {
+            parentOfParentP.replaceChild(figure,parentP);
+        }
     });
 
 });
