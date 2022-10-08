@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-  console.log("massilia-auto-centering PAGE IS LOADED");
+  // console.log("massilia-auto-centering PAGE IS LOADED");
 
   /* ====================================================================== */
   /*                    Automatic Centering of Tables                       */

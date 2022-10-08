@@ -1,5 +1,8 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
+window.addEventListener('load', function() {
+  // console.log("massilia-admonitions PAGE LOADED");
+
 var replaceBy = {
   "definition": "Définition ",
   "lemma": "Lemme ",
@@ -207,3 +210,5 @@ for (let i = 0; i < nbJeretiens; i++) {
     jeretiens[i].firstElementChild.innerHTML = replaceBy["jeretiens"]+(i+1)+". "+jeretiens[i].firstElementChild.innerHTML
   }
 }
+
+});

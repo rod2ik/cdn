@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-    // console.log("Page xtables-cellmerge IS LOADED");
+    // console.log("massilia-xtables-cellmerge PAGE LOADED");
 
     /* ====================================================================== */
     /*                    Cell Merge in Tables                                */

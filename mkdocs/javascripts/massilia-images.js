@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-    console.log("massilia-images PAGE LOADED");
+    // console.log("massilia-images PAGE LOADED");
 
     /* ====================================================================== */
     /*                       Get Images                              */

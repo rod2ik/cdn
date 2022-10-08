@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-  // console.log("MKDOCS GRAPHVIZ.JS LOADED");
+  // console.log("massilia-graphviz PAGE LOADED");
 
   var span = document.querySelector("[class='graphviz-light-dark']:first-of-type");
   if (span !== null) { // at least one graphviz diagram in the page
