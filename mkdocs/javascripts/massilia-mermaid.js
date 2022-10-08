@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
 
   // apply theme updates to current theme
   fix_graph_flowchart();
-  resize_state_diagram();
+  // resize_state_diagram();
   fix_pie();
   fix_git();
   update_theme();
