@@ -66,14 +66,14 @@ window.addEventListener('load', function() {
     });
   }
 
-  function resize_state_diagram() {
-    // console.log("RESIZE STATE DIAGRAM");
-    document.querySelectorAll("svg[id^='mermaid-'].statediagram")
-    .forEach( el => {
-      let maxwidth = getComputedStyle(el).maxWidth;
-      el.style.setProperty("max-width", (parseInt(maxwidth)*0.6)+"px", "important");
-    });
-  }
+  // function resize_state_diagram() {
+  //   // console.log("RESIZE STATE DIAGRAM");
+  //   document.querySelectorAll("svg[id^='mermaid-'].statediagram")
+  //   .forEach( el => {
+  //     let maxwidth = getComputedStyle(el).maxWidth;
+  //     el.style.setProperty("max-width", (parseInt(maxwidth)*0.6)+"px", "important");
+  //   });
+  // }
 
   function fix_gantt() {
     // console.log("FIX GANTT");
