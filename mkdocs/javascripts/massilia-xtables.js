@@ -9,7 +9,7 @@ async function loadExtendedTables() {
   await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js');
   await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js');
   await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.date.min.js');
-  await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.date.min.js');
+  await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.dotsep.min.js');
   await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.monthname.min.js');
   await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.filesize.min.js');
   // await import('./tablesort.js');
