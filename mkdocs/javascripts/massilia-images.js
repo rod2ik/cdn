@@ -15,23 +15,26 @@ window.addEventListener('load', function() {
         let parentP = img.parentElement;
         let parentOfParentP = img.parentElement.parentElement;
 
-        // create HTML container Elements
-        let figure = this.document.createElement("figure");
-        let figcaption = this.document.createElement("figcaption");
-        let altTextElement = this.document.createTextNode(altText);
-        if (!imgClassList.length == 0) {
-            imgClassList.forEach( classItem => {
-                figure.classList.add(classItem);
-            });
-        }
-        figure.style.width = imgWidthAttribute;
-        img.style.width = "100%";
-        figure.appendChild(img);
-        figcaption.appendChild(altTextElement);
-        figcaption.style.display = "block";
-        figure.appendChild(figcaption);
-        if (parentOfParentP) {
-            parentOfParentP.replaceChild(figure,parentP);
+        if (!img.classList.contains("twemoji") && !img.classList.contains("emojione")) { //emojis are not treated
+            // create HTML container Elements
+            let figure = this.document.createElement("figure");
+            let figcaption = this.document.createElement("figcaption");
+            let altTextElement = this.document.createTextNode(altText);
+            if (!imgClassList.length == 0) {
+                imgClassList.forEach( classItem => {
+                    figure.classList.add(classItem);
+                });
+            }
+            figure.style.width = imgWidthAttribute;
+            img.style.width = "100%";
+            figure.appendChild(img);
+            figcaption.appendChild(altTextElement);
+            figcaption.style.display = "block";
+            figure.appendChild(figcaption);
+            if (parentOfParentP) {
+                parentOfParentP.replaceChild(figure,parentP);
+            }
+
         }
     });
 
