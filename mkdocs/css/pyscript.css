@@ -1,5 +1,5 @@
-:not(:defined):not(span.arithmatex *) {
-    display: none
+:not(:defined):not(span.arithmatex *):not(nav.md-nav *) {
+    display: none;
 }
 
 html{
