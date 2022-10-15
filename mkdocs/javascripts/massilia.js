@@ -2,6 +2,7 @@
 
 import('./massilia-admonitions.js');
 import('./massilia-images.js');
+import('./massilia-badges.js');
 import('./massilia-graphviz.js');
 import('./massilia-xtables.js');
 import('./massilia-auto-centering.js');

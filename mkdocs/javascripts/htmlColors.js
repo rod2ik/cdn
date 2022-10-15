@@ -1,4 +1,8 @@
-const htmlColors =  {
+const color =  {
+  //////////////////////////////////////////////////////////////////////////////////////
+  /*                             Standard HTML Colors                                 */
+  //////////////////////////////////////////////////////////////////////////////////////
+  // colorKey:                [Background, BorderLight, BorderDark, TextLight, TextDark]
   "aliceblue":                ["#f0f8ff", "#ff0000", "#00ffff","#000000","#ffffff"],
   "antiquewhite":             ["#faebd7", "#ff0000", "#00ffff","#000000","#ffffff"],
   "aqua":                     ["#00ffff", "#ff0000", "#00ffff","#000000","#ffffff"],
@@ -147,6 +151,11 @@ const htmlColors =  {
   "whitesmoke":               ["#f5f5f5", "#ff0000", "#00ffff","#000000","#ffffff"],
   "yellow":                   ["#ffff00", "#ff0000", "#00ffff","#000000","#ffffff"],
   "yellowgreen":              ["#9acd32", "#ff0000", "#00ffff","#000000","#ffffff"],
+  //////////////////////////////////////////////////////////////////////////////////////
+  /*                              Custom Colors                                       */
+  //////////////////////////////////////////////////////////////////////////////////////
+  // colorKey:                [Background, BorderLight, BorderDark, TextLight, TextDark]
+  "mauve":                    ["#a547fe", "#8c13ff", "#c080fd","#000000","#ffffff"],
 }
 
-export default htmlColors;
+export default color;

@@ -1,0 +1,116 @@
+/* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+/* MASSILIA BADGES / EN VALEUR */
+:root {
+  /* BADGES / EN VALEUR MASSILIA */
+  --env-background-color: rgba(220,220,220,0.6);
+  --env-border-color: rgba(0, 0, 0, .6);
+  --envpink-background-color: deeppink;
+  --envpink-border-color: #580833;
+  --envred-background-color: #ff0000;
+  --envred-border-color: #ab0000;
+  --envscarlet-background-color: #dc3545;
+  --envscarlet-border-color: #85202a;
+  --envyellow-background-color: #ffc107;
+  --envyellow-border-color: #d39f00;
+  --envgreen-background-color: #51ff00;
+  --envgreen-border-color: #3cbb01;
+  --envblue-background-color: #007bff;
+  --envblue-border-color: #014b9a;
+}
+
+badge, bad, bd {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+}
+
+envaleurshadow, envshadow,
+bashadow, basha {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: rgba(220, 220, 220, 0.6);
+  border-bottom: 2px solid var(--env-border-color);
+  border-right: 2px solid var(--env-border-color);
+  box-shadow: 5px 5px 3px var(--env-border-color);
+}
+
+envaleur, env, envgris,
+bagrey, bagris {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: var(--env-background-color);
+  border-bottom: 2px solid var(--env-border-color);
+  border-right: 2px solid var(--env-border-color);
+}
+
+envrose,
+bapink, barose {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: var(--envpink-background-color);
+  border-bottom: 2px solid var(--envpink-border-color);
+  border-right: 2px solid var(--envpink-border-color);
+}
+
+bascarlet, baecarlate {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: var(--envscarlet-background-color);
+  border-bottom: 2px solid var(--envscarlet-border-color);
+  border-right: 2px solid var(--envscarlet-border-color);
+}
+
+envrouge,
+bared, barouge {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: var(--envred-background-color);
+  border-bottom: 2px solid var(--envred-border-color);
+  border-right: 2px solid var(--envred-border-color);
+}
+
+envjaune,
+bayellow, bajaune {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: var(--envyellow-background-color);
+  border-bottom: 2px solid var(--envyellow-border-color);
+  border-right: 2px solid var(--envyellow-border-color);
+}
+
+envvert,
+bagreen, bavert {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: var(--envgreen-background-color);
+  border-bottom: 2px solid var(--envgreen-border-color);
+  border-right: 2px solid var(--envgreen-border-color);
+}
+
+envbleu,
+bablue, bableu {
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight: 500;
+  background-color: var(--envblue-background-color);
+  border-bottom: 2px solid var(--envblue-border-color);
+  border-right: 2px solid var(--envblue-border-color);
+}
+
+/* FLUO */
