@@ -70,10 +70,6 @@ window.addEventListener('load', function() {
         return Array(attr1,attr2,attr3);
     }
 
-    // function setDynamicBackground(badge, badgeDynamicColorsArray) {
-    //     return badgeDynamicColorsArray[0];
-    // }
-
     function getBgColors(attrList) { // return the background color, as :
         // a single static color, 
         // or a dynamic couple 'color1-color2'
