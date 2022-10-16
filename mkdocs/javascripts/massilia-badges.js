@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
     update_badges();
 
     function update_badges() {
-        document.querySelectorAll(".md-typeset p badge, .md-typeset p bad, .md-typeset p bd")
+        document.querySelectorAll(".md-typeset badge, .md-typeset bad, .md-typeset bd")
         .forEach( badge => {
             let attrList = badge.getAttributeNames();
             if (!attrList.includes("style")) { 
