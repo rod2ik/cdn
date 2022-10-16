@@ -44,6 +44,16 @@
   --env-border-color: rgba(190, 190, 190, .7);
   --envpink-background-color: deeppink;
   --envpink-border-color: rgb(255, 94, 180);
+  --envred-background-color: #ff0000;
+  --envred-border-color: #ff3e3e;
+  --envscarlet-background-color: #dc3545;
+  --envscarlet-border-color: #85202a;
+  --envyellow-background-color: #ffc107;
+  --envyellow-border-color: #f7df97;
+  --envgreen-background-color: #28a745;
+  --envgreen-border-color: #6ec783;
+  --envblue-background-color: #007bff;
+  --envblue-border-color: #57a5f9;
   /* ENCADRE MASSILIA DARK */
   --enc-color:#fff;
   --enc-border-color:#fff;

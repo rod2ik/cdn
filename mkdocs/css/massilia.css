@@ -2,9 +2,8 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 @import url("massilia-dark.css");
 @import url("massilia-admonitions.css");
-/* COLONNES PERSONNALISÉES */
-/* @import url("https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/css/mkdocs-columns.css"); */
 @import url("massilia-columns.css");
+@import url("massilia-badges.css");
 @import url("massilia-mermaid.css");
 /* IMPORT LED BRIGHT */
 @font-face {
@@ -46,11 +45,6 @@
   /* ADMONITIONS THÈME CLAIR MASSILIA : VALEURS PAR DÉFAUT */
   --md-admonition-python-title-background: rgb(81, 164, 231);
   --md-admonition-python-border-color: rgb(55, 116, 167);
-  /* EN VALEUR MASSILIA */
-  --env-background-color: rgba(220,220,220,0.6);
-  --env-border-color: rgba(0, 0, 0, .6);
-  --envpink-background-color: #fc5db1;
-  --envpink-border-color: #800b49;
   /* ENCADRE MASSILIA */
   --enc-color: inherit;
   --enc-border-color:#111111;
@@ -398,48 +392,6 @@ encadre, #encadre, .encadre, enc {
   box-shadow: var(--enc-box-shadow);
   margin-bottom: 0.3em;
   padding: 0.5em 0.7em 0.5em 0.7em;
-}
-
-/* EN VALEUR */
-envaleurshadow, #envaleurshadow, .envaleurshadow,
-valsha, #valsha, .valsha, envsha, #envsha, .envsha {
-  display: inline-block;
-  background-color: rgba(220, 220, 220, 0.6);
-  border-radius: 7px;
-  padding: 0 0.5em;
-  border-bottom: 2px solid var(--env-border-color);
-  border-right: 2px solid var(--env-border-color);
-  box-shadow: 5px 5px 3px var(--env-border-color);
-}
-
-envaleur, #envaleur, .envaleur,
-val, #val, .val, env, #env, .env {
-  display: inline-block;
-  /* background-color: rgba(220,220,220,0.6); */
-  background-color: var(--env-background-color);
-  border-radius: 7px;
-  padding: 0 0.5em;
-  border-bottom: 2px solid var(--env-border-color);
-  border-right: 2px solid var(--env-border-color);
-  font-weight: 500;
-  /* box-shadow: 5px 5px 3px rgba(0, 0, 0, .4); */
-}
-
-envpink, #envpink, .envpink {
-  display: inline-block;
-  background-color: var(--envpink-background-color);
-  border-radius: 7px;
-  padding: 0 0.5em;
-  border-bottom: 2px solid var(--envpink-border-color);
-  border-right: 2px solid var(--envpink-border-color);
-  font-weight: 500;
-}
-
-/* FLUO */
-fluo, fjaune {
-  background-color: var(--fluo-jaune-background-color);
-  border-radius: 5px;
-  padding: 0.1em;
 }
 
 /* IMAGES */
