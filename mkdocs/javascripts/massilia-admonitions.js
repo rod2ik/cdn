@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-  // console.log("massilia-admonitions PAGE LOADED");
+  console.log("massilia-admonitions PAGE LOADED");
 
 var replaceBy = {
   "definition": "Définition ",
@@ -11,13 +11,15 @@ var replaceBy = {
   "theorem": "Théorème ",
   "proof": "Preuve ",
   "exercice": "Exercice ",
-  "example": "Exemple ",
+  "exemple": "Exemple ",
   "method": "Méthode ",
   "python": "Python ",
   "notation": "Notation ",
   "reponse": "Réponse ",
   "corrige": "Corrigé ",
-  "jeretiens": "Je Retiens "
+  "jeretiens": "Je Retiens ",
+  "reference": "Références ",
+  "film": "Films "
 }
 
 function toAdmonitionClassString(array) {
@@ -27,7 +29,7 @@ function toAdmonitionClassString(array) {
     s += "details."+element.toLowerCase()+", ";
   });
   return s.substring(0,s.length-2).trim();
-} 
+}
 
 // Définitions
 var defRendering = ["Def", "Déf", "Definition", "Définition"];
@@ -134,15 +136,15 @@ for (let i = 0; i < nbEx; i++) {
 }
 
 // Exemples
-var expRendering = ["Exp", "Exemple", "Example"];
+var expRendering = ["Exp", "Exemple"];
 var admonitionExp = toAdmonitionClassString(expRendering);
 var exp = document.querySelectorAll(admonitionExp);
 var nbExp = exp.length;
 for (let i = 0; i < nbExp; i++) {
   if (expRendering.includes(exp[i].firstElementChild.innerHTML)) {
-    exp[i].firstElementChild.innerHTML = replaceBy["example"]+(i+1)+".";
+    exp[i].firstElementChild.innerHTML = replaceBy["exemple"]+(i+1)+".";
   } else {
-    exp[i].firstElementChild.innerHTML = replaceBy["example"]+(i+1)+". "+exp[i].firstElementChild.innerHTML
+    exp[i].firstElementChild.innerHTML = replaceBy["exemple"]+(i+1)+". "+exp[i].firstElementChild.innerHTML
   }
 }
 
@@ -210,5 +212,33 @@ for (let i = 0; i < nbJeretiens; i++) {
     jeretiens[i].firstElementChild.innerHTML = replaceBy["jeretiens"]+(i+1)+". "+jeretiens[i].firstElementChild.innerHTML
   }
 }
+
+// Films
+var filmsRendering = ["Film", "Films", "Movie", "Movies"];
+var admonitionFilms = toAdmonitionClassString(filmsRendering);
+var films = document.querySelectorAll(admonitionFilms);
+var nbFilms = films.length;
+console.log("nbFilms=", nbFilms);
+for (let i = 0; i < nbFilms; i++) {
+  if (filmsRendering.includes(films[i].firstElementChild.innerHTML)) {
+    films[i].firstElementChild.innerHTML = replaceBy["film"]+(i+1)+".";
+  } else {
+    films[i].firstElementChild.innerHTML = replaceBy["film"]+(i+1)+". "+films[i].firstElementChild.innerHTML
+  }
+}
+
+// Références
+var referencesRendering = ["Ref", "Réf", "Reference", "Référence", "References", "Références"];
+var admonitionReferences = toAdmonitionClassString(referencesRendering);
+var references = document.querySelectorAll(admonitionReferences);
+var nbReferences = references.length;
+for (let i = 0; i < nbReferences; i++) {
+  if (referencesRendering.includes(references[i].firstElementChild.innerHTML)) {
+    references[i].firstElementChild.innerHTML = replaceBy["reference"]+(i+1)+".";
+  } else {
+    references[i].firstElementChild.innerHTML = replaceBy["reference"]+(i+1)+". "+references[i].firstElementChild.innerHTML
+  }
+}
+
 
 });
