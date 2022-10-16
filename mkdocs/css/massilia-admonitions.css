@@ -12,16 +12,16 @@
 /* ======================================================= */
 /*                   MATHS ADMONITIONS                     */
 /* ======================================================= */
+.md-typeset .admonition {
+  font-size: 0.75rem;
+}
+
 /* def - DEFINITION */
 :root {
   --md-admonition-icon--def: url('data:image/svg+xml;charset=utf-8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open" class="svg-inline--fa fa-book-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path></svg>');
   --md-admonition-icon--déf: var(--md-admonition-icon--def);
   --md-admonition-icon--definition: var(--md-admonition-icon--def);
   --md-admonition-icon--définition: var(--md-admonition-icon--def);
-}
-
-.md-typeset .admonition {
-  font-size: 0.75rem;
 }
 
 .md-typeset .admonition.def,
@@ -57,7 +57,6 @@
 .md-typeset .définition > .admonition-title::before,
 .md-typeset .définition > summary::before {
   background-color: rgb(43, 155, 70);
-  -webkit-mask-image: var(--md-admonition-icon--def);
   mask-image: var(--md-admonition-icon--def);
 }
 
@@ -94,7 +93,6 @@
 .md-typeset .lemma > .admonition-title::before,
 .md-typeset .lemma > summary::before {
   background-color: rgb(26, 153, 238);
-  -webkit-mask-image: var(--md-admonition-icon--pte);
   mask-image: var(--md-admonition-icon--pte);
 }
 
@@ -143,7 +141,6 @@
 .md-typeset .property > .admonition-title::before,
 .md-typeset .property > summary::before {
   background-color: rgb(26, 153, 238);
-  -webkit-mask-image: var(--md-admonition-icon--pte);
   mask-image: var(--md-admonition-icon--pte);
 }
 
@@ -217,7 +214,6 @@
 .md-typeset .theorem > .admonition-title::before,
 .md-typeset .theorem > summary::before {
   background-color: rgb(250, 74, 74);
-  -webkit-mask-image: var(--md-admonition-icon--thm);
   mask-image: var(--md-admonition-icon--thm);
 }
 
@@ -282,7 +278,6 @@
   content: "";
   display: inline-block;
   border-bottom: 4px solid var(--md-admonition-proof-dashed-border-color);
-  border-style: dashed;
   width: min(50px, 7%);
   position: absolute;
   bottom: 0px;
@@ -341,7 +336,6 @@
 .md-typeset .demonstration > .admonition-title::before,
 .md-typeset .demonstration > summary::before {
   background-color: var(--md-admonition-icon-proof-color);
-  -webkit-mask-image: var(--md-admonition-icon--proof);
   mask-image: var(--md-admonition-icon--proof);
 }
 
@@ -366,7 +360,6 @@
 .md-typeset .python > .admonition-title::before,
 .md-typeset .python > summary::before {
   background-color: rgb(255, 211, 67);
-  -webkit-mask-image: var(--md-admonition-icon--python);
   mask-image: var(--md-admonition-icon--python);
 }
 
@@ -407,7 +400,6 @@
 .md-typeset .exercice > .admonition-title::before,
 .md-typeset .exercice > summary::before {
   background-color: rgb(253, 167, 28);
-  -webkit-mask-image: var(--md-admonition-icon--ex);
   mask-image: var(--md-admonition-icon--ex);
 }
 
@@ -421,18 +413,14 @@
 .md-typeset .admonition.exp,
 .md-typeset details.exp,
 .md-typeset .admonition.exemple,
-.md-typeset details.exemple,
-.md-typeset .admonition.example,
-.md-typeset details.example {
+.md-typeset details.exemple {
   border-color: rgb(246, 231, 10);
 }
 
 .md-typeset .exp > .admonition-title,
 .md-typeset .exp > summary,
 .md-typeset .exemple > .admonition-title,
-.md-typeset .exemple > summary,
-.md-typeset .example > .admonition-title,
-.md-typeset .example > summary {
+.md-typeset .exemple > summary {
   background-color: rgba(246, 231, 81, 0.25);
   border-color: rgb(246, 231, 10);
 }
@@ -440,11 +428,8 @@
 .md-typeset .exp > .admonition-title::before,
 .md-typeset .exp > summary::before,
 .md-typeset .exemple > .admonition-title::before,
-.md-typeset .exemple > summary::before,
-.md-typeset .example > .admonition-title::before,
-.md-typeset .example > summary::before {
+.md-typeset .exemple > summary::before {
   background-color: rgb(246, 231, 10);
-  -webkit-mask-image: var(--md-admonition-icon--exp);
   mask-image: var(--md-admonition-icon--exp);
 }
 
@@ -618,7 +603,6 @@
 .md-typeset .correction > .admonition-title::before,
 .md-typeset .correction > summary::before {
   background-color: #f82e2e;
-  -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--cor);
 }
 
@@ -651,4 +635,100 @@
   background-color: var(--md-admonition-fg-color);
   -webkit-mask-image: var(--md-admonition-icon--jeretiens);
   mask-image: var(--md-admonition-icon--jeretiens);
+}
+
+/* Film / Films  / Movies */
+:root {
+  /* --md-admonition-icon--jeretiens: url('data:image/svg+xml;charset=utf-8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><g><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"><path d="M3900.4,5002c-203-40.2-406-195.4-501.8-385c-61.3-120.7-91.9-293-93.8-503.7c0-72.8-5.7-164.7-11.5-203l-11.5-70.9l-176.2,113c-478.8,310.3-848.5,444.4-1110.9,400.3c-645.5-105.3-915.5-879.1-469.2-1350.3c352.4-373.5,815.9-339,1541.8,116.8c90,57.5,172.4,103.4,180,103.4s9.6-40.2,5.7-90c-7.7-101.5-55.5-1195.2-74.7-1731.5l-13.4-339l-136-51.7c-360.1-139.8-637.8-308.4-837-507.6C1973.6,284.6,1851,31.8,1799.3-311c-139.8-921.3,371.6-1882.8,1513.1-2838.5l174.3-147.5l11.5-229.8c17.2-342.8,116.8-589.9,333.3-831.2c107.3-118.8,331.3-272,482.7-329.4c245.2-91.9,339-97.7,1618.4-90c1074.5,5.7,1204.7,9.6,1308.2,40.2c379.2,111.1,668.4,352.4,835.1,693.3c74.7,153.2,130.3,360.1,132.2,480.8c0,32.6,7.7,65.1,17.2,70.9c30.6,19.2,227.9,478.8,306.5,712.5c40.2,124.5,95.8,327.5,120.7,448.2c40.2,199.2,44.1,266.2,42.1,708.7c-3.8,498-24.9,844.7-76.6,1254.5c-84.3,668.4-191.5,973-421.4,1208.6c-170.5,176.2-390.7,256.7-704.9,256.7h-155.1l-46,105.3c-57.5,132.1-233.7,325.6-377.3,411.8c-164.7,99.6-316,132.1-620.6,134.1H6034l-47.9,111.1c-32.6,74.7-90,151.3-182,243.3c-229.8,231.7-406.1,296.9-789.1,296.9h-235.6v413.7c0,323.7,5.7,411.8,24.9,404.1c11.5-3.8,95.8-53.6,185.8-109.2c381.2-233.7,724-363.9,953.8-363.9c298.8,0,597.6,195.4,727.8,475c46,97.7,51.7,132.2,51.7,329.4c0,208.8-3.8,227.9-61.3,348.6c-151.3,321.8-517.1,515.2-852.3,455.8c-216.4-40.2-488.4-160.9-821.7-365.8c-101.5-61.3-189.6-113-195.4-113c-5.8,0-13.4,136-17.2,302.6c-5.7,281.6-9.6,306.4-59.4,408c-107.3,218.3-296.9,369.7-526.7,417.5C4074.7,5025,4021,5026.9,3900.4,5002z M4201.1,4668.8c180-76.6,272-241.3,272-492.2v-130.2h-427.1h-429l9.6,159c13.4,254.7,103.4,408,281.6,469.3C3994.2,4705.2,4120.6,4701.3,4201.1,4668.8z M2349,3988.8c222.2-80.4,783.4-396.5,783.4-440.5c0-46-612.9-381.2-823.6-452c-339-113-653.1,78.5-683.8,413.7c-19.2,206.8,95.8,400.3,291.1,490.3C2046.3,4061.6,2157.4,4059.7,2349,3988.8z M6120.2,4006.1c304.5-137.9,400.3-515.2,193.5-766.1c-136-162.8-352.4-216.4-586.1-141.7c-206.8,67-814,402.2-814,450.1c0,23,285.4,201.1,496.1,312.2C5756.3,4044.4,5949.8,4084.6,6120.2,4006.1z M4469.2,3554.1l-5.7-168.5l-434.8-5.8l-436.7-3.8v159c0,88.1,5.7,166.6,13.4,172.4c5.7,7.7,204.9,13.4,440.5,13.4h429L4469.2,3554.1z M4473.1,1642.6c0-1394.3,0-1426.9,38.3-1465.2c55.5-55.5,120.7-65.1,189.6-30.7c32.6,17.2,61.3,34.5,63.2,36.4c3.8,1.9,9.6,430.9,15.3,951.9l9.6,948.1l178.1,5.7c379.2,11.5,622.5-120.7,756.6-411.8c42.1-90,42.1-111.1,51.7-1022.8c9.6-882.9,11.5-934.7,46-973c51.7-55.5,162.8-53.6,218.3,3.8c42.1,44.1,42.1,51.7,46,896.4l5.7,850.4l229.8-1.9c187.7-1.9,250.9-11.5,344.8-46c136-53.6,285.4-193.5,354.3-335.2c47.9-95.8,47.9-99.6,57.5-810.2l9.6-716.3l46-36.4c44.1-36.4,124.5-47.9,183.9-24.9c78.5,30.7,86.2,91.9,86.2,718.2v595.7l178.1-7.7c149.4-5.7,191.5-15.3,264.3-57.5c245.2-143.6,354.3-385,438.6-971.1c59.4-423.3,78.5-672.3,90-1227.7c11.5-574.6,0-699.1-99.6-1043.8c-67-231.7-132.2-358.2-241.3-459.7c-116.8-109.2-201.1-143.7-404.1-159c-178.1-15.3-231.7-42.1-252.8-130.2c-17.2-65.1,36.4-157.1,95.8-172.4c28.7-7.7,136-7.7,241.3-1.9l191.5,9.6l-13.4-107.2c-49.8-436.7-365.8-798.7-771.9-883c-134.1-28.7-2428.6-28.7-2551.2,0c-224.1,51.7-482.7,235.6-611,436.7c-74.7,114.9-130.2,275.8-147.5,421.4c-11.5,105.3-9.6,113,28.7,126.4c61.3,19.2,105.3,120.7,80.4,183.9c-9.6,28.7-116.8,130.3-245.2,231.8C2822-2350.9,2327.9-1715,2153.6-1073.3c-57.5,214.5-70.9,580.3-26.8,792.9c80.4,400.3,321.8,670.4,802.5,900.2c113,53.6,208.8,95.8,212.6,91.9c5.7-7.6,24.9-616.7,28.7-873.4c0-97.7,7.7-126.4,42.1-159c57.5-53.6,159-49.8,214.5,5.7l44.1,44.1l11.5,881c9.6,793,55.6,2101.1,82.4,2359.7l9.6,99.6h450.1h448.2V1642.6z"/></g></g></svg>'); */
+  --md-admonition-icon--film: url("../images/film.svg");
+  --md-admonition-icon--films: var(--md-admonition-icon--film);
+  --md-admonition-icon--movies: var(--md-admonition-icon--film);
+}
+
+.md-typeset .admonition.film,
+.md-typeset details.film,
+.md-typeset .admonition.films,
+.md-typeset details.films,
+.md-typeset .admonition.movie,
+.md-typeset details.movie,
+.md-typeset .admonition.movies,
+.md-typeset details.movies {
+  border-color: #f82e2e;
+}
+
+.md-typeset .film > .admonition-title,
+.md-typeset .film > summary,
+.md-typeset .films > .admonition-title,
+.md-typeset .films > summary,
+.md-typeset .movie > .admonition-title,
+.md-typeset .movie > summary,
+.md-typeset .movies > .admonition-title,
+.md-typeset .movies > summary {
+  background: url("../images/affiche.jpg");
+}
+
+.md-typeset .film > .admonition-title::before,
+.md-typeset .film > summary::before,
+.md-typeset .films > .admonition-title::before,
+.md-typeset .films > summary::before,
+.md-typeset .movie > .admonition-title::before,
+.md-typeset .movie > summary::before,
+.md-typeset .movies > .admonition-title::before,
+.md-typeset .movies > summary::before {
+  background-color: var(--md-admonition-fg-color);
+  mask-image: var(--md-admonition-icon--film);
+}
+
+/* Ref / References / Références */
+:root {
+  /* --md-admonition-icon--jeretiens: url('data:image/svg+xml;charset=utf-8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><g><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"><path d="M3900.4,5002c-203-40.2-406-195.4-501.8-385c-61.3-120.7-91.9-293-93.8-503.7c0-72.8-5.7-164.7-11.5-203l-11.5-70.9l-176.2,113c-478.8,310.3-848.5,444.4-1110.9,400.3c-645.5-105.3-915.5-879.1-469.2-1350.3c352.4-373.5,815.9-339,1541.8,116.8c90,57.5,172.4,103.4,180,103.4s9.6-40.2,5.7-90c-7.7-101.5-55.5-1195.2-74.7-1731.5l-13.4-339l-136-51.7c-360.1-139.8-637.8-308.4-837-507.6C1973.6,284.6,1851,31.8,1799.3-311c-139.8-921.3,371.6-1882.8,1513.1-2838.5l174.3-147.5l11.5-229.8c17.2-342.8,116.8-589.9,333.3-831.2c107.3-118.8,331.3-272,482.7-329.4c245.2-91.9,339-97.7,1618.4-90c1074.5,5.7,1204.7,9.6,1308.2,40.2c379.2,111.1,668.4,352.4,835.1,693.3c74.7,153.2,130.3,360.1,132.2,480.8c0,32.6,7.7,65.1,17.2,70.9c30.6,19.2,227.9,478.8,306.5,712.5c40.2,124.5,95.8,327.5,120.7,448.2c40.2,199.2,44.1,266.2,42.1,708.7c-3.8,498-24.9,844.7-76.6,1254.5c-84.3,668.4-191.5,973-421.4,1208.6c-170.5,176.2-390.7,256.7-704.9,256.7h-155.1l-46,105.3c-57.5,132.1-233.7,325.6-377.3,411.8c-164.7,99.6-316,132.1-620.6,134.1H6034l-47.9,111.1c-32.6,74.7-90,151.3-182,243.3c-229.8,231.7-406.1,296.9-789.1,296.9h-235.6v413.7c0,323.7,5.7,411.8,24.9,404.1c11.5-3.8,95.8-53.6,185.8-109.2c381.2-233.7,724-363.9,953.8-363.9c298.8,0,597.6,195.4,727.8,475c46,97.7,51.7,132.2,51.7,329.4c0,208.8-3.8,227.9-61.3,348.6c-151.3,321.8-517.1,515.2-852.3,455.8c-216.4-40.2-488.4-160.9-821.7-365.8c-101.5-61.3-189.6-113-195.4-113c-5.8,0-13.4,136-17.2,302.6c-5.7,281.6-9.6,306.4-59.4,408c-107.3,218.3-296.9,369.7-526.7,417.5C4074.7,5025,4021,5026.9,3900.4,5002z M4201.1,4668.8c180-76.6,272-241.3,272-492.2v-130.2h-427.1h-429l9.6,159c13.4,254.7,103.4,408,281.6,469.3C3994.2,4705.2,4120.6,4701.3,4201.1,4668.8z M2349,3988.8c222.2-80.4,783.4-396.5,783.4-440.5c0-46-612.9-381.2-823.6-452c-339-113-653.1,78.5-683.8,413.7c-19.2,206.8,95.8,400.3,291.1,490.3C2046.3,4061.6,2157.4,4059.7,2349,3988.8z M6120.2,4006.1c304.5-137.9,400.3-515.2,193.5-766.1c-136-162.8-352.4-216.4-586.1-141.7c-206.8,67-814,402.2-814,450.1c0,23,285.4,201.1,496.1,312.2C5756.3,4044.4,5949.8,4084.6,6120.2,4006.1z M4469.2,3554.1l-5.7-168.5l-434.8-5.8l-436.7-3.8v159c0,88.1,5.7,166.6,13.4,172.4c5.7,7.7,204.9,13.4,440.5,13.4h429L4469.2,3554.1z M4473.1,1642.6c0-1394.3,0-1426.9,38.3-1465.2c55.5-55.5,120.7-65.1,189.6-30.7c32.6,17.2,61.3,34.5,63.2,36.4c3.8,1.9,9.6,430.9,15.3,951.9l9.6,948.1l178.1,5.7c379.2,11.5,622.5-120.7,756.6-411.8c42.1-90,42.1-111.1,51.7-1022.8c9.6-882.9,11.5-934.7,46-973c51.7-55.5,162.8-53.6,218.3,3.8c42.1,44.1,42.1,51.7,46,896.4l5.7,850.4l229.8-1.9c187.7-1.9,250.9-11.5,344.8-46c136-53.6,285.4-193.5,354.3-335.2c47.9-95.8,47.9-99.6,57.5-810.2l9.6-716.3l46-36.4c44.1-36.4,124.5-47.9,183.9-24.9c78.5,30.7,86.2,91.9,86.2,718.2v595.7l178.1-7.7c149.4-5.7,191.5-15.3,264.3-57.5c245.2-143.6,354.3-385,438.6-971.1c59.4-423.3,78.5-672.3,90-1227.7c11.5-574.6,0-699.1-99.6-1043.8c-67-231.7-132.2-358.2-241.3-459.7c-116.8-109.2-201.1-143.7-404.1-159c-178.1-15.3-231.7-42.1-252.8-130.2c-17.2-65.1,36.4-157.1,95.8-172.4c28.7-7.7,136-7.7,241.3-1.9l191.5,9.6l-13.4-107.2c-49.8-436.7-365.8-798.7-771.9-883c-134.1-28.7-2428.6-28.7-2551.2,0c-224.1,51.7-482.7,235.6-611,436.7c-74.7,114.9-130.2,275.8-147.5,421.4c-11.5,105.3-9.6,113,28.7,126.4c61.3,19.2,105.3,120.7,80.4,183.9c-9.6,28.7-116.8,130.3-245.2,231.8C2822-2350.9,2327.9-1715,2153.6-1073.3c-57.5,214.5-70.9,580.3-26.8,792.9c80.4,400.3,321.8,670.4,802.5,900.2c113,53.6,208.8,95.8,212.6,91.9c5.7-7.6,24.9-616.7,28.7-873.4c0-97.7,7.7-126.4,42.1-159c57.5-53.6,159-49.8,214.5,5.7l44.1,44.1l11.5,881c9.6,793,55.6,2101.1,82.4,2359.7l9.6,99.6h450.1h448.2V1642.6z"/></g></g></svg>'); */
+  --md-admonition-icon--reference: url("../images/references.svg");
+  --md-admonition-icon--references: var(--md-admonition-icon--reference);
+}
+
+.md-typeset .admonition.ref,
+.md-typeset details.ref,
+.md-typeset .admonition.réf,
+.md-typeset details.réf,
+.md-typeset .admonition.reference,
+.md-typeset details.reference,
+.md-typeset .admonition.references,
+.md-typeset details.references,
+.md-typeset .admonition.référence,
+.md-typeset details.référence,
+.md-typeset .admonition.références,
+.md-typeset details.références {
+  border-color: #f82e2e;
+}
+
+.md-typeset .ref > .admonition-title,
+.md-typeset .ref > summary,
+.md-typeset .réf > .admonition-title,
+.md-typeset .réf > summary,
+.md-typeset .reference > .admonition-title,
+.md-typeset .reference > summary,
+.md-typeset .references > .admonition-title,
+.md-typeset .references > summary,
+.md-typeset .référence > .admonition-title,
+.md-typeset .référence > summary,
+.md-typeset .références > .admonition-title,
+.md-typeset .références > summary {
+  background-color: rgba(248, 46, 46, 0.6156862745);
+  border-color: #f82e2e;
+}
+
+.md-typeset .ref > .admonition-title::before,
+.md-typeset .ref > summary::before,
+.md-typeset .réf > .admonition-title::before,
+.md-typeset .réf > summary::before,
+.md-typeset .reference > .admonition-title::before,
+.md-typeset .reference > summary::before,
+.md-typeset .references > .admonition-title::before,
+.md-typeset .references > summary::before,
+.md-typeset .référence > .admonition-title::before,
+.md-typeset .référence > summary::before,
+.md-typeset .références > .admonition-title::before,
+.md-typeset .références > summary::before {
+  background-color: var(--md-admonition-fg-color);
+  mask-image: var(--md-admonition-icon--reference);
 }
