@@ -1,11 +1,13 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
-import color from './htmlColors.js';
+import htmlColors from './htmlColors.js';
+var color = htmlColors;
 
 window.addEventListener('load', function() {
-    console.log("massilia-badges PAGE LOADED");
+    // console.log("massilia-badges PAGE LOADED");
 
     let conf = getConfOptions();
+    // console.log("conf=", conf);
     
     /* ====================================================================== */
     /*                             Get Badges                                 */
@@ -16,13 +18,16 @@ window.addEventListener('load', function() {
     const BACKGROUND = 0;
     const BORDER = 1;
     const TEXT = 2;
-    const BORDER_LIGHT = 1;
-    const BORDER_DARK = 2;
-    const TEXT_LIGHT = 3;
-    const TEXT_DARK = 4;
+    const BACKGROUND_LIGHT = 0;
+    const BACKGROUND_DARK = 1;
+    const BORDER_LIGHT = 2;
+    const BORDER_DARK = 3;
+    const TEXT_LIGHT = 4;
+    const TEXT_DARK = 5;
     const VALUE = 0;
-    let DEFAULT = "yellow";
+    let DEFAULT = "gris";
 
+    setUserConfOptions(conf);
     update_badges();
 
     function update_badges() {
@@ -37,11 +42,11 @@ window.addEventListener('load', function() {
             let borderColor;
             let textColor;
 
-            setUserOptions(conf, badge, attrList);
+            setVoidBadges(conf, badge, attrList);
 
             if (hasDynamicColor(badge)) {
                 let newAttrList = getTheDynamicColorsArrayOf(badge);
-                attrList = setNewAttributes(badge, newAttrList);
+                attrList = setNewAttributes(newAttrList);
             }
 
             bgColor = getBgColors(attrList);
@@ -59,26 +64,50 @@ window.addEventListener('load', function() {
         });
     } // End update_badges
 
-    function setUserOptions(conf, badge, attrList) {
-        setDefaultVoidBadgeOptions(conf, badge, attrList);
+    function setUserConfOptions(conf) {
+        DEFAULT = setDefaultVoidBadgeColor(conf);
+        // console.log("DEFAULT=",DEFAULT);
+        color = setCustomDynamicBadges(conf);        
     }
 
-    function setDefaultVoidBadgeOptions(conf, badge, attrList) {
+    function setCustomDynamicBadges(conf) {
+        let newColor = color;
+        if (Object.keys(conf.badges).includes("dynamic")) {
+            // console.log("CUSTOM DYNAMIC DETECTED");
+            Object.keys(conf.badges.dynamic).forEach( colorItem => {
+                newColor[colorItem] = conf.badges.dynamic[colorItem].split(" ").concat("");
+                for (let i=0; i<=5; i++) {
+                    newColor[colorItem][i] = "#"+newColor[colorItem][i];
+                }
+            });
+            return newColor
+        } else {
+            return color
+        }
+    }
+
+    function setDefaultVoidBadgeColor(conf) {
+        if (Object.keys(conf.badges).includes("default")) {
+            let j = Object.keys(conf.badges.default);
+            DEFAULT = conf.badges.default;
+        }
+        return DEFAULT;
+    }
+
+    function setVoidBadges(conf, badge, attrList) {
         let voidBadgeBgStyle;
         let voidBadgeBorderStyle;
         let voidBadgeTextStyle;
         if (attrList.length == 1) { // Void Badge default behavior : <badge>Hey</badge>
-            if (Object.keys(conf).length == 1) {
-                DEFAULT = conf.badges.default;
-            } 
-            voidBadgeBgStyle = color[DEFAULT][BACKGROUND];
+            // voidBadgeBgStyle = color[DEFAULT][BACKGROUND];
+            voidBadgeBgStyle = color[DEFAULT][BACKGROUND_LIGHT]+"-"+color[DEFAULT][BACKGROUND_DARK];
             voidBadgeBorderStyle = color[DEFAULT][BORDER_LIGHT]+"-"+color[DEFAULT][BORDER_DARK];
             voidBadgeTextStyle = color[DEFAULT][TEXT_LIGHT]+"-"+color[DEFAULT][TEXT_DARK];
             setBgColor(badge, voidBadgeBgStyle);
             setBorderColor(badge, voidBadgeBorderStyle);
             setTextColor(badge, voidBadgeTextStyle);
             attrList = [voidBadgeBgStyle, voidBadgeBorderStyle, voidBadgeTextStyle];
-        }
+            }
     }
 
     function hasDynamicColor(badge) {
@@ -88,15 +117,20 @@ window.addEventListener('load', function() {
     function getTheDynamicColorsArrayOf(badge) {
         let dynamicBgColor = badge.getAttributeNames()[BACKGROUND];
         let staticBgColor = dynamicBgColor.substring(1,dynamicBgColor.length);
-        let dynamicBadgeColorsArray = color[staticBgColor].concat("");
+        let dynamicBadgeColorsArray;
+        if (color[staticBgColor]) {
+            dynamicBadgeColorsArray = color[staticBgColor].concat(""); // "" is for style
+        } else { // dynamicColor not Found
+            dynamicBadgeColorsArray = ["","","","","","",""];
+        }
         return dynamicBadgeColorsArray;
     }
 
-    function setNewAttributes(badge, newAttrList) {
+    function setNewAttributes(newAttrList) {
         // push structured newAttrList to old attrList
-        let attr1 = newAttrList[0];
-        let attr2 = newAttrList[1]+"-"+newAttrList[2];
-        let attr3 = newAttrList[3]+"-"+newAttrList[4];
+        let attr1 = newAttrList[BACKGROUND_LIGHT]+"-"+newAttrList[BACKGROUND_DARK];
+        let attr2 = newAttrList[BORDER_LIGHT]+"-"+newAttrList[BORDER_DARK];
+        let attr3 = newAttrList[TEXT_LIGHT]+"-"+newAttrList[TEXT_DARK];
         return Array(attr1,attr2,attr3);
     }
 
@@ -205,9 +239,7 @@ window.addEventListener('load', function() {
         let data;
         document.querySelectorAll("massilia").forEach( confTag => {
             data = confTag.getAttribute("data");
-            // console.log("data=", data);
             data = replaceSingleByDoubleQuotes(data);
-            console.log("data=", data);
             if (data != "") {
                 data = JSON.parse(data);
             } else {
@@ -237,6 +269,7 @@ window.addEventListener('load', function() {
             return
           }
           update_badges();
+        //   console.log("DEFAULT CHANGE=",DEFAULT);
         }
       };
 
