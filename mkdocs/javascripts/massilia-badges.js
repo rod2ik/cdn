@@ -3,18 +3,25 @@
 import color from './htmlColors.js';
 
 window.addEventListener('load', function() {
-    // console.log("massilia-badges PAGE LOADED");
+    console.log("massilia-badges PAGE LOADED");
+
+    let conf = getConfOptions();
     
     /* ====================================================================== */
     /*                             Get Badges                                 */
     /* ====================================================================== */
         
-    let LIGHT = 0;
-    let DARK = 1;
-    let BACKGROUND = 0;
-    let BORDER = 1;
-    let TEXT = 2;
-    let VALUE = 0;
+    const LIGHT = 0;
+    const DARK = 1;
+    const BACKGROUND = 0;
+    const BORDER = 1;
+    const TEXT = 2;
+    const BORDER_LIGHT = 1;
+    const BORDER_DARK = 2;
+    const TEXT_LIGHT = 3;
+    const TEXT_DARK = 4;
+    const VALUE = 0;
+    let DEFAULT = "yellow";
 
     update_badges();
 
@@ -29,6 +36,8 @@ window.addEventListener('load', function() {
             let bgColor;
             let borderColor;
             let textColor;
+
+            setUserOptions(conf, badge, attrList);
 
             if (hasDynamicColor(badge)) {
                 let newAttrList = getTheDynamicColorsArrayOf(badge);
@@ -50,14 +59,35 @@ window.addEventListener('load', function() {
         });
     } // End update_badges
 
+    function setUserOptions(conf, badge, attrList) {
+        setDefaultVoidBadgeOptions(conf, badge, attrList);
+    }
+
+    function setDefaultVoidBadgeOptions(conf, badge, attrList) {
+        let voidBadgeBgStyle;
+        let voidBadgeBorderStyle;
+        let voidBadgeTextStyle;
+        if (attrList.length == 1) { // Void Badge default behavior : <badge>Hey</badge>
+            if (Object.keys(conf).length == 1) {
+                DEFAULT = conf.badges.default;
+            } 
+            voidBadgeBgStyle = color[DEFAULT][BACKGROUND];
+            voidBadgeBorderStyle = color[DEFAULT][BORDER_LIGHT]+"-"+color[DEFAULT][BORDER_DARK];
+            voidBadgeTextStyle = color[DEFAULT][TEXT_LIGHT]+"-"+color[DEFAULT][TEXT_DARK];
+            setBgColor(badge, voidBadgeBgStyle);
+            setBorderColor(badge, voidBadgeBorderStyle);
+            setTextColor(badge, voidBadgeTextStyle);
+            attrList = [voidBadgeBgStyle, voidBadgeBorderStyle, voidBadgeTextStyle];
+        }
+    }
+
     function hasDynamicColor(badge) {
-        return badge.getAttributeNames()[BACKGROUND][0] == "@"
+        return badge.getAttributeNames() != [] ? (badge.getAttributeNames()[BACKGROUND][0] == "@") : false;
     }
 
     function getTheDynamicColorsArrayOf(badge) {
         let dynamicBgColor = badge.getAttributeNames()[BACKGROUND];
         let staticBgColor = dynamicBgColor.substring(1,dynamicBgColor.length);
-        // let dynamicBadgeColorsArray = dynamicBadgeColor[staticBgColor].concat("");
         let dynamicBadgeColorsArray = color[staticBgColor].concat("");
         return dynamicBadgeColorsArray;
     }
@@ -169,6 +199,33 @@ window.addEventListener('load', function() {
         //     console.log("DARK THEME DETECTED");
         // }
         return document.body.getAttribute("data-md-color-scheme") == "default"
+    }
+
+    function getConfOptions() {
+        let data;
+        document.querySelectorAll("massilia").forEach( confTag => {
+            data = confTag.getAttribute("data");
+            // console.log("data=", data);
+            data = replaceSingleByDoubleQuotes(data);
+            console.log("data=", data);
+            if (data != "") {
+                data = JSON.parse(data);
+            } else {
+                data = {}
+            }
+        });
+        return data;
+    }
+
+    function replaceSingleByDoubleQuotes(data) {
+        let s = "";
+        Array.from(data).forEach( c => {
+            if (c == "'") {
+                c = '"';
+            }
+            s = s + c;
+        });
+        return s
     }
 
     const mutationCallback = (mutationsList) => {
