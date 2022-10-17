@@ -11,6 +11,9 @@ window.addEventListener('load', function() {
         // get Infos
         let imgWidthAttribute = img.getAttribute("width");
         let altText = img.getAttribute("alt");
+        if (altText == null) {
+            altText="";
+        }
         let imgClassList = img.classList;
         let parentP = img.parentElement;
         let parentOfParentP = img.parentElement.parentElement;
