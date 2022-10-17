@@ -156,6 +156,7 @@ const htmlColors =  {
   //////////////////////////////////////////////////////////////////////////////////////
   // colorKey:                [BgLight,     BgDark,  BorderLight, BorderDark, TextLight, TextDark]
   "gris":                     ["#dcdcdc99", "#808080", "#00000099", "#bebebeb3","#000000","#ffffff"],
+  "bleu":                     ["#00e4ff99", "#00e4ffcc", "#00a1b499", "#59edff99","#000000","#ffffff"],
 }
 
 export default htmlColors;
