@@ -39,6 +39,7 @@ window.MathJax = {
       greencolor: ['{\\color\{green\} #1}',1],
       purplecolor: ['{\\color\{purple\} #1}',1],
       blackcolor: ['{\\color\{black\} #1}',1],
+      symbover: ['{\\displaystyle \\stackrel{\\mathclap{\\mbox{ #2 }}}{ #1 }}',2],
       liminf: ['{\\displaystyle \\lim_\{#1\\to+\\infty\} #2}',2],
       limninf: ['{\\displaystyle \\lim_\{n\\to+\\infty\} #1}',1],
       limxinf: ['{\\displaystyle \\lim_\{x\\to+\\infty\} #1}',1],
