@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
     document.querySelectorAll(".md-typeset table")
     .forEach( table => {
         // transform last row into table classes
-        if (lastRowContainsClasses(table)) {
+        if (lastRowContainsClasses(table)) { }
 
 
     // /* ====================================================================== */
@@ -44,5 +44,7 @@ window.addEventListener('load', function() {
     //             td.style.verticalAlign = "middle";
     //         });
     //     }
-    // });
+    });
     // // the nocolor class is treated directly in CSS
+
+});

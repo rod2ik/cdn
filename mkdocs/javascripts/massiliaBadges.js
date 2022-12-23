@@ -1,14 +1,14 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
-import htmlColors from './htmlColors.js';
+import htmlColors, { conf } from './htmlColors.js';
 var color = htmlColors;
 
 window.addEventListener('load', function() {
     // console.log("massilia-badges PAGE LOADED");
 
-    let conf = getConfOptions();
+    // let conf = getConfOptions();
     // console.log("conf=", conf);
-    
+
     /* ====================================================================== */
     /*                             Get Badges                                 */
     /* ====================================================================== */
@@ -235,30 +235,30 @@ window.addEventListener('load', function() {
         return document.body.getAttribute("data-md-color-scheme") == "default"
     }
 
-    function getConfOptions() {
-        let data;
-        document.querySelectorAll("massilia").forEach( confTag => {
-            data = confTag.getAttribute("data");
-            data = replaceSingleByDoubleQuotes(data);
-            if (data != "") {
-                data = JSON.parse(data);
-            } else {
-                data = {}
-            }
-        });
-        return data;
-    }
+    // function getConfOptions() {
+    //     let data;
+    //     document.querySelectorAll("massilia").forEach( confTag => {
+    //         data = confTag.getAttribute("data");
+    //         data = replaceSingleByDoubleQuotes(data);
+    //         if (data != "") {
+    //             data = JSON.parse(data);
+    //         } else {
+    //             data = {}
+    //         }
+    //     });
+    //     return data;
+    // }
 
-    function replaceSingleByDoubleQuotes(data) {
-        let s = "";
-        Array.from(data).forEach( c => {
-            if (c == "'") {
-                c = '"';
-            }
-            s = s + c;
-        });
-        return s
-    }
+    // function replaceSingleByDoubleQuotes(data) {
+    //     let s = "";
+    //     Array.from(data).forEach( c => {
+    //         if (c == "'") {
+    //             c = '"';
+    //         }
+    //         s = s + c;
+    //     });
+    //     return s
+    // }
 
     const mutationCallback = (mutationsList) => {
         for (const mutation of mutationsList) {
@@ -274,7 +274,6 @@ window.addEventListener('load', function() {
       };
 
     const observer = new MutationObserver(mutationCallback);
-
     let themeChange = document.querySelector("body");
     observer.observe(themeChange, { attributes: true });
 

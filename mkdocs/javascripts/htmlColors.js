@@ -1,4 +1,4 @@
-const htmlColors =  {
+let htmlColors =  {
   //////////////////////////////////////////////////////////////////////////////////////
   /*                             Standard HTML Colors                                 */
   //////////////////////////////////////////////////////////////////////////////////////
@@ -17,7 +17,7 @@ const htmlColors =  {
   "brown":                    ["#a52a2a", "#a52a2a", "#ff0000", "#00ffff","#000000","#ffffff"],
   "burlywood":                ["#deb887", "#deb887", "#ff0000", "#00ffff","#000000","#ffffff"],
   "cadetblue":                ["#5f9ea0", "#5f9ea0", "#ff0000", "#00ffff","#000000","#ffffff"],
-  "chartreuse":               ["#7fff00", "#7fff00", "#ff0000", "#00ffff","#000000","#ffffff"],
+  "chartreuse":               ["#7fff00", "#7fff00", "#3b7800", "#daffb6","#000000","#ffffff"],
   "chocolate":                ["#d2691e", "#d2691e", "#ff0000", "#00ffff","#000000","#ffffff"],
   "coral":                    ["#ff7f50", "#ff7f50", "#ff0000", "#00ffff","#000000","#ffffff"],
   "cornflowerblue":           ["#6495ed", "#6495ed", "#ff0000", "#00ffff","#000000","#ffffff"],
@@ -56,10 +56,10 @@ const htmlColors =  {
   "ghostwhite":               ["#f8f8ff", "#f8f8ff", "#ff0000", "#00ffff","#000000","#ffffff"],
   "goldenrod":                ["#daa520", "#daa520", "#ff0000", "#00ffff","#000000","#ffffff"],
   "gold":                     ["#ffd700", "#ffd700", "#ff0000", "#00ffff","#000000","#ffffff"],
-  "gray":                     ["#808080", "#808080", "#ff0000", "#00ffff","#000000","#ffffff"],
+  "gray":                     ["#808080", "#808080", "#6f6f7699", "#bebebeb3","#000000","#ffffff"],
   "green":                    ["#008000", "#008000", "#ff0000", "#00ffff","#000000","#ffffff"],
   "greenyellow":              ["#adff2f", "#adff2f", "#ff0000", "#00ffff","#000000","#ffffff"],
-  "grey":                     ["#808080", "#808080", "#ff0000", "#00ffff","#000000","#ffffff"],
+  "grey":                     ["#808080", "#808080", "#6f6f7699", "#bebebeb3","#000000","#ffffff"],
   "honeydew":                 ["#f0fff0", "#f0fff0", "#ff0000", "#00ffff","#000000","#ffffff"],
   "hotpink":                  ["#ff69b4", "#ff69b4", "#ff0000", "#00ffff","#000000","#ffffff"],
   "indianred":                ["#cd5c5c", "#cd5c5c", "#ff0000", "#00ffff","#000000","#ffffff"],
@@ -108,7 +108,7 @@ const htmlColors =  {
   "oldlace":                  ["#fdf5e6", "#fdf5e6", "#ff0000", "#00ffff","#000000","#ffffff"],
   "olive":                    ["#808000", "#808000", "#ff0000", "#00ffff","#000000","#ffffff"],
   "olivedrab":                ["#6b8e23", "#6b8e23", "#ff0000", "#00ffff","#000000","#ffffff"],
-  "orange":                   ["#ffa500", "#ffa500", "#ff0000", "#00ffff","#000000","#ffffff"],
+  "orange":                   ["#ffa500", "#ffa500", "#b47500", "#ffc75f","#000000","#ffffff"],
   "orangered":                ["#ff4500", "#ff4500", "#ff0000", "#00ffff","#000000","#ffffff"],
   "orchid":                   ["#da70d6", "#da70d6", "#ff0000", "#00ffff","#000000","#ffffff"],
   "palegoldenrod":            ["#eee8aa", "#eee8aa", "#ff0000", "#00ffff","#000000","#ffffff"],
@@ -149,14 +149,63 @@ const htmlColors =  {
   "wheat":                    ["#f5deb3", "#f5deb3", "#ff0000", "#00ffff","#000000","#ffffff"],
   "white":                    ["#ffffff", "#ffffff", "#ff0000", "#00ffff","#000000","#ffffff"],
   "whitesmoke":               ["#f5f5f5", "#f5f5f5", "#ff0000", "#00ffff","#000000","#ffffff"],
-  "yellow":                   ["#ffff00", "#ffff00", "#ff0000", "#00ffff","#000000","#ffffff"],
+  "yellow":                   ["#ffff00", "#ffff00cc", "#b0b000", "#fdfd75","#000000","#ffffff"],
   "yellowgreen":              ["#9acd32", "#9acd32", "#ff0000", "#00ffff","#000000","#ffffff"],
   //////////////////////////////////////////////////////////////////////////////////////
   /*                              Custom Colors                                       */
   //////////////////////////////////////////////////////////////////////////////////////
   // colorKey:                [BgLight,     BgDark,  BorderLight, BorderDark, TextLight, TextDark]
   "gris":                     ["#dcdcdc99", "#808080", "#00000099", "#bebebeb3","#000000","#ffffff"],
+  // "gris":                     ["#bebebeb3", "#808080", "#6f6f7699", "#bebebeb3","#000000","#ffffff"],
   "bleu":                     ["#00e4ff99", "#00e4ffcc", "#00a1b499", "#59edff99","#000000","#ffffff"],
+  "vert":                     ["#7fff00", "#7fff00ee", "#3b7800", "#daffb6","#000000","#ffffff"],
+  "jaune":                    ["#ffff00", "#ffff00cc", "#b0b000", "#fdfd75","#000000","#ffffff"],
+  "test":                     ["#ff0000", "#00ff00", "#b0b000", "#fdfd75","#000000","#ffffff"],
 }
+
+function getConfOptions() {
+  let data;
+  document.querySelectorAll("massilia").forEach( confTag => {
+      data = confTag.getAttribute("data");
+      data = replaceSingleByDoubleQuotes(data);
+      if (data != "") {
+          data = JSON.parse(data);
+      } else {
+          data = {}
+      }
+  });
+  return data;
+}
+
+function replaceSingleByDoubleQuotes(data) {
+  let s = "";
+  Array.from(data).forEach( c => {
+      if (c == "'") {
+          c = '"';
+      }
+      s = s + c;
+  });
+  return s
+}
+
+function setCustomDynamicColorsIn(conf) {
+  let newColor = htmlColors;
+  if (Object.keys(conf.badges).includes("dynamic")) {
+      // console.log("CUSTOM DYNAMIC DETECTED");
+      Object.keys(conf.badges.dynamic).forEach( colorItem => {
+          newColor[colorItem] = conf.badges.dynamic[colorItem].split(" ").concat("");
+          for (let i=0; i<=5; i++) {
+              newColor[colorItem][i] = "#"+newColor[colorItem][i];
+          }
+        });
+        return newColor
+  } else {
+      return htmlColors
+    }
+  }
+  
+export let conf = getConfOptions();
+
+htmlColors = setCustomDynamicColorsIn(conf);
 
 export default htmlColors;

@@ -1,5 +1,20 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
+import htmlColors from './htmlColors.js';
+var color = htmlColors;
+
+const LIGHT = 0;
+const DARK = 1;
+const BACKGROUND = 0;
+const BORDER = 1;
+const TEXT = 2;
+const BACKGROUND_LIGHT = 0;
+const BACKGROUND_DARK = 1;
+const BORDER_LIGHT = 2;
+const BORDER_DARK = 3;
+const TEXT_LIGHT = 4;
+const TEXT_DARK = 5;
+
 window.addEventListener('load', function() {
     // console.log("massilia-xtables-cellmerge PAGE LOADED");
 
@@ -44,6 +59,7 @@ window.addEventListener('load', function() {
             }); // forEach headBody
         }); // forEach table
         // });
+
         for (let i = rowspans.length -1; i >= 0; i--){
             let _a = rowspans[i], prev = _a[0], col = _a[1];
             let rowspan = (parseInt(prev.getAttribute("rowspan"), 10) || 1) +
@@ -69,8 +85,16 @@ window.addEventListener('load', function() {
             col.remove();
         }
     } // End if TXablesArray
-    
+
 }); // End of load page
+
+function isLightTheme() {
+    return document.querySelector("body").getAttribute("data-md-color-scheme") === "default"
+}
+
+function isDarkTheme() {
+    return document.querySelector("body").getAttribute("data-md-color-scheme") !== "default"
+}
 
 function getXTables() {
     const Xtables = []
@@ -145,3 +169,4 @@ function getNext(col0) {
 function formatMathTable(table) {
     console.log("Math Table Detected");
 }
+

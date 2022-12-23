@@ -1,7 +1,7 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
 window.addEventListener('load', function() {
-  console.log("massilia-admonitions PAGE LOADED");
+  // console.log("massilia-admonitions PAGE LOADED");
 
 var replaceBy = {
   "definition": "Définition ",
@@ -9,7 +9,7 @@ var replaceBy = {
   "property": "Propriété ",
   "proposition": "Proposition ",
   "theorem": "Théorème ",
-  "proof": "Preuve ",
+  "proof": "Démonstration ",
   "exercice": "Exercice ",
   "exemple": "Exemple ",
   "method": "Méthode ",
@@ -218,7 +218,6 @@ var filmsRendering = ["Film", "Films", "Movie", "Movies"];
 var admonitionFilms = toAdmonitionClassString(filmsRendering);
 var films = document.querySelectorAll(admonitionFilms);
 var nbFilms = films.length;
-console.log("nbFilms=", nbFilms);
 for (let i = 0; i < nbFilms; i++) {
   if (filmsRendering.includes(films[i].firstElementChild.innerHTML)) {
     films[i].firstElementChild.innerHTML = replaceBy["film"]+(i+1)+".";
