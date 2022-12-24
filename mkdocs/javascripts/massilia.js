@@ -13,8 +13,8 @@ async function loadMassiliaModules() {
     // XTABLES
     // await import('./massiliaXTables.js');
     await import('./massiliaXTablesClasses.js');
-    await import('./massiliaXTablesCellmerge.js');
     await import('./massiliaXTablesColors.js');
+    await import('./massiliaXTablesCellmerge.js');
     await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js');
     await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js');
     await import('https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.date.min.js');
