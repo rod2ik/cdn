@@ -67,24 +67,40 @@ window.addEventListener('load', function() {
     function setUserConfOptions(conf) {
         DEFAULT = setDefaultVoidBadgeColor(conf);
         // console.log("DEFAULT=",DEFAULT);
-        color = setCustomDynamicBadges(conf);        
+        // color = setCustomDynamicBadges(conf);        
     }
 
-    function setCustomDynamicBadges(conf) {
-        let newColor = color;
-        if (Object.keys(conf.badges).includes("dynamic")) {
-            // console.log("CUSTOM DYNAMIC DETECTED");
-            Object.keys(conf.badges.dynamic).forEach( colorItem => {
-                newColor[colorItem] = conf.badges.dynamic[colorItem].split(" ").concat("");
-                for (let i=0; i<=5; i++) {
-                    newColor[colorItem][i] = "#"+newColor[colorItem][i];
-                }
-            });
-            return newColor
-        } else {
-            return color
-        }
-    }
+    // function setCustomDynamicBadges(conf) {
+    //     let newColor = color;
+    //     if (Object.keys(conf.badges).includes("dynamic")) {
+    //         // console.log("CUSTOM DYNAMIC DETECTED");
+    //         Object.keys(conf.badges.dynamic).forEach( colorItem => {
+    //             newColor[colorItem] = conf.badges.dynamic[colorItem].split(" ").concat("");
+    //             for (let i=0; i<=5; i++) {
+    //                 newColor[colorItem][i] = "#"+newColor[colorItem][i];
+    //             }
+    //         });
+    //         return newColor
+    //     } else {
+    //         return color
+    //     }
+    // }
+
+    // function setCustomDynamicBadges(conf) {
+    //     let newColor = color;
+    //     if (Object.keys(conf).includes("colors")) {
+    //         console.log("CUSTOM COLOR DETECTED");
+    //         Object.keys(conf.colors).forEach( colorItem => {
+    //             newColor[colorItem] = conf.colors[colorItem].split(" ").concat("");
+    //             for (let i=0; i<=5; i++) {
+    //                 newColor[colorItem][i] = "#"+newColor[colorItem][i];
+    //             }
+    //         });
+    //         return newColor
+    //     } else {
+    //         return color
+    //     }
+    // }
 
     function setDefaultVoidBadgeColor(conf) {
         if (Object.keys(conf.badges).includes("default")) {

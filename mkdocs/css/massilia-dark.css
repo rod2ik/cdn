@@ -40,8 +40,8 @@
   --md-admonition-icon-proof-color: #fff;
   --md-admonition-proof-qed-icon: url(../images/cqfd-dark.svg);
   /* EN VALEUR MASSILIA DARK*/
-  --env-background-color: rgba(140,140,150,0.6);
-  --env-border-color: rgba(190, 190, 190, .7);
+  --env-background-color: #8c8c9699;
+  --env-border-color: #bebebeb3;
   --envpink-background-color: deeppink;
   --envpink-border-color: rgb(255, 94, 180);
   --envred-background-color: #ff0000;

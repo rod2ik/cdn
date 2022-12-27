@@ -1,0 +1,119 @@
+/* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
+
+/* MASSILIA BADGES / EN VALEUR */
+
+:root{
+/* BADGES / EN VALEUR MASSILIA */
+--env-background-color: rgba(220,220,220,0.6);
+--env-border-color: rgba(0, 0, 0, .6);
+
+--envpink-background-color: deeppink;
+--envpink-border-color: #580833;
+
+--envred-background-color: #ff0000;
+--envred-border-color: #ab0000;
+
+--envscarlet-background-color: #dc3545;
+--envscarlet-border-color: #85202a;
+
+--envyellow-background-color: #ffc107;
+--envyellow-border-color: #d39f00;
+
+--envgreen-background-color: #51ff00;
+--envgreen-border-color: #3cbb01;
+
+--envblue-background-color: #007bff;
+--envblue-border-color: #014b9a;
+}
+
+@mixin badge
+{
+  display:inline-block;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  font-weight:500;
+}
+
+badge, bad, bd {
+  @include badge;
+}
+
+envaleurshadow, envshadow,
+bashadow, basha
+{
+  @include badge;
+  background-color: rgba(220,220,220,0.6);
+  border-bottom: 2px solid var(--env-border-color);
+  border-right: 2px solid var(--env-border-color);
+  box-shadow: 5px 5px 3px var(--env-border-color);
+}
+
+envaleur, env, envgris, 
+bagrey, bagris
+{
+  @include badge;
+  background-color: var(--env-background-color);
+  border-bottom: 2px solid var(--env-border-color);
+  border-right: 2px solid var(--env-border-color);
+}
+
+envrose,
+bapink, barose
+ {
+  @include badge;
+  background-color: var(--envpink-background-color);
+  border-bottom: 2px solid var(--envpink-border-color);
+  border-right: 2px solid var(--envpink-border-color);
+}
+
+bascarlet, baecarlate
+{
+  @include badge;
+  background-color: var(--envscarlet-background-color);
+  border-bottom: 2px solid var(--envscarlet-border-color);
+  border-right: 2px solid var(--envscarlet-border-color);
+}
+
+envrouge,
+bared, barouge
+ {
+  @include badge;
+  background-color: var(--envred-background-color);
+  border-bottom: 2px solid var(--envred-border-color);
+  border-right: 2px solid var(--envred-border-color);
+}
+
+envjaune, 
+bayellow, bajaune
+ {
+  @include badge;
+  background-color: var(--envyellow-background-color);
+  border-bottom: 2px solid var(--envyellow-border-color);
+  border-right: 2px solid var(--envyellow-border-color);
+}
+
+envvert,
+bagreen, bavert
+ {
+  @include badge;
+  background-color: var(--envgreen-background-color);
+  border-bottom: 2px solid var(--envgreen-border-color);
+  border-right: 2px solid var(--envgreen-border-color);
+}
+
+envbleu,
+bablue, bableu
+{
+  @include badge;
+  background-color: var(--envblue-background-color);
+  border-bottom: 2px solid var(--envblue-border-color);
+  border-right: 2px solid var(--envblue-border-color);
+  }
+
+/* FLUO */
+
+// fluo, fjaune {
+//   background-color: var(--fluo-jaune-background-color);
+//   border-radius: 5px;
+//   padding: 0.1em;
+// }

@@ -161,12 +161,21 @@ let htmlColors =  {
   "vert":                     ["#7fff00", "#7fff00ee", "#3b7800", "#daffb6","#000000","#ffffff"],
   "jaune":                    ["#ffff00", "#ffff00cc", "#b0b000", "#fdfd75","#000000","#ffffff"],
   "test":                     ["#ff0000", "#00ff00", "#b0b000", "#fdfd75","#000000","#ffffff"],
+  // "demo1":                    ["#ff0000", "#0000ff", "#b0b000", "#fdfd75","#0000ff","#ff0000"],
+  "demo2":                    ["#ffff00", "#00ffff", "#b0b000", "#fdfd75","#00ffff","#ff00ff"],
+  "demo3":                    ["#DC143C", "#9932CC", "#b0b000", "#fdfd75","#000000","#ffffff"],
+  "demo4":                    ["#ff000077", "#0000ff77", "#b0b000", "#fdfd75","#ffffff","#ff0000"],
+  "demo5":                    ["#0000ff77", "#ff000077", "#b0b000", "#fdfd75","#000000","#ffffff"],
+  "demo6":                    ["#FFA50077", "#7FFFD477", "#b0b000", "#fdfd75","#000000","#ffffff"],
 }
 
 function getConfOptions() {
   let data;
   document.querySelectorAll("massilia").forEach( confTag => {
       data = confTag.getAttribute("data");
+      // if (data[0] == '"' && data[data.length-1] == '"') {
+      //   data = data.substring(1,data.length-1);
+      // }
       data = replaceSingleByDoubleQuotes(data);
       if (data != "") {
           data = JSON.parse(data);
@@ -190,10 +199,10 @@ function replaceSingleByDoubleQuotes(data) {
 
 function setCustomDynamicColorsIn(conf) {
   let newColor = htmlColors;
-  if (Object.keys(conf.badges).includes("dynamic")) {
+  if (Object.keys(conf).includes("colors")) {
       // console.log("CUSTOM DYNAMIC DETECTED");
-      Object.keys(conf.badges.dynamic).forEach( colorItem => {
-          newColor[colorItem] = conf.badges.dynamic[colorItem].split(" ").concat("");
+      Object.keys(conf.colors).forEach( colorItem => {
+          newColor[colorItem] = conf.colors[colorItem].split(" ").concat("");
           for (let i=0; i<=5; i++) {
               newColor[colorItem][i] = "#"+newColor[colorItem][i];
           }
@@ -201,9 +210,9 @@ function setCustomDynamicColorsIn(conf) {
         return newColor
   } else {
       return htmlColors
-    }
   }
-  
+}
+
 export let conf = getConfOptions();
 
 htmlColors = setCustomDynamicColorsIn(conf);
