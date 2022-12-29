@@ -22,12 +22,12 @@
         border: solid 1.2px var(--table-header-border);
       }
 
-      &:not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) th,
-      &:not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) th:not(code table th),
-      &:not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) tr,
-      &:not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) tr:not(code table tr),
-      &:not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) td,
-      &:not(.shrink):not(.little):not(.reduire):not(.reduite):not(.petit) td:not(code table td) 
+      &:not(.shrink):not(.small):not(.petit) th,
+      &:not(.shrink):not(.small):not(.petit) th:not(code table th),
+      &:not(.shrink):not(.small):not(.petit) tr,
+      &:not(.shrink):not(.small):not(.petit) tr:not(code table tr),
+      &:not(.shrink):not(.small):not(.petit) td,
+      &:not(.shrink):not(.small):not(.petit) td:not(code table td) 
       {
         min-width: 3rem;
         padding: 0.9375rem 1.25rem;

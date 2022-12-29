@@ -6,8 +6,8 @@ var style = xTableStyles;
 let RowsToBeStyled = Array();
 let ColsToBeStyled = Array();
 let CellsToBeStyled = Array();
-let rowStyleAttrList = ["lstyle", "linestyle", "line-style", "rowstyle", "row-style", "styleligne"];
-let colStyleAttrList = ["cstyle", "colstyle", "col-style", "stylecol"];
+let rowStyleAttrList = ["lstyle", "linestyle", "line-style", "rstyle", "rowstyle", "row-style", "styleligne"];
+let colStyleAttrList = ["cstyle", "colstyle", "col-style", "columnstyle", "column-style", "stylecol"];
 let cellStyleAttrList = ["celstyle", "cellstyle", "cel-style", "cell-style"];
 let tableStyleAttrList = ["tabstyle", "tablestyle", "globalstyle", "tab-style", "table-style", "global-style"];
 // let noneColorList = ["vide", "void", "none", "transparent", "aucun", "aucune"];
@@ -80,14 +80,13 @@ function styleTables() {
                             let lineStyleName = lineStyle;
                             // Static Color
                             lineStyle = getCssStyleFrom(lineStyleName);
-                            // console.log("lineStyleName =");
-                            // console.log(lineStyleName);
-                            // console.log("lineStyle =");
-                            // console.log(lineStyle);
-                            
+
                             // addRowWithColor(row, i, attrInRowStyleList, lineStyle, lineStyleName);
+                            // col.setAttribute("style", lineStyle);
+                            // col.setAttribute(attrInRowStyleList, lineStyleName);
                             row.setAttribute("style", lineStyle);
                             row.setAttribute(attrInRowStyleList, lineStyleName);
+                            setRowStyletoCols(row, attrInRowStyleList, lineStyleName, lineStyle);
                             }
 
                         // Populate ColsToBeStyled Array
@@ -135,6 +134,13 @@ function getCssStyleFrom(styleName) {
         s += cssProperty+": "+style[styleName][theme][cssProperty]+"; "
     }
     return s
+}
+
+function setRowStyletoCols(row, attrInRowStyleList, lineStyleName, lineStyle) {
+    for (const col of row.children) {
+        col.setAttribute(attrInRowStyleList, lineStyleName);
+        col.setAttribute("style", lineStyle);
+    }
 }
 
 function hasAnyAttribIn(el, styleAttrList) {
@@ -247,6 +253,8 @@ export default function update_styles() {
                         let lineStyleName = row.getAttribute(rowStyleAttribute);
                         let lineStyle = getCssStyleFrom(lineStyleName);
                         row.setAttribute("style", lineStyle);
+                        // setRowStyletoCols(row, attrInRowStyleList, lineStyleName, lineStyle);
+                        setRowStyletoCols(row, rowStyleAttribute, lineStyleName, lineStyle);
                     }
                     Array.from(row.children).forEach( (col, j) => {
                         if (hasAnyAttribIn(col, colStyleAttrList)) {
@@ -254,13 +262,13 @@ export default function update_styles() {
                             let colStyleName = col.getAttribute(colStyleAttribute);
                             let colStyle = getCssStyleFrom(colStyleName);
                             col.setAttribute("style", colStyle);
-                            if (hasAnyAttribIn(col, rowStyleAttrList)) { 
-                                // in case row had a rowStyleAttribute defined in this col
-                                let rowStyleAttribute = hasAnyAttribIn(col, rowStyleAttrList);
-                                let lineStyleName = col.getAttribute(rowStyleAttribute);
-                                let lineStyle = getCssStyleFrom(lineStyleName);
-                                row.setAttribute("style", lineStyle);
-                            }
+                            // if (hasAnyAttribIn(col, rowStyleAttrList)) { 
+                            //     // in case row had a rowStyleAttribute defined in this col
+                            //     let rowStyleAttribute = hasAnyAttribIn(col, rowStyleAttrList);
+                            //     let lineStyleName = col.getAttribute(rowStyleAttribute);
+                            //     let lineStyle = getCssStyleFrom(lineStyleName);
+                            //     row.setAttribute("style", lineStyle);
+                            // }
                         }
                         if (hasAnyAttribIn(col, cellStyleAttrList)) {
                             let cellStyleAttribute = hasAnyAttribIn(col, cellStyleAttrList);

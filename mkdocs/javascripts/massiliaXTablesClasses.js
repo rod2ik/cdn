@@ -1,5 +1,12 @@
 /* License: GNU GPLv3+, Rodrigo Schwencke (Copyleft) */
 
+const LETTERS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const DIGITS = '0123456789';
+const OTHER_SYMBOLS = LETTERS+'-._'
+const AUTHORIZED_CHARS = LETTERS + DIGITS + OTHER_SYMBOLS;
+const AUTHORIZED_FIRST_CHARS = LETTERS + OTHER_SYMBOLS;
+// they cannot start by digit or hyphen
+
 window.addEventListener('load', function() {
     // console.log("massilia-xtables-classes PAGE LOADED");
 
@@ -8,19 +15,10 @@ window.addEventListener('load', function() {
     /* ====================================================================== */
     document.querySelectorAll(".md-typeset table")
     .forEach( table => {
-        // getTableClassesIDsAndAttrList(table);
-        // getTableClassList(table);
-        // getTableIDsList(table);
-        // getTableAttrList(table);
-
-        // transform last row into table classes
-        if (lastRowContainsClasses(table)) {
+        if (formatIsOk(table)) {
             let arrayOfClasses = getTableClassList(table);
             let arrayOfIDs = getTableIDsList(table);
             let arrayOfAttrs = getTableAttrList(table);
-            // let arrayOfClasses = getLastTdContentOf(table).replace(/{:/, "")
-            // .replace(/{/, "").replace(/}/, "").replaceAll(/\./g, "")
-            // .replace(/\s\s+/g, ' ').trim().split(" ");
             if (arrayOfClasses.length >0 ) { // sets the Classes
                 // remove the first dot '.' in each class Name
                 table.classList.add(...arrayOfClasses.map( className => className.substring(1,className.length) ));
@@ -36,93 +34,193 @@ window.addEventListener('load', function() {
                 let attrValue;
                 for (const attr of arrayOfAttrs) {
                     [attrProperty, attrValue] = attr.split("=");
-                    // console.log("attrProperty =");
-                    // console.log(attrProperty);
-                    // console.log("attrValue =");
-                    // console.log(attrValue);
                     // remove the first " and the last " in Attribute name
                     let n = attrValue.length;
                     table.setAttribute(attrProperty, attrValue.substring(1,n-1));
                 }
             }
-            getLastTrOf(table).remove();
+            getLastRowOf(table).remove();
         }
     });
 })
 
-// function tableHasClass(table, klass) {
-//     return table
-//     // let lastTd = table.querySelectorAll("tbody tr:last-of-type td:first-of-type")[0].innerHTML;
-//     // // console.log("LastTd", lastTd);
-//     // // console.log("Typeof LastTd", typeof lastTd);
-//     // if ((lastTd.startsWith("{") || lastTd.startsWith("{:")) 
-//     // && (lastTd.endsWith("}"))) {
-//     //     return true
-//     // } else return false
-// }
+function getClassesIDsAndAttrArrayOf(table) {
+    let attrString = getFirstCellOfLastTdContentOf(table);
+    let lastTdArrayClassesAttributes = getClassesIDsAndAttrArrayFromString(attrString);
+    return lastTdArrayClassesAttributes
+}
 
-function getTableClassesIDsAndAttrList(table) {
-    let lastTd = table.querySelectorAll("tbody tr:last-of-type td:first-of-type")[0].innerHTML;
-    let lastTdArrayClassesAttributes = lastTd.split(" ")
+function getClassesIDsAndAttrArrayFromString(s) {
+    let lastTdArrayClassesAttributes = s.trim().split(" ")
                                 .filter(attr => attr !== "{")
                                 .filter(attr => attr !== "}")
                                 .map( attr => {
                                     let n = attr.length;
-                                    if (attr.includes("{:")) {
-                                        return attr.substring(2,n)
-                                    } else if (attr.includes("{")) {
-                                        return attr.substring(1,n)
-                                    } else if (attr.includes(":}")) {
-                                        return attr.substring(0,n-2)
-                                    } else if (attr.includes("}")) {
-                                        return attr.substring(0,n-1)
-                                    } else {
+                                    if (attr[0] == "{" && attr[1] == ":" && attr[attr.length-1] == "}" && attr[attr.length-2] == ":") {
+                                        return attr.substring(2,n-2)
+                                    }
+                                    else if (attr[0] == "{" && attr[attr.length-1] == "}") {
+                                        return attr.substring(1,n-1)
+                                    }
+                                    else {
                                         return attr
                                     }
                                 })
                                 .filter(attr => attr !== "");
-    // console.log("lastTdArrayClassesAttributes =");
-    // console.log(lastTdArrayClassesAttributes);
     return lastTdArrayClassesAttributes
 }
 
+function isValidClassString (s) {
+    if (!((typeof s) === "string") || s.length <= 1) {
+        return false
+    } else if ( (s[0] != ".") || !(isValidString(s.substring(1,s.length))) ) {
+        return false
+    } else {
+        return true
+    }
+}
+
+function isValidIDString (s) {
+    if (!((typeof s) === "string") || s.length <= 1) {
+        return false
+    } else if ( (s[0] != "#") || !(isValidString(s.substring(1,s.length))) ) {
+        return false
+    } else {
+        return true
+    }
+}
+
+function isValidAttributeString (s) {
+    // s looks like \"validProperty=validValue\"
+    if (!((typeof s) === "string") || s.length == 0) { // s not a string or string is void
+        return false
+    } else { // s is a string with at least 1 char
+        if ( s.includes("=") ) { // s has an '=' sign
+            let i = s.indexOf("=");
+            if (i == 0 || i == s.length) { // '=' is at the first or last position in s
+                return false
+            } else { // s has something before AND something after the '='
+                let s0 = s.substring(0,i);
+                let s1 = s.substring(i+1,s.length);
+                if (!(isValidString(s0))) { // s0 is not valid (the string before '=')
+                    return false
+                } else { // s0 is valid. now, hat about s1 ?
+                    if ( !((s1[0] == '"') && (s1[s1.length-1] == '"')) && !((s1[0] == "'") && (s1[s1.length-1] == "'")) ) {
+                        return false
+                    } else { // s1 is surrounded by two \", or by two ', so strip them first
+                        // s1 = s1.substring(1,s1.length-2);
+                        // if (!(isValidString(s1))) { // s1 not valid
+                        //     return false
+                        // } // else s1 (and s0) are valid
+                        return true
+                    }
+                }
+            }
+        } else { // no '=' sign, just an attribute name
+            return isValidString(s)
+        }
+    }
+}
+
+function isValidArrayOfAttributes(attrArray) {
+    for (const attr of attrArray) {
+        if (!(isValidClassString(attr)) && !(isValidIDString(attr)) && !(isValidAttributeString(attr)) ) {
+            return false
+        }
+    return true
+    }
+}
+
+
+function isValidString(s) {
+    if ((typeof s !== "string") || s.length == 0 ) {
+        return false
+    } else if (!(AUTHORIZED_FIRST_CHARS.includes(s[0]))) { // first char s[0] is not among first authorized ones
+        return false
+    } else { // first char is correct
+        for (const c of s) {
+            if (!(AUTHORIZED_CHARS.includes(c))) { // c is not among 'mid' authorized chars
+                return false
+            }
+        }
+        return true
+    }
+}
+
 function getTableClassList(table) {
-    let globalAttribList = getTableClassesIDsAndAttrList(table);
+    let globalAttribList = getClassesIDsAndAttrArrayOf(table);
     let classList = globalAttribList.filter( attr => attr[0] == "." );
-    // console.log("Class List =");
-    // console.log(classList);
     return classList
 }
 
 function getTableIDsList(table) {
-    let globalAttribList = getTableClassesIDsAndAttrList(table);
+    let globalAttribList = getClassesIDsAndAttrArrayOf(table);
     let IDsList = globalAttribList.filter( attr => attr[0] == "#" );
-    // console.log("IDs List =");
-    // console.log(IDsList);
     return IDsList
 }
 
 function getTableAttrList(table) {
-    let globalAttribList = getTableClassesIDsAndAttrList(table);
-    let AttrList = globalAttribList.filter( attr => ((attr[0] != ".") && (attr[0] != "#")) );
-    // console.log("Attr List =");
-    // console.log(AttrList);
+    let globalAttribList = getClassesIDsAndAttrArrayOf(table);
+    let AttrList = globalAttribList.filter( attr => ((attr[0] != ".") && (attr[0] != "#") && (isValidAttributeString(attr))) );
     return AttrList
 }
 
-function lastRowContainsClasses(table) { 
-    return getTableClassList(table).length > 0
+function formatIsOk(table) {
+    let firstCell = getFirstCellOfLastTdContentOf(table);
+    let lastRow = getLastRowOf(table);
+    if ( lastButFirstCellsAreVoidIn(lastRow) && isWellFormatted(firstCell) ) {
+        return true
+    } else {
+        return false
+    }
 }
 
-function getLastTdContentOf(table) {
-    let lastTd = table.querySelectorAll("tbody tr:last-of-type td:first-of-type")[0].innerHTML;
+function isWellFormatted(s) {
+    if (!(s.includes("{")) || !(s.includes("}"))) {
+        return false
+    } else { // s has both '{' and '}' symbols
+        s.trim();
+        let s0 = s.indexOf("{");
+        let s1 = s.indexOf("}");
+        let prefix = s.substring(0,s0);
+        let suffix = s.substring(s1+1,s.length);
+        prefix = prefix.trim();
+        suffix = suffix.trim();
+        if (prefix != "" || suffix != "") { // something before '{' or after '}'
+            return false
+        } else { // trim the { } or the {: :}
+            s = s.trim();
+            if ( s[0] == "{" && s[1] == ":") {
+                s = s.substring(2,s.length).trim();
+            }
+            if ( s[s.length-1] == "}" && s[s.length-2] == ":") {
+                s = s.substring(0,s.length-2).trim();
+            }
+            let attrArray = getClassesIDsAndAttrArrayFromString(s);
+            return isValidArrayOfAttributes(attrArray)
+        }
+    }
+
+}
+
+function lastButFirstCellsAreVoidIn(tableRow) {
+    for (const i in tableRow.children) {
+        if (i >0 && tableRow.children[i].innerHTML != "") {
+            return false
+        }
+    }
+    return true
+}
+
+function getFirstCellOfLastTdContentOf(table) {
+    let lastTd = table.querySelectorAll("tbody tr:last-of-type td:first-of-type")[0].childNodes[0].nodeValue;
     if (lastTd) {
         lastTd = lastTd.trim();
     }
     return lastTd
 }
 
-function getLastTrOf(table) {
+function getLastRowOf(table) {
     let arrayOfTrs = table.getElementsByTagName("tr");
     let lastTr = arrayOfTrs[arrayOfTrs.length-1];
     return lastTr

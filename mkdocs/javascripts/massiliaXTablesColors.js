@@ -6,9 +6,9 @@ var color = htmlColors;
 let RowsToBeColoured = Array();
 let ColsToBeColoured = Array();
 let CellsToBeColoured = Array();
-let rowAttrList = ["line", "ligne", "linecolor", "line-color"];
-let rowStyleAttrList = ["lstyle"];
-let colAttrList = ["col", "colcolor", "col-color"];
+let rowAttrList = ["line", "ligne", "linecolor", "line-color", "row", "rowcolor", "row-color"];
+// let rowStyleAttrList = ["lstyle"];
+let colAttrList = ["col", "colcolor", "col-color", "column", "colonne"];
 let cellAttrList = ["cell", "celcolor", "cellcolor", "cel-color", "cell-color"];
 let noneColorList = ["vide", "void", "none", "transparent", "aucun", "aucune"];
 

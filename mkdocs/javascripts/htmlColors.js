@@ -166,7 +166,7 @@ let htmlColors =  {
   "demo3":                    ["#DC143C", "#9932CC", "#b0b000", "#fdfd75","#000000","#ffffff"],
   "demo4":                    ["#ff000077", "#0000ff77", "#b0b000", "#fdfd75","#ffffff","#ff0000"],
   "demo5":                    ["#0000ff77", "#ff000077", "#b0b000", "#fdfd75","#000000","#ffffff"],
-  "demo6":                    ["#FFA50077", "#7FFFD477", "#b0b000", "#fdfd75","#000000","#ffffff"],
+  "demo6":                    ["#FFA50077", "#ff00ff77", "#b0b000", "#fdfd75","#000000","#ffffff"],
 }
 
 function getConfOptions() {

@@ -16,8 +16,8 @@ let xTableStyles =  {
     'dark':  {'font-family': 'Source Code Pro', 'background-color': 'green', 'color': 'red'}
     },
   'sevillana': {
-    'light': {'font-weight': 'bold', 'font-family': "arial;", 'background-color': 'blue', 'color': '#ff0000'}, 
-    'dark':  {'font-weight': 'bold', 'font-family': "arial;", 'background-color': 'orange', 'color': '#00ffff'}
+    'light': {'font-weight': 'bold', 'font-size': '0.8em', 'font-family': "arial", 'background-color': 'blue', 'color': '#ff0000'}, 
+    'dark':  {'font-weight': 'bold', 'font-size': '1.3em', 'font-family': "arial", 'background-color': 'orange', 'color': '#00ffff'}
     },
 }
 

@@ -40,37 +40,37 @@
 @media only screen and (min-width: 1000px), only screen and (hover: none) and (pointer: coarse) and (orientation: landscape), print {
   /* FLOAT LEFT by DEFAULT */
   .md-typeset .admonition.col:not(.admonition.col.right),
-  .md-typeset details.col:not(.admonition.col.right),
-  .md-typeset .admonition.colonne:not(.admonition.colonne.right),
-  .md-typeset details.colonne:not(.admonition.colonne.right),
-  .md-typeset .admonition.column:not(.admonition.column.right),
-  .md-typeset details.column:not(.admonition.column.right) {
+.md-typeset details.col:not(.admonition.col.right),
+.md-typeset .admonition.colonne:not(.admonition.colonne.right),
+.md-typeset details.colonne:not(.admonition.colonne.right),
+.md-typeset .admonition.column:not(.admonition.column.right),
+.md-typeset details.column:not(.admonition.column.right) {
     float: left;
   }
   /* FLOAT RIGHT if RIGHT class */
   .md-typeset .admonition.col.right,
-  .md-typeset details.col.right,
-  .md-typeset .admonition.colonne.right,
-  .md-typeset details.colonne.right,
-  .md-typeset .admonition.column.right,
-  .md-typeset details.column.right {
+.md-typeset details.col.right,
+.md-typeset .admonition.colonne.right,
+.md-typeset details.colonne.right,
+.md-typeset .admonition.column.right,
+.md-typeset details.column.right {
     float: right;
   }
   /* CLEAR if ANY (LEFT or RIGHT) */
   .md-typeset .admonition.col.clear,
-  .md-typeset details.col.clear,
-  .md-typeset .admonition.colonne.clear,
-  .md-typeset details.colonne.clear,
-  .md-typeset .admonition.column.clear,
-  .md-typeset details.column.clear {
+.md-typeset details.col.clear,
+.md-typeset .admonition.colonne.clear,
+.md-typeset details.colonne.clear,
+.md-typeset .admonition.column.clear,
+.md-typeset details.column.clear {
     clear: none;
   }
   .md-typeset .admonition.col.clear + *,
-  .md-typeset details.col.clear + *,
-  .md-typeset .admonition.colonne.clear + *,
-  .md-typeset details.colonne.clear + *,
-  .md-typeset .admonition.column.clear + *,
-  .md-typeset details.column.clear + * {
+.md-typeset details.col.clear + *,
+.md-typeset .admonition.colonne.clear + *,
+.md-typeset details.colonne.clear + *,
+.md-typeset .admonition.column.clear + *,
+.md-typeset details.column.clear + * {
     display: block;
     clear: both;
   }
