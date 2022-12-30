@@ -11,6 +11,10 @@
 // }
 
 let xTableStyles =  {
+  'title': {
+    'light': {'font-weight': 'bold', 'background-color': '#07bce577', 'color': 'red'}, 
+    'dark':  {'font-weight': 'bold', 'background-color': '#c7222e77', 'color': 'blue'}
+    },
   'normal': {
     'light': {'font-family': 'Source Code Pro', 'background-color': 'yellow', 'color': 'blue'}, 
     'dark':  {'font-family': 'Source Code Pro', 'background-color': 'green', 'color': 'red'}
