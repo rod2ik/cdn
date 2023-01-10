@@ -317,7 +317,8 @@ div.clear, clear {
 /*                           Maths XTables                                */
 /* ====================================================================== */
 table.math, table.maths, table.math-table, table.maths-table {
-  color: red;
+  border: solid 1.2px var(--table-header-border);
+  box-shadow: 7px 7px 7px;
 }
 
 /* COLORS */
