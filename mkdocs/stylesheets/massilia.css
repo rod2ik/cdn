@@ -59,6 +59,8 @@
   /* IMAGE-SHADOW MASSILIA */
   --img-shadow-box: 5px 5px 10px #222;
   --img-shadow-background-color: inherit;
+  --vartab-light-display: block;
+  --vartab-dark-display: none;
 }
 
 /* Theme Général MkDocs */
@@ -399,6 +401,14 @@ encadre, #encadre, .encadre, enc {
 .md-typeset figure img {
   clear: both;
   display: block;
+}
+
+.md-typeset .light {
+  display: var(--vartab-light-display);
+}
+
+.md-typeset .dark {
+  display: var(--vartab-dark-display);
 }
 
 img.shadow, img.ombre, img.encadree, img.box,

@@ -75,6 +75,8 @@
   --img-shadow-box: 5px 5px 10px #222;
   --img-shadow-background-color: inherit;
 
+  --vartab-light-display: block;
+  --vartab-dark-display: none;
 }
 
 /* Theme Général MkDocs */
@@ -84,7 +86,6 @@
   margin-right:auto;
   margin-left:auto;
 }
-
 
 /* STYLE WEB AVEC I,II pour h1 puis Styling pour h2 */
 h1 {
@@ -360,6 +361,14 @@ encadre, #encadre, .encadre, enc
   display:block;
 }
 
+.md-typeset .light { // For mkdocs_tex2svg Images
+  display: var(--vartab-light-display);
+}
+
+.md-typeset .dark { // For mkdocs_tex2svg Images
+  display: var(--vartab-dark-display);
+}
+
 img.shadow, img.ombre, img.encadree, img.box,
 iframe.shadow, iframe.box {
   // margin: auto;
@@ -375,6 +384,7 @@ iframe.shadow, iframe.box {
   clear:both; // for figcaption centering from markdown
   margin-top: 0.5em;
 }
+
 
 // Positioning
 
