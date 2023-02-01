@@ -10,6 +10,11 @@
   font-family: "24 LED Bright";
   src: url("../fonts/24_LED_Bright.ttf") format("truetype"), url("../fonts/24_LED_Bright.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Freckle Face";
+  src: url("../fonts/FreckleFace_Regular.ttf") format("truetype");
+}
+
 :root {
   /* HEADERS MASSILIA */
   --h1: #5a9ac5;
