@@ -14,6 +14,7 @@ window.addEventListener('load', function () {
       // Add 'center' class to parent element 'el'
       Array.from(el.children).forEach(child => {
         if (el.tagName != "ARTICLE" && el.tagName != "CENTER" &&
+          el.tagName != "MJX-CONTAINER" &&
           (child.tagName == "svg" || // ne pas mettre en majuscules
             child.tagName == "FIGURE" ||
             child.tagName == "FIGCAPTION")
