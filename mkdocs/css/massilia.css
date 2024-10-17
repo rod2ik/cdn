@@ -431,6 +431,7 @@ iframe.shadow, iframe.box {
 }
 
 .center, .center *:not(table *) {
+  /* display: block; */
   text-align: center;
   margin: 0 auto;
 }
@@ -471,6 +472,10 @@ iframe.shadow, iframe.box {
 .md-nav__link {
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.md-nav__item--section > .md-nav__link[for] { /* section titles */
+  color: var(--md-primary-fg-color);
 }
 
 .md-nav__link .MathJax {
