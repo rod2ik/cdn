@@ -431,7 +431,7 @@ iframe.shadow, iframe.box {
 }
 
 .center, .center *:not(table *) {
-  /* display: block; */
+  display: block;
   text-align: center;
   margin: 0 auto;
 }
