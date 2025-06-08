@@ -132,7 +132,8 @@ h2:target:after {
 
 /* STYLE WEB avec I,I,III puis Styling pour h2 et h3 */
 h3 { /* Sous-Paragraphes */
-  display: inline-block;
+  // display: inline-block;
+  display: block;
   color: var(--h3);
   padding-right: 0.5em;
   font-weight: bold;
