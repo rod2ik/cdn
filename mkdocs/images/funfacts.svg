@@ -1,0 +1,56 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <g>
+    <!-- Cercle extérieur -->
+    <path d="M32 1C49.0163 1 63 14.9837 63 32C63 49.0163 49.0163 63 32 63C14.9837 63 1 49.0163 1 32C1 14.9837 14.9837 1 32 1Z" stroke="black" stroke-width="2"/>
+  </g>
+  <g>
+    <!-- Ampoule noire avec yeux très grands et sourire incurvé plus ouvert (mais peu profond) -->
+    <path
+      d="
+        M32 14
+        C25 14 20 19.5 20 26
+        C20 30.5 23 34 25 36
+        C27 38 28 39.5 28 41
+        H36
+        C36 39.5 37 38 39 36
+        C41 34 44 30.5 44 26
+        C44 19.5 39 14 32 14
+        Z
+
+        M27.5 25
+        C29.2 25 30.5 23.7 30.5 22
+        C30.5 20.3 29.2 19 27.5 19
+        C25.8 19 24.5 20.3 24.5 22
+        C24.5 23.7 25.8 25 27.5 25
+        Z
+
+        M36.5 25
+        C38.2 25 39.5 23.7 39.5 22
+        C39.5 20.3 38.2 19 36.5 19
+        C34.8 19 33.5 20.3 33.5 22
+        C33.5 23.7 34.8 25 36.5 25
+        Z
+
+        M26 28
+        C30 32 34 32 38 28
+        C34 34 30 34 26 28
+        Z"
+      fill="black"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+    />
+  </g>
+  <g>
+    <!-- Culot de l’ampoule -->
+    <path d="M28 41H36V45H28V41Z" fill="black"/>
+    <path d="M28 45H36V49H28V45Z" fill="black"/>
+  </g>
+  <g>
+    <!-- 5 rayons lumineux épais -->
+    <path d="M32 10V2" stroke="black" stroke-width="3"/>
+    <path d="M20 14L13 7" stroke="black" stroke-width="3"/>
+    <path d="M44 14L51 7" stroke="black" stroke-width="3"/>
+    <path d="M12 32H4" stroke="black" stroke-width="3"/>
+    <path d="M60 32H52" stroke="black" stroke-width="3"/>
+  </g>
+</svg>
