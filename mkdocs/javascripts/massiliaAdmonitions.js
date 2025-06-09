@@ -20,7 +20,7 @@ var replaceBy = {
   "jeretiens": "Je Retiens ",
   "reference": "Références ",
   "film": "Films ",
-  "anec": "Anecdote"
+  "anecdote": "Anecdote "
 }
 
 function toAdmonitionClassString(array) {
@@ -237,6 +237,19 @@ for (let i = 0; i < nbReferences; i++) {
     references[i].firstElementChild.innerHTML = replaceBy["reference"]+(i+1)+".";
   } else {
     references[i].firstElementChild.innerHTML = replaceBy["reference"]+(i+1)+". "+references[i].firstElementChild.innerHTML
+  }
+}
+
+// Anecdotes
+var anecdotesRendering = ["Anec", "Anecdotes", "Funfacts"];
+var admonitionAnecdotes = toAdmonitionClassString(anecdotesRendering);
+var anecdotes = document.querySelectorAll(admonitionAnecdotes);
+var nbAnecdotes = anecdotes.length;
+for (let i = 0; i < nbAnecdotes; i++) {
+  if (anecdotesRendering.includes(anecdotes[i].firstElementChild.innerHTML)) {
+    anecdotes[i].firstElementChild.innerHTML = replaceBy["anecdote"]+(i+1)+".";
+  } else {
+    anecdotes[i].firstElementChild.innerHTML = replaceBy["anecdote"]+(i+1)+". "+anecdotes[i].firstElementChild.innerHTML
   }
 }
 
