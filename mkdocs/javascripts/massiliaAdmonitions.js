@@ -19,7 +19,8 @@ var replaceBy = {
   "corrige": "Corrigé ",
   "jeretiens": "Je Retiens ",
   "reference": "Références ",
-  "film": "Films "
+  "film": "Films ",
+  "anec": "Anecdote"
 }
 
 function toAdmonitionClassString(array) {
