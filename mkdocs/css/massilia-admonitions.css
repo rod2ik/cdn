@@ -732,3 +732,33 @@
   background-color: var(--md-admonition-fg-color);
   mask-image: var(--md-admonition-icon--reference);
 }
+
+/* anec - anecdote -Anecdote */
+:root {
+  --md-admonition-icon--anec: url("../images/funfacts.svg");
+  --md-admonition-icon--anecdote: var(--md-admonition-icon--anec);
+}
+
+.md-typeset .admonition.anec,
+.md-typeset details.anec,
+.md-typeset .admonition.anecdote,
+.md-typeset details.anecdote {
+  border-color: rgb(74, 173, 255);
+}
+
+.md-typeset .anec > .admonition-title,
+.md-typeset .anec > summary,
+.md-typeset .anecdote > .admonition-title,
+.md-typeset .anecdote > summary {
+  background-color: rgba(10, 139, 245, 0.25);
+  border-color: rgb(74, 173, 255);
+}
+
+.md-typeset .anec > .admonition-title::before,
+.md-typeset .anec > summary::before,
+.md-typeset .anecdote > .admonition-title::before,
+.md-typeset .anecdote > summary::before {
+  background-color: rgb(74, 173, 255);
+  -webkit-mask-image: var(--md-admonition-icon--anec);
+  mask-image: var(--md-admonition-icon--anec);
+}
