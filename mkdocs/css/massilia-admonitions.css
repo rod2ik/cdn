@@ -956,6 +956,7 @@
 /* Summary - Res - Resume - Résumé */
 :root {
   --md-admonition-icon--res: url("../images/funfacts.svg");
+  --md-admonition-icon--rés: var(--md-admonition-icon--res);
   --md-admonition-icon--resume: var(--md-admonition-icon--res);
   --md-admonition-icon--résumé: var(--md-admonition-icon--res);
   --md-admonition-icon--summary: var(--md-admonition-icon--res);
@@ -963,6 +964,8 @@
 
 .md-typeset .admonition.res,
 .md-typeset details.res,
+.md-typeset .admonition.rés,
+.md-typeset details.rés,
 .md-typeset .admonition.resume,
 .md-typeset details.resume,
 .md-typeset .admonition.résumé,
@@ -974,6 +977,8 @@
 
 .md-typeset .res > .admonition-title,
 .md-typeset .res > summary,
+.md-typeset .rés > .admonition-title,
+.md-typeset .rés > summary,
 .md-typeset .resume > .admonition-title,
 .md-typeset .resume > summary,
 .md-typeset .résumé > .admonition-title,
@@ -986,6 +991,8 @@
 
 .md-typeset .res > .admonition-title::before,
 .md-typeset .res > summary::before,
+.md-typeset .rés > .admonition-title::before,
+.md-typeset .rés > summary::before,
 .md-typeset .resume > .admonition-title::before,
 .md-typeset .resume > summary::before,
 .md-typeset .résumé > .admonition-title::before,

@@ -285,7 +285,7 @@ for (let i = 0; i < nbReponse; i++) {
 }
 
 // Summary - Res - Resume - Résumé
-var summariesRendering = ["Summary", "Res", "Resume", "Résumé"];
+var summariesRendering = ["Summary", "Res", "Rés", "Resume", "Résumé"];
 var admonitionSummaries = toAdmonitionClassString(summariesRendering);
 var summaries = document.querySelectorAll(admonitionSummaries);
 var nbSummaries = summaries.length;
