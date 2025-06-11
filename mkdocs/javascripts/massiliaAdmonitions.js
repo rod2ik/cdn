@@ -6,6 +6,7 @@ window.addEventListener('load', function() {
 var replaceBy = {
   "anecdote": "Anecdote ",
   "axiom": "Axiome ",
+  "challenge": "Challenge ",
   "consequence": "Conséquence ",
   "corollary": "Corollaire ",
   "corrige": "Corrigé ",
@@ -17,6 +18,8 @@ var replaceBy = {
   "lemma": "Lemme ",
   "method": "Méthode ",
   "notation": "Notation ",
+  "problem": "Problème ",
+  "problematique": "Problématique ",
   "property": "Propriété ",
   "proposition": "Proposition ",
   "proof": "Démonstration ",
@@ -60,6 +63,19 @@ for (let i = 0; i < nbAxioms; i++) {
     axioms[i].firstElementChild.innerHTML = replaceBy["axiom"]+(i+1)+".";
   } else {
     axioms[i].firstElementChild.innerHTML = replaceBy["axiom"]+(i+1)+". "+axioms[i].firstElementChild.innerHTML
+  }
+}
+
+// chlg - Challenge
+var challengeRendering = ["Chlg", "Challenge"];
+var admonitionChallenges = toAdmonitionClassString(challengeRendering);
+var challenges = document.querySelectorAll(admonitionChallenges);
+var nbChallenges = challenges.length;
+for (let i = 0; i < nbChallenges; i++) {
+  if (challengeRendering.includes(challenges[i].firstElementChild.innerHTML)) {
+    challenges[i].firstElementChild.innerHTML = replaceBy["challenge"]+(i+1)+".";
+  } else {
+    challenges[i].firstElementChild.innerHTML = replaceBy["challenge"]+(i+1)+". "+challenges[i].firstElementChild.innerHTML
   }
 }
 
@@ -203,6 +219,32 @@ for (let i = 0; i < nbNotation; i++) {
     notation[i].firstElementChild.innerHTML = replaceBy["notation"]+(i+1)+".";
   } else {
     notation[i].firstElementChild.innerHTML = replaceBy["notation"]+(i+1)+". "+notation[i].firstElementChild.innerHTML
+  }
+}
+
+// Prob - Problem - Probleme - Problème
+var problemRendering = ["Prob",  "Problem", "Probleme", "Problème"];
+var admonitionProblem = toAdmonitionClassString(problemRendering);
+var problem = document.querySelectorAll(admonitionProblem);
+var nbProblem = problem.length;
+for (let i = 0; i < nbProblem; i++) {
+  if (problemRendering.includes(problem[i].firstElementChild.innerHTML)) {
+    problem[i].firstElementChild.innerHTML = replaceBy["problem"]+(i+1)+".";
+  } else {
+    problem[i].firstElementChild.innerHTML = replaceBy["problem"]+(i+1)+". "+problem[i].firstElementChild.innerHTML
+  }
+}
+
+// pbst - Problemstatement - probx - Problematique - Problématique
+var problematiqueRendering = ["Pbst",  "Problemstatement", "Probx", "Problematique", "Problématique"];
+var admonitionProblematique = toAdmonitionClassString(problematiqueRendering);
+var problematique = document.querySelectorAll(admonitionProblematique);
+var nbProblematiques = problematique.length;
+for (let i = 0; i < nbProblematiques; i++) {
+  if (problematiqueRendering.includes(problematique[i].firstElementChild.innerHTML)) {
+    problematique[i].firstElementChild.innerHTML = replaceBy["problematique"]+(i+1)+".";
+  } else {
+    problematique[i].firstElementChild.innerHTML = replaceBy["problematique"]+(i+1)+". "+problematique[i].firstElementChild.innerHTML
   }
 }
 
