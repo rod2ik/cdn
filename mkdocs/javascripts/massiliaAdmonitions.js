@@ -5,10 +5,14 @@ window.addEventListener('load', function() {
 
 var replaceBy = {
   "definition": "Définition ",
+  "thesis": "Thèse ",
+  "axiom": "Axiome ",
   "lemma": "Lemme ",
   "property": "Propriété ",
   "proposition": "Proposition ",
   "theorem": "Théorème ",
+  "corollary": "Corollaire ",
+  "consequence": "Conséquence ",
   "proof": "Démonstration ",
   "exercice": "Exercice ",
   "exemple": "Exemple ",
@@ -97,7 +101,7 @@ for (let i = 0; i < nbThm; i++) {
   }
 }
 
-// Théorèmes
+// Preuves - Démonstrations
 var proofRendering = ["Proof", "Demo", , "Demonstration", "Preuve", "Démo", "Démonstration" ];
 var admonitionProof = toAdmonitionClassString(proofRendering);
 var proof = document.querySelectorAll(admonitionProof);
@@ -136,8 +140,8 @@ for (let i = 0; i < nbEx; i++) {
   }
 }
 
-// Exemples
-var expRendering = ["Exp", "Exemple"];
+// Exp - Example - Exemple
+var expRendering = ["Exp", "Example", "Exemple"];
 var admonitionExp = toAdmonitionClassString(expRendering);
 var exp = document.querySelectorAll(admonitionExp);
 var nbExp = exp.length;
@@ -149,8 +153,8 @@ for (let i = 0; i < nbExp; i++) {
   }
 }
 
-// Méthodes
-var mthRendering = ["Mth", "Méthode", "Methode", "Method"];
+// Mth - Method - Méthode - Methode
+var mthRendering = ["Mth", "Method", "Méthode", "Methode"];
 var admonitionMth = toAdmonitionClassString(mthRendering);
 var mth = document.querySelectorAll(admonitionMth);
 var nbMth = mth.length;
@@ -162,7 +166,7 @@ for (let i = 0; i < nbMth; i++) {
   }
 }
 
-// Notation
+// Not - Nota - Notation
 var notRendering = ["Not", "Nota", "Notation"];
 var admonitionNotation = toAdmonitionClassString(notRendering);
 var notation = document.querySelectorAll(admonitionNotation);
@@ -175,8 +179,8 @@ for (let i = 0; i < nbNotation; i++) {
   }
 }
 
-// Réponse
-var repRendering = ["Rep", "Rép", "Reponse", "Réponse", "Answer"];
+// Rep - Rép - Reponse - Réponse - Answer
+var repRendering = ["Answer", "Rep", "Rép", "Reponse", "Réponse"];
 var admonitionReponse = toAdmonitionClassString(repRendering);
 var reponse = document.querySelectorAll(admonitionReponse);
 var nbReponse = reponse.length;
@@ -188,20 +192,20 @@ for (let i = 0; i < nbReponse; i++) {
   }
 }
 
-// Corrigé
-var corRendering = ["Cor", "Corr", "Corrige", "Corrigé", "Correction"];
-var admonitionCorrige = toAdmonitionClassString(corRendering);
+// Corr - Corrige - Corrigé - Correction
+var corrigeRendering = ["Corr", "Corrige", "Corrigé", "Correction"];
+var admonitionCorrige = toAdmonitionClassString(corrigeRendering);
 var corrige = document.querySelectorAll(admonitionCorrige);
 var nbCorrige = corrige.length;
 for (let i = 0; i < nbCorrige; i++) {
-  if (corRendering.includes(corrige[i].firstElementChild.innerHTML)) {
+  if (corrigeRendering.includes(corrige[i].firstElementChild.innerHTML)) {
     corrige[i].firstElementChild.innerHTML = replaceBy["corrige"]+(i+1)+".";
   } else {
     corrige[i].firstElementChild.innerHTML = replaceBy["corrige"]+(i+1)+". "+corrige[i].firstElementChild.innerHTML
   }
 }
 
-// Jeretiens
+// Jeretiens - Iremember
 var jeretiensRendering = ["Jeretiens", "Iremember"];
 var admonitionJeretiens = toAdmonitionClassString(jeretiensRendering);
 var jeretiens = document.querySelectorAll(admonitionJeretiens);
@@ -214,8 +218,8 @@ for (let i = 0; i < nbJeretiens; i++) {
   }
 }
 
-// Films
-var filmsRendering = ["Film", "Films", "Movie", "Movies"];
+// Film - Movie
+var filmsRendering = ["Film", "Movie"];
 var admonitionFilms = toAdmonitionClassString(filmsRendering);
 var films = document.querySelectorAll(admonitionFilms);
 var nbFilms = films.length;
@@ -227,8 +231,8 @@ for (let i = 0; i < nbFilms; i++) {
   }
 }
 
-// Références
-var referencesRendering = ["Ref", "Réf", "Reference", "Référence", "References", "Références"];
+// Ref - Réf - Reference - Référence
+var referencesRendering = ["Ref", "Réf", "Reference", "Référence"];
 var admonitionReferences = toAdmonitionClassString(referencesRendering);
 var references = document.querySelectorAll(admonitionReferences);
 var nbReferences = references.length;
@@ -240,8 +244,8 @@ for (let i = 0; i < nbReferences; i++) {
   }
 }
 
-// Anecdotes
-var anecdotesRendering = ["Anec", "Anecdotes", "Funfacts"];
+// Anec - Anecdote - Funfact
+var anecdotesRendering = ["Anec", "Anecdote", "Funfact"];
 var admonitionAnecdotes = toAdmonitionClassString(anecdotesRendering);
 var anecdotes = document.querySelectorAll(admonitionAnecdotes);
 var nbAnecdotes = anecdotes.length;
@@ -250,6 +254,58 @@ for (let i = 0; i < nbAnecdotes; i++) {
     anecdotes[i].firstElementChild.innerHTML = replaceBy["anecdote"]+(i+1)+".";
   } else {
     anecdotes[i].firstElementChild.innerHTML = replaceBy["anecdote"]+(i+1)+". "+anecdotes[i].firstElementChild.innerHTML
+  }
+}
+
+// Ths - Thesis - Thèse
+var thesisRendering = ["Ths", "Thesis", "These", "Thèse"];
+var admonitionThesis = toAdmonitionClassString(thesisRendering);
+var thesis = document.querySelectorAll(admonitionThesis);
+var nbThesis = thesis.length;
+for (let i = 0; i < nbThesis; i++) {
+  if (thesisRendering.includes(thesis[i].firstElementChild.innerHTML)) {
+    thesis[i].firstElementChild.innerHTML = replaceBy["thesis"]+(i+1)+".";
+  } else {
+    thesis[i].firstElementChild.innerHTML = replaceBy["thesis"]+(i+1)+". "+thesis[i].firstElementChild.innerHTML
+  }
+}
+
+// Cor - Corol - Coroll - Corollary - Corollaire
+var corollariesRendering = ["Cor", "Corol", "Coroll", "Corollary", "Corollaire"];
+var admonitionCorollaries = toAdmonitionClassString(corollariesRendering);
+var corollaries = document.querySelectorAll(admonitionCorollaries);
+var nbCorollaries = corollaries.length;
+for (let i = 0; i < nbCorollaries; i++) {
+  if (corollariesRendering.includes(corollaries[i].firstElementChild.innerHTML)) {
+    corollaries[i].firstElementChild.innerHTML = replaceBy["corollary"]+(i+1)+".";
+  } else {
+    corollaries[i].firstElementChild.innerHTML = replaceBy["corollary"]+(i+1)+". "+corollaries[i].firstElementChild.innerHTML
+  }
+}
+
+// Cons - Consq - Conseq - Consequence - Conséquence
+var consequencesRendering = ["Cons", "Consq", "Conseq", "Consequence", "Conséquence"];
+var admonitionConsequences = toAdmonitionClassString(consequencesRendering);
+var consequences = document.querySelectorAll(admonitionConsequences);
+var nbConsequences = consequences.length;
+for (let i = 0; i < nbConsequences; i++) {
+  if (consequencesRendering.includes(consequences[i].firstElementChild.innerHTML)) {
+    consequences[i].firstElementChild.innerHTML = replaceBy["consequence"]+(i+1)+".";
+  } else {
+    consequences[i].firstElementChild.innerHTML = replaceBy["consequence"]+(i+1)+". "+consequences[i].firstElementChild.innerHTML
+  }
+}
+
+// Ax - Axiom - Axiome
+var axiomsRendering = ["Ax", "Axiom", "Axiome"];
+var admonitionAxioms = toAdmonitionClassString(axiomsRendering);
+var axioms = document.querySelectorAll(admonitionAxioms);
+var nbAxioms = axioms.length;
+for (let i = 0; i < nbAxioms; i++) {
+  if (axiomsRendering.includes(axioms[i].firstElementChild.innerHTML)) {
+    axioms[i].firstElementChild.innerHTML = replaceBy["axiom"]+(i+1)+".";
+  } else {
+    axioms[i].firstElementChild.innerHTML = replaceBy["axiom"]+(i+1)+". "+axioms[i].firstElementChild.innerHTML
   }
 }
 
