@@ -865,7 +865,7 @@
   mask-image: var(--md-admonition-icon--cor);
 }
 
-/* cons - consq - conseq - consequence - conséquence */
+/* Cons - Consq - Conseq - Consequence - Conséquence */
 :root {
   --md-admonition-icon--cons: url("../images/funfacts.svg");
   --md-admonition-icon--consq: var(--md-admonition-icon--cons);
@@ -951,4 +951,48 @@
   background-color: rgb(255, 141, 53);
   -webkit-mask-image: var(--md-admonition-icon--ax);
   mask-image: var(--md-admonition-icon--ax);
+}
+
+/* Summary - Res - Resume - Résumé */
+:root {
+  --md-admonition-icon--res: url("../images/funfacts.svg");
+  --md-admonition-icon--resume: var(--md-admonition-icon--res);
+  --md-admonition-icon--résumé: var(--md-admonition-icon--res);
+  --md-admonition-icon--summary: var(--md-admonition-icon--res);
+}
+
+.md-typeset .admonition.res,
+.md-typeset details.res,
+.md-typeset .admonition.resume,
+.md-typeset details.resume,
+.md-typeset .admonition.résumé,
+.md-typeset details.résumé,
+.md-typeset .admonition.summary,
+.md-typeset details.summary {
+  border-color: rgb(254, 48, 48);
+}
+
+.md-typeset .res > .admonition-title,
+.md-typeset .res > summary,
+.md-typeset .resume > .admonition-title,
+.md-typeset .resume > summary,
+.md-typeset .résumé > .admonition-title,
+.md-typeset .résumé > summary,
+.md-typeset .summary > .admonition-title,
+.md-typeset .summary > summary {
+  background-color: rgba(254, 48, 48, 0.25);
+  border-color: rgb(254, 48, 48);
+}
+
+.md-typeset .res > .admonition-title::before,
+.md-typeset .res > summary::before,
+.md-typeset .resume > .admonition-title::before,
+.md-typeset .resume > summary::before,
+.md-typeset .résumé > .admonition-title::before,
+.md-typeset .résumé > summary::before,
+.md-typeset .summary > .admonition-title::before,
+.md-typeset .summary > summary::before {
+  background-color: rgb(254, 48, 48);
+  -webkit-mask-image: var(--md-admonition-icon--res);
+  mask-image: var(--md-admonition-icon--res);
 }
