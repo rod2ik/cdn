@@ -333,7 +333,7 @@
 .md-typeset .probleme > summary::before,
 .md-typeset .problème > .admonition-title::before,
 .md-typeset .problème > summary::before {
-  background-color: rgb(129, 255, 109);
+  background-color: rgb(0, 138, 197);
   -webkit-mask-image: var(--md-admonition-icon--prob);
   mask-image: var(--md-admonition-icon--prob);
 }
@@ -511,27 +511,29 @@
 .md-typeset .demonstration::after {
   content: "";
   display: inline-block;
-  border-bottom: 4px solid var(--md-admonition-proof-dashed-border-color);
-  border-style: dashed;
   width: min(50px, 7%);
   position: absolute;
   bottom: 0px;
   left: 0px;
 }
 
-.md-typeset details.proof::after,
-.md-typeset details.preuve::after,
-.md-typeset details.démo::after,
-.md-typeset details.demo::after,
-.md-typeset details.démonstration::after,
-.md-typeset details.demonstration::after {
-  content: "";
-  display: inline-block;
-  border-bottom: 4px solid var(--md-admonition-proof-dashed-border-color);
+.md-typeset details.proof[open],
+.md-typeset details.preuve[open],
+.md-typeset details.démo[open],
+.md-typeset details.demo[open],
+.md-typeset details.démonstration[open],
+.md-typeset details.demonstration[open] {
+  border-left: 4px dashed var(--md-admonition-proof-dashed-border-color);
+}
+
+.md-typeset details.proof[open]::after,
+.md-typeset details.preuve[open]::after,
+.md-typeset details.démo[open]::after,
+.md-typeset details.demo[open]::after,
+.md-typeset details.démonstration[open]::after,
+.md-typeset details.demonstration[open]::after {
+  border-bottom: 4px dashed var(--md-admonition-proof-dashed-border-color);
   width: min(50px, 7%);
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
 }
 
 .md-typeset .proof > p:last-of-type::after,
@@ -1081,7 +1083,7 @@
   mask-image: var(--md-admonition-icon--thm);
 }
 
-/* ths - thesis - these - thèse */
+/* Ths - Thesis - These - Thèse */
 :root {
   --md-admonition-icon--ths: url("../images/funfacts.svg");
   --md-admonition-icon--these: var(--md-admonition-icon--ths);

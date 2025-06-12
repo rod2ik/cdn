@@ -33,7 +33,7 @@
 .md-typeset .anec > summary,
 .md-typeset .anecdote > .admonition-title,
 .md-typeset .anecdote > summary
- {
+{
   background-color: rgba(10, 139, 245, 0.25);
   border-color: rgb(74, 173, 255);
 }
@@ -42,6 +42,7 @@
 .md-typeset .anecdote > .admonition-title::before,
 .md-typeset .anecdote > summary::before
 {
+  // Icon Background Color
   background-color: rgb(74, 173, 255);
   -webkit-mask-image: var(--md-admonition-icon--anec);
   mask-image: var(--md-admonition-icon--anec);
@@ -59,7 +60,7 @@
 .md-typeset details.axiom,
 .md-typeset .admonition.axiome,
 .md-typeset details.axiome
- {
+{
   border-color: rgb(255, 141, 53);
 }
 .md-typeset .ax > .admonition-title,
@@ -79,6 +80,7 @@
 .md-typeset .axiome > .admonition-title::before,
 .md-typeset .axiome > summary::before
 {
+  // Icon Background Color
   background-color: rgb(255, 141, 53);
   -webkit-mask-image: var(--md-admonition-icon--ax);
   mask-image: var(--md-admonition-icon--ax);
@@ -109,6 +111,7 @@
 .md-typeset .challenge > .admonition-title::before,
 .md-typeset .challenge > summary::before
 {
+  // Icon Background Color
   background-color: rgb(26, 153, 238);
   // -webkit-mask-image: var(--md-admonition-icon--pte);
   mask-image: var(--md-admonition-icon--pte);
@@ -160,6 +163,7 @@
 .md-typeset .corollaire > .admonition-title::before,
 .md-typeset .corollaire > summary::before
 {
+  // Icon Background Color
   background-color: rgb(129, 255, 109);
   -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--cor);
@@ -211,6 +215,7 @@
 .md-typeset .conséquence > .admonition-title::before,
 .md-typeset .conséquence > summary::before
 {
+  // Icon Background Color
   background-color: rgb(255, 87, 219);
   -webkit-mask-image: var(--md-admonition-icon--cons);
   mask-image: var(--md-admonition-icon--cons);
@@ -234,8 +239,8 @@
 .md-typeset .admonition.définition,
 .md-typeset details.définition
  {
-  border-color: rgb(43, 155, 70);
-}
+   border-color: rgb(43, 155, 70);
+  }
 .md-typeset .def > .admonition-title,
 .md-typeset .def > summary,
 .md-typeset .déf > .admonition-title,
@@ -258,6 +263,7 @@
 .md-typeset .définition > .admonition-title::before,
 .md-typeset .définition > summary::before 
 {
+  // Icon Background Color
   background-color: rgb(43, 155, 70);
   // -webkit-mask-image: var(--md-admonition-icon--def);
   mask-image: var(--md-admonition-icon--def);
@@ -295,6 +301,7 @@
 .md-typeset .lemma > .admonition-title::before,
 .md-typeset .lemma > summary::before 
 {
+  // Icon Background Color
   background-color: rgb(26, 153, 238);
   // -webkit-mask-image: var(--md-admonition-icon--pte);
   mask-image: var(--md-admonition-icon--pte);
@@ -339,7 +346,8 @@
 .md-typeset .problème > .admonition-title::before,
 .md-typeset .problème > summary::before
 {
-  background-color: rgb(129, 255, 109);
+  // Icon Background Color
+  background-color: rgb(0, 138, 197);
   -webkit-mask-image: var(--md-admonition-icon--prob);
   mask-image: var(--md-admonition-icon--prob);
 }
@@ -363,8 +371,8 @@
 .md-typeset .admonition.problématique,
 .md-typeset details.problématique
  {
-  border-color: rgb(255, 39, 39);
-}
+   border-color: rgb(255, 39, 39);
+  }
 .md-typeset .probx > .admonition-title,
 .md-typeset .probx > summary,
 .md-typeset .pbst > .admonition-title,
@@ -390,6 +398,7 @@
 .md-typeset .problématique > .admonition-title::before,
 .md-typeset .problématique > summary::before
 {
+  // Icon Background Color
   background-color: rgb(255, 39, 39);
   -webkit-mask-image: var(--md-admonition-icon--prob);
   mask-image: var(--md-admonition-icon--prob);
@@ -439,6 +448,7 @@
 .md-typeset .property > .admonition-title::before,
 .md-typeset .property > summary::before
 {
+  // Icon Background Color
   background-color: rgb(26, 153, 238);
   // -webkit-mask-image: var(--md-admonition-icon--pte);
   mask-image: var(--md-admonition-icon--pte);
@@ -469,11 +479,11 @@
 .md-typeset .proposition > .admonition-title::before,
 .md-typeset .proposition > summary::before
 {
+  // Icon Background Color
   background-color: rgb(26, 153, 238);
   -webkit-mask-image: var(--md-admonition-icon--prop);
   mask-image: var(--md-admonition-icon--prop);
 }
-
 
 /* Proof - Preuve - Demo - Démo - Démonstration - Demonstration */
 :root {
@@ -497,7 +507,7 @@
 .md-typeset details.démonstration, 
 .md-typeset .admonition.demonstration,
 .md-typeset details.demonstration
-{
+{ // ??? admonitions
   border-color: var(--md-admonition-proof-dashed-border-color);
   border-style: dashed;
 }
@@ -518,32 +528,34 @@
 .md-typeset .demo::after,
 .md-typeset .démonstration::after,
 .md-typeset .demonstration::after
-{
+{ // bottom line 50px on ??? admonitions
   content: "";
   display: inline-block;
-  border-bottom: 4px solid var(--md-admonition-proof-dashed-border-color);
-  border-style: dashed;
   width: min(50px, 7%);
   position: absolute;
   bottom: 0px;
-  left:0px;
+  left: 0px;
 }
 
-.md-typeset details.proof::after,
-.md-typeset details.preuve::after,
-.md-typeset details.démo::after,
-.md-typeset details.demo::after,
-.md-typeset details.démonstration::after,
-.md-typeset details.demonstration::after
-{
-  content: "";
-  display: inline-block;
-  border-bottom: 4px solid var(--md-admonition-proof-dashed-border-color);
-  // border-style: dashed;
+.md-typeset details.proof[open],
+.md-typeset details.preuve[open],
+.md-typeset details.démo[open],
+.md-typeset details.demo[open],
+.md-typeset details.démonstration[open],
+.md-typeset details.demonstration[open]
+{ // on opened ??? admonitions
+  border-left: 4px dashed var(--md-admonition-proof-dashed-border-color);
+}
+
+.md-typeset details.proof[open]::after,
+.md-typeset details.preuve[open]::after,
+.md-typeset details.démo[open]::after,
+.md-typeset details.demo[open]::after,
+.md-typeset details.démonstration[open]::after,
+.md-typeset details.demonstration[open]::after
+{ // on bottom, opened ??? admonitions
+  border-bottom: 4px dashed var(--md-admonition-proof-dashed-border-color);
   width: min(50px, 7%);
-  position: absolute;
-  bottom: 0px;
-  left:0px;  
 }
 
 .md-typeset .proof > p:last-of-type::after,
@@ -558,7 +570,7 @@
 .md-typeset details.démonstration > p:last-of-type::after, 
 .md-typeset .demonstration > p:last-of-type::after,
 .md-typeset details.demonstration > p:last-of-type::after
-{
+{  // Icône CQFD/QED, en bas à droite
   content: "";
   display: inline-block;
   background-image: var(--md-admonition-proof-qed-icon);
@@ -601,6 +613,7 @@
 .md-typeset .demonstration > .admonition-title::before,
 .md-typeset .demonstration > summary::before
 {
+  // Icon Background Color
   background-color: var(--md-admonition-icon-proof-color);
   // -webkit-mask-image: var(--md-admonition-icon--proof);
   mask-image: var(--md-admonition-icon--proof);
@@ -626,6 +639,7 @@
 .md-typeset .python > .admonition-title::before,
 .md-typeset .python > summary::before
 {
+  // Icon Background Color
   background-color: rgb(255, 211, 67);
   // -webkit-mask-image: var(--md-admonition-icon--python);
   mask-image: var(--md-admonition-icon--python);
@@ -664,6 +678,7 @@
 .md-typeset .exercice > .admonition-title::before,
 .md-typeset .exercice > summary::before
 {
+  // Icon Background Color
   background-color: rgb(253, 167, 28);
   // -webkit-mask-image: var(--md-admonition-icon--ex);
   mask-image: var(--md-admonition-icon--ex);
@@ -694,7 +709,7 @@
 .md-typeset .exemple > summary
 // .md-typeset .example > .admonition-title,
 // .md-typeset .example > summary
- {
+{
   background-color: rgba(246, 231, 81, 0.25);
   border-color: rgb(246, 231, 10);
 }
@@ -707,10 +722,11 @@
 // .md-typeset .example > .admonition-title::before,
 // .md-typeset .example > summary::before
 {
+  // Icon Background Color
   background-color: rgb(246, 231, 10);
   // -webkit-mask-image: var(--md-admonition-icon--exp);
   mask-image: var(--md-admonition-icon--exp);
-  }
+}
 
 /* Mth - Méthod - Méthode - Methode */
 :root {
@@ -751,6 +767,7 @@
 .md-typeset .method > .admonition-title::before,
 .md-typeset .method > summary::before
 {
+  // Icon Background Color
   background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--mth);
   mask-image: var(--md-admonition-icon--mth);
@@ -777,7 +794,7 @@
 .md-typeset .nota > summary,
 .md-typeset .notation > .admonition-title,
 .md-typeset .notation > summary
- {
+{
   background-color: rgba(238, 113, 255, 0.25);
   border-color: rgb(238, 113, 255);
 }
@@ -788,6 +805,7 @@
 .md-typeset .notation > .admonition-title::before,
 .md-typeset .notation > summary::before
 {
+  // Icon Background Color
   background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--not);
   mask-image: var(--md-admonition-icon--not);
@@ -842,6 +860,7 @@
 .md-typeset .answer > .admonition-title::before,
 .md-typeset .answer > summary::before
 {
+  // Icon Background Color
   background-color: #f82e2e;
   -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--cor);
@@ -883,6 +902,7 @@
 .md-typeset .correction > .admonition-title::before,
 .md-typeset .correction > summary::before
 {
+  // Icon Background Color
   background-color: #f82e2e;
   // -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--corr);
@@ -909,12 +929,13 @@
  {
    background-color: #f82e2e9d;
    border-color: #f82e2e;
-}
+  }
 .md-typeset .jeretiens > .admonition-title::before,
 .md-typeset .jeretiens > summary::before, 
 .md-typeset .iremember > .admonition-title::before,
 .md-typeset .iremember > summary::before
 {
+  // Icon Background Color
   background-color: var(--md-admonition-fg-color);
   -webkit-mask-image: var(--md-admonition-icon--jeretiens);
   mask-image: var(--md-admonition-icon--jeretiens);
@@ -963,8 +984,9 @@
 .md-typeset .movies > .admonition-title::before,
 .md-typeset .movies > summary::before
 {
+  // Icon Background Color
   background-color: var(--md-admonition-fg-color);
-    // -webkit-mask-image: var(--md-admonition-icon--film);
+  // -webkit-mask-image: var(--md-admonition-icon--film);
     mask-image: var(--md-admonition-icon--film);
 }
 
@@ -989,8 +1011,8 @@
 .md-typeset .admonition.références,
 .md-typeset details.références
  {
-  border-color: #f82e2e;
-}
+   border-color: #f82e2e;
+  }
 
 .md-typeset .ref > .admonition-title,
 .md-typeset .ref > summary,
@@ -1021,12 +1043,11 @@
 .md-typeset .références > .admonition-title::before,
 .md-typeset .références > summary::before
 {
+  // Icon Background Color
   background-color: var(--md-admonition-fg-color);
   // -webkit-mask-image: var(--md-admonition-icon--reference);
   mask-image: var(--md-admonition-icon--reference);
 }
-
-
 
 /* Summary - Res - Resume - Résumé */
 :root {
@@ -1046,7 +1067,7 @@
 .md-typeset details.résumé,
 .md-typeset .admonition.summary,
 .md-typeset details.summary
- {
+{
   border-color: rgb(254, 48, 48);
 }
 .md-typeset .res > .admonition-title,
@@ -1074,6 +1095,7 @@
 .md-typeset .summary > .admonition-title::before,
 .md-typeset .summary > summary::before
 {
+  // Icon Background Color
   background-color: rgb(254, 48, 48);
   -webkit-mask-image: var(--md-admonition-icon--res);
   mask-image: var(--md-admonition-icon--res);
@@ -1118,13 +1140,14 @@
 .md-typeset .theorem > .admonition-title::before,
 .md-typeset .theorem > summary::before
 {
+  // Icon Background Color
   background-color: rgb(250, 74, 74);
   // -webkit-mask-image: var(--md-admonition-icon--thm);
   mask-image: var(--md-admonition-icon--thm);
 }
 
 
-/* ths - thesis - these - thèse */
+/* Ths - Thesis - These - Thèse */
 :root {
   --md-admonition-icon--ths: url('../images/funfacts.svg');
   --md-admonition-icon--these: var(--md-admonition-icon--ths);
@@ -1163,6 +1186,7 @@
 .md-typeset .thesis > .admonition-title::before,
 .md-typeset .thesis > summary::before
 {
+  // Icon Background Color
   background-color: rgb(252, 185, 41);
   -webkit-mask-image: var(--md-admonition-icon--ths);
   mask-image: var(--md-admonition-icon--ths);
