@@ -20,8 +20,8 @@ var replaceBy = {
   "notation": "Notation ",
   "problem": "Problème ",
   "problematique": "Problématique ",
-  "property": "Propriété ",
   "proposition": "Proposition ",
+  "property": "Propriété ",
   "proof": "Démonstration ",
   "python": "Python ",
   "reponse": "Réponse ",
@@ -248,19 +248,6 @@ for (let i = 0; i < nbProblematiques; i++) {
   }
 }
 
-// Pte - Pté - Propriete - Propriété - Property
-var pteRendering = ["Pte", "Pté", "Propriete", "Propriété", "Property"];
-var admonitionPte = toAdmonitionClassString(pteRendering);
-var pte = document.querySelectorAll(admonitionPte);
-var nbPtes = pte.length;
-for (let i = 0; i < nbPtes; i++) {
-  if (pteRendering.includes(pte[i].firstElementChild.innerHTML)) {
-    pte[i].firstElementChild.innerHTML = replaceBy["property"]+(i+1)+".";
-  } else {
-    pte[i].firstElementChild.innerHTML = replaceBy["property"]+(i+1)+". "+pte[i].firstElementChild.innerHTML
-  }
-}
-
 // Prop - Proposition
 var propRendering = ["Prop", "Proposition"];
 var admonitionProp = toAdmonitionClassString(propRendering);
@@ -271,6 +258,19 @@ for (let i = 0; i < nbProp; i++) {
     prop[i].firstElementChild.innerHTML = replaceBy["proposition"]+(i+1)+".";
   } else {
     prop[i].firstElementChild.innerHTML = replaceBy["proposition"]+(i+1)+". "+prop[i].firstElementChild.innerHTML
+  }
+}
+
+// Pte - Pté - Propriete - Propriété - Property
+var pteRendering = ["Pte", "Pté", "Propriete", "Propriété", "Property"];
+var admonitionPte = toAdmonitionClassString(pteRendering);
+var pte = document.querySelectorAll(admonitionPte);
+var nbPtes = pte.length;
+for (let i = 0; i < nbPtes; i++) {
+  if (pteRendering.includes(pte[i].firstElementChild.innerHTML)) {
+    pte[i].firstElementChild.innerHTML = replaceBy["property"]+(i+1)+".";
+  } else {
+    pte[i].firstElementChild.innerHTML = replaceBy["property"]+(i+1)+". "+pte[i].firstElementChild.innerHTML
   }
 }
 
@@ -364,7 +364,5 @@ for (let i = 0; i < nbThesis; i++) {
     thesis[i].firstElementChild.innerHTML = replaceBy["thesis"]+(i+1)+". "+thesis[i].firstElementChild.innerHTML
   }
 }
-
-
 
 });
