@@ -909,22 +909,27 @@
   --md-admonition-icon--py: var(--md-admonition-icon--python);
 }
 .md-typeset .admonition.python,
-.md-typeset details.python
+.md-typeset details.python,
+.md-typeset .admonition.py,
+.md-typeset details.py
 {
   border-color: var(--md-admonition-python-border-color);
 }
 .md-typeset .python > .admonition-title,
-.md-typeset .python > summary
+.md-typeset .python > summary,
+.md-typeset .py > .admonition-title,
+.md-typeset .py > summary
 {
   background-color: var(--md-admonition-python-title-background);
   border-color: rgb(255, 211, 67);
 }
 .md-typeset .python > .admonition-title::before,
-.md-typeset .python > summary::before
+.md-typeset .python > summary::before,
+.md-typeset .py > .admonition-title::before,
+.md-typeset .py > summary::before
 {
   // Icon Background Color
   background-color: rgb(255, 211, 67);
-  // -webkit-mask-image: var(--md-admonition-icon--python);
   mask-image: var(--md-admonition-icon--python);
 }
 
