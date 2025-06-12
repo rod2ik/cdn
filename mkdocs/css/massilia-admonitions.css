@@ -766,7 +766,6 @@
 .md-typeset .démonstration,
 .md-typeset .demonstration {
   position: relative;
-  border-left: 4px dashed var(--md-admonition-proof-dashed-border-color);
 }
 
 .md-typeset .proof::after,
@@ -777,7 +776,6 @@
 .md-typeset .demonstration::after {
   content: "";
   display: inline-block;
-  width: min(50px, 7%);
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -799,16 +797,7 @@
 .md-typeset details.démonstration[open]::after,
 .md-typeset details.demonstration[open]::after {
   border-bottom: 4px dashed var(--md-admonition-proof-dashed-border-color);
-  width: min(50px, 7%);
-}
-
-.md-typeset details.proof:not([open]),
-.md-typeset details.preuve:not([open]),
-.md-typeset details.démo:not([open]),
-.md-typeset details.demo:not([open]),
-.md-typeset details.démonstration:not([open]),
-.md-typeset details.demonstration:not([open]) {
-  border: dotted;
+  width: min(80px, 10%);
 }
 
 .md-typeset .proof > p:last-of-type::after,

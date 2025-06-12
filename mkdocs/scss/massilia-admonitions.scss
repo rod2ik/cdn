@@ -49,7 +49,7 @@
 .md-typeset .anecdote > .admonition-title::before,
 .md-typeset .anecdote > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(74, 173, 255);
   -webkit-mask-image: var(--md-admonition-icon--anec);
   mask-image: var(--md-admonition-icon--anec);
@@ -87,7 +87,7 @@
 .md-typeset .axiome > .admonition-title::before,
 .md-typeset .axiome > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(255, 141, 53);
   -webkit-mask-image: var(--md-admonition-icon--ax);
   mask-image: var(--md-admonition-icon--ax);
@@ -118,7 +118,7 @@
 .md-typeset .challenge > .admonition-title::before,
 .md-typeset .challenge > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(26, 153, 238);
   mask-image: var(--md-admonition-icon--chlg);
 }
@@ -169,7 +169,7 @@
 .md-typeset .conséquence > .admonition-title::before,
 .md-typeset .conséquence > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(255, 87, 219);
   -webkit-mask-image: var(--md-admonition-icon--cons);
   mask-image: var(--md-admonition-icon--cons);
@@ -221,7 +221,7 @@
 .md-typeset .corollaire > .admonition-title::before,
 .md-typeset .corollaire > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(129, 255, 109);
   -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--cor);
@@ -263,7 +263,7 @@
 .md-typeset .correction > .admonition-title::before,
 .md-typeset .correction > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: #f82e2e;
   // -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--corr);
@@ -310,7 +310,7 @@
 .md-typeset .définition > .admonition-title::before,
 .md-typeset .définition > summary::before 
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(43, 155, 70);
   mask-image: var(--md-admonition-icon--def);
 }
@@ -347,7 +347,7 @@
 .md-typeset .exercice > .admonition-title::before,
 .md-typeset .exercice > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(253, 167, 28);
   mask-image: var(--md-admonition-icon--ex);
 }
@@ -386,7 +386,7 @@
 .md-typeset .exemple > .admonition-title::before,
 .md-typeset .exemple > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(246, 231, 10);
   mask-image: var(--md-admonition-icon--exp);
 }
@@ -416,7 +416,7 @@
 .md-typeset .movie > .admonition-title::before,
 .md-typeset .movie > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: var(--md-admonition-fg-color);
   // -webkit-mask-image: var(--md-admonition-icon--film);
     mask-image: var(--md-admonition-icon--film);
@@ -448,7 +448,7 @@
 .md-typeset .iremember > .admonition-title::before,
 .md-typeset .iremember > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: var(--md-admonition-fg-color);
   -webkit-mask-image: var(--md-admonition-icon--jeretiens);
   mask-image: var(--md-admonition-icon--jeretiens);
@@ -486,7 +486,7 @@
 .md-typeset .lemma > .admonition-title::before,
 .md-typeset .lemma > summary::before 
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(26, 153, 238);
   mask-image: var(--md-admonition-icon--pte);
 }
@@ -530,7 +530,7 @@
 .md-typeset .method > .admonition-title::before,
 .md-typeset .method > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--mth);
   mask-image: var(--md-admonition-icon--mth);
@@ -568,7 +568,7 @@
 .md-typeset .notation > .admonition-title::before,
 .md-typeset .notation > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(233, 68, 255);
   -webkit-mask-image: var(--md-admonition-icon--not);
   mask-image: var(--md-admonition-icon--not);
@@ -613,7 +613,7 @@
 .md-typeset .problème > .admonition-title::before,
 .md-typeset .problème > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(0, 138, 197);
   -webkit-mask-image: var(--md-admonition-icon--prob);
   mask-image: var(--md-admonition-icon--prob);
@@ -665,7 +665,7 @@
 .md-typeset .problématique > .admonition-title::before,
 .md-typeset .problématique > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(255, 39, 39);
   -webkit-mask-image: var(--md-admonition-icon--prob);
   mask-image: var(--md-admonition-icon--prob);
@@ -723,7 +723,7 @@
 .md-typeset .property > .admonition-title::before,
 .md-typeset .property > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(26, 153, 238);
   mask-image: var(--md-admonition-icon--pte);
 }
@@ -753,7 +753,7 @@
 .md-typeset .proposition > .admonition-title::before,
 .md-typeset .proposition > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(26, 153, 238);
   -webkit-mask-image: var(--md-admonition-icon--prop);
   mask-image: var(--md-admonition-icon--prop);
@@ -794,7 +794,6 @@
 .md-typeset .demonstration
 {
   position: relative;
-  border-left: 4px dashed var(--md-admonition-proof-dashed-border-color);
 }
 
 .md-typeset .proof::after,
@@ -803,10 +802,9 @@
 .md-typeset .demo::after,
 .md-typeset .démonstration::after,
 .md-typeset .demonstration::after
-{
+{ // dashed bottom Horizontal Line
   content: "";
   display: inline-block;
-  width: min(50px, 7%);
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -828,19 +826,9 @@
 .md-typeset details.demo[open]::after,
 .md-typeset details.démonstration[open]::after,
 .md-typeset details.demonstration[open]::after
-{
+{ // ALSO NEEDED : dashed bottom Horizontal Line
   border-bottom: 4px dashed var(--md-admonition-proof-dashed-border-color);
-  width: min(50px, 7%);
-}
-
-.md-typeset details.proof:not([open]),
-.md-typeset details.preuve:not([open]),
-.md-typeset details.démo:not([open]),
-.md-typeset details.demo:not([open]),
-.md-typeset details.démonstration:not([open]),
-.md-typeset details.demonstration:not([open])
-{
-  border: dotted;
+  width: min(80px, 10%);
 }
 
 .md-typeset .proof > p:last-of-type::after,
@@ -885,6 +873,7 @@
   background-color: rgba(127, 127, 127, 0.25);
   border-color: rgb(117, 117, 117);
 }
+
 .md-typeset .proof > .admonition-title::before,
 .md-typeset .proof > summary::before, 
 .md-typeset .preuve > .admonition-title::before,
@@ -898,7 +887,7 @@
 .md-typeset .demonstration > .admonition-title::before,
 .md-typeset .demonstration > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: var(--md-admonition-icon-proof-color);
   mask-image: var(--md-admonition-icon--proof);
 }
@@ -928,7 +917,7 @@
 .md-typeset .py > .admonition-title::before,
 .md-typeset .py > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(255, 211, 67);
   mask-image: var(--md-admonition-icon--python);
 }
@@ -973,7 +962,7 @@
 .md-typeset .référence > .admonition-title::before,
 .md-typeset .référence > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: var(--md-admonition-fg-color);
   mask-image: var(--md-admonition-icon--reference);
 }
@@ -1034,7 +1023,7 @@
 .md-typeset .answer > .admonition-title::before,
 .md-typeset .answer > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: #f82e2e;
   -webkit-mask-image: var(--md-admonition-icon--cor);
   mask-image: var(--md-admonition-icon--cor);
@@ -1086,7 +1075,7 @@
 .md-typeset .summary > .admonition-title::before,
 .md-typeset .summary > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(254, 48, 48);
   -webkit-mask-image: var(--md-admonition-icon--res);
   mask-image: var(--md-admonition-icon--res);
@@ -1131,7 +1120,7 @@
 .md-typeset .theorem > .admonition-title::before,
 .md-typeset .theorem > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(250, 74, 74);
   mask-image: var(--md-admonition-icon--thm);
 }
@@ -1175,7 +1164,7 @@
 .md-typeset .thesis > .admonition-title::before,
 .md-typeset .thesis > summary::before
 {
-  // Icon Background Color
+  // Admonition Icon Background Color
   background-color: rgb(252, 185, 41);
   -webkit-mask-image: var(--md-admonition-icon--ths);
   mask-image: var(--md-admonition-icon--ths);
