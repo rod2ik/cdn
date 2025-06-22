@@ -29,6 +29,7 @@ window.addEventListener('load', function () {
   /* ====================================================================== */
   document.querySelectorAll(".md-typeset table")
     .forEach(table => { // Table defined in Markdown notation
+      table.style.margin = "auto";
       if ((table.parentElement instanceof HTMLDivElement && table.parentElement.classList.contains("md-typeset__table"))
         && (table.parentElement.parentElement instanceof HTMLDivElement && table.parentElement.parentElement.classList.contains("md-typeset__scrollwrap"))) {
         table.parentElement.parentElement.classList.add("center");
