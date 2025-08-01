@@ -12,6 +12,8 @@ window.addEventListener('load', function() {
         console.log(el);
     });
 
+    update_theme();
+
     function swapValue(value) {
         if ( value === "#000") return "#fff";
         if ( value === "#fff") return defaultBackgroundColor;
