@@ -11,7 +11,7 @@ async function loadMassiliaModules() {
     await import('./massiliaAutoCentering.js');
 
     // XTABLES
-    // await import('./massiliaXTables.js');
+    await import('./massiliaXTables.js');
     await import('./massiliaXTablesClasses.js');
     await import('./massiliaXTablesStyles.js');
     await import('./massiliaXTablesColors.js');
