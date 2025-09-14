@@ -29,6 +29,8 @@ window.MathJax = {
       iimp: '{\\Longrightarrow}',
       ssi: '{\\Leftrightarrow}',
       sssi: '{\\Longleftrightarrow}',
+      // arcs
+      wideparen: ['{\\overparen{#1}}', 1],
       RR: '{\\bf R}',
       euro: ['{\\unicode \{0x20AC\}}'],
       bold: ['{\\bf #1}',1],
