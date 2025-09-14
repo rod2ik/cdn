@@ -31,6 +31,7 @@ window.MathJax = {
       sssi: '{\\Longleftrightarrow}',
       // arcs
       arc: ['{\\displaystyle \\overparen\{#1\}}', 1],
+      wideparen: ['{\\displaystyle \\overparen\{#1\}}', 1],
       RR: '{\\bf R}',
       euro: ['{\\unicode \{0x20AC\}}'],
       bold: ['{\\bf #1}',1],
