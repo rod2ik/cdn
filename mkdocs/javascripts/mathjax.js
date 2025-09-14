@@ -30,8 +30,6 @@ window.MathJax = {
       ssi: '{\\Leftrightarrow}',
       sssi: '{\\Longleftrightarrow}',
       RR: '{\\bf R}',
-      // arcs
-      arc: ['{\\displaystyle \\overparen #1}',1],
       euro: ['{\\unicode \{0x20AC\}}'],
       bold: ['{\\bf #1}',1],
       // colors list reference: https://www.w3schools.com/colors/colors_names.asp
