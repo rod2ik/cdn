@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg4999"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="cqfd-dark.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5001"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0574425"
+     inkscape:cx="5.6740675"
+     inkscape:cy="566.93391"
+     inkscape:window-width="1914"
+     inkscape:window-height="2046"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs4996">
+    <linearGradient
+       id="linearGradient8620"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop8618" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="fill:none;fill-opacity:1">
+    <rect
+       id="rect5969"
+       width="292.85468"
+       height="294.38803"
+       x="-41.410755"
+       y="2.0032208"
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:22.4503937;stroke-dasharray:none;stroke-opacity:1;stroke-linejoin:bevel" />
+    <text
+       xml:space="preserve"
+       style="font-size:173.471px;fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:16.3911;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="-16.077276"
+       y="161.5836"
+       id="text6068"
+       transform="scale(1.2182461,0.8208522)"><tspan
+         sodipodi:role="line"
+         id="tspan6066"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Victor Mono';-inkscape-font-specification:'Victor Mono';fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke-width:16.3911;stroke-dasharray:none"
+         x="-16.077276"
+         y="161.5836">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:167.31px;fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:15.8089;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="94.033119"
+       y="150.49756"
+       id="text6068-6"
+       transform="scale(1.1970279,0.83540242)"><tspan
+         sodipodi:role="line"
+         id="tspan6066-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Victor Mono';-inkscape-font-specification:'Victor Mono';fill:#ffffff;fill-opacity:0;stroke-width:15.8089;stroke-dasharray:none"
+         x="94.033119"
+         y="150.49756">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:159.567px;fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:15.0772;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="-11.89993"
+       y="315.82001"
+       id="text6068-3"
+       transform="scale(1.1860956,0.84310237)"><tspan
+         sodipodi:role="line"
+         id="tspan6066-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Victor Mono';-inkscape-font-specification:'Victor Mono';fill:#ffffff;fill-opacity:0;stroke-width:15.0772"
+         x="-11.89993"
+         y="315.82001">F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:161.532px;fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:15.2628;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="96.582253"
+       y="329.82886"
+       id="text6068-5"
+       transform="scale(1.2366775,0.80861825)"><tspan
+         sodipodi:role="line"
+         id="tspan6066-63"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Victor Mono';-inkscape-font-specification:'Victor Mono';fill:#ffffff;fill-opacity:0;stroke-width:15.2628"
+         x="96.582253"
+         y="329.82886">D</tspan></text>
+  </g>
+</svg>

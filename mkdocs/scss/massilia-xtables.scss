@@ -1,0 +1,105 @@
+/* TABLES / TABLEAUX */
+
+/* TABLES LIGHT THEME, BY DEFAULT / TABLEAUX THEME CLAIR : PAR DÉFAUT*/
+
+/* ====================================================================== */
+/*                   Normal (NON Maths) XTables                           */
+/* ====================================================================== */
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table) {
+    max-width: 100% !important;
+    border: solid 1.2px var(--table-header-border) !important;
+    border-collapse: separate !important;
+    font-size: 0.87rem !important;
+
+    &:not(.highlighttable) {
+      /* display: inline-block !important; */
+      width: auto !important;
+      margin-bottom: 0.5em !important;
+      box-shadow: 7px 7px 7px;
+  
+      & th, & th:not(code table th) {
+        font-weight: 700 !important;
+        border: solid 1.2px var(--table-header-border);
+      }
+
+      &:not(.shrink):not(.small):not(.petit) th,
+      &:not(.shrink):not(.small):not(.petit) th:not(code table th),
+      &:not(.shrink):not(.small):not(.petit) tr,
+      &:not(.shrink):not(.small):not(.petit) tr:not(code table tr),
+      &:not(.shrink):not(.small):not(.petit) td,
+      &:not(.shrink):not(.small):not(.petit) td:not(code table td) 
+      {
+        min-width: 3rem;
+        padding: 0.9375rem 1.25rem;
+      }
+
+      &:not([class*='nocolor']) { // colorful Table
+        & th, & th:not(code table th) {
+          background-color: var(--table-header-background);
+        }
+  
+        & tr:nth-child(even), & tr:nth-child(even):not(code table tr) {
+          background-color: var(--table-row-even-background);
+        }
+
+      } // End colorful table
+  
+      & tr:nth-child(odd):hover,
+      & tr:nth-child(odd):not(code table tr):hover {
+        background-color: var(--table-row-hover-bgcolor);
+  
+          /* for RBL tags on table hover --> inverse rbl */
+          & div.rbl,
+          & rbl,
+          & div.brbl,
+          & brbl {
+            color: var(--inv-rbl-color);
+            font-weight: 700;
+          }
+  
+      }
+     
+      & tr:nth-child(even):hover,
+      & tr:nth-child(even):not(code table tr):hover {
+        background-color: var(--table-row-hover-bgcolor);
+  
+          /* for RBL tags on table hover --> inverse rbl */
+          & div.rbl,
+          & rbl,
+          & div.brbl,
+          & brbl {
+            color: var(--inv-rbl-color);
+            font-weight: 700;
+          }
+      }
+  
+      & td,
+      & td:not(code table td) {
+        white-space: normal;
+        border: solid 1.2px var(--table-header-border);
+        vertical-align: middle;
+      }
+  
+      & code,
+      & code:not(code table code) {
+        background-color: var(--table-code-background) !important;
+      }
+  
+    } // End not(.highlightable)
+  
+    .md-typeset code:not(table code, div.highlight pre[id*="_code_"] code) {
+      background-color:var(--code-normal) !important;
+    }
+  
+  } // End Table not(.math)
+
+
+/* ====================================================================== */
+/*                           Maths XTables                                */
+/* ====================================================================== */
+
+table.math, table.maths, table.math-table, table.maths-table {
+    border: solid 1.2px var(--table-header-border);
+    box-shadow: 7px 7px 7px;
+    // color:red;
+}
