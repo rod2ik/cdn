@@ -113,7 +113,7 @@ h2:target:after {
 
 /* STYLE WEB avec I,I,III puis Styling pour h2 et h3 */
 h3 { /* Sous-Paragraphes */
-  display: block;
+  display: inline-block;
   color: var(--h3);
   padding-right: 0.5em;
   font-weight: bold;
@@ -430,7 +430,7 @@ iframe.shadow, iframe.box {
   margin-top: 0.5em;
 }
 
-.center, .center *:not(table *) {
+.center, .center *:not(a):not(table *) {
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -459,12 +459,6 @@ iframe.shadow, iframe.box {
 
 .md-typeset a[href$=".pdf"] {
   background: url(../images/pdf.svg) no-repeat 0 50%;
-  padding-left: 1.5em;
-}
-
-.md-typeset a[href^="https://"][href*="wikipedia.org"] {
-  background: url(../images/wikipedia.svg) no-repeat 0 50%;
-  background-size: 18px 18px;
   padding-left: 1.5em;
 }
 
