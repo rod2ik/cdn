@@ -394,7 +394,7 @@ iframe.shadow, iframe.box {
 
 // Positioning
 
-.center, .center *:not(a):not(table *)  {
+.center, .center *:not(a):not(figcaption):not(table *)  {
   display:block;
   text-align: center;
   margin: 0 auto;
@@ -573,7 +573,6 @@ body div.md-content ul li ul li ul li:not(body div.md-content ul li ul li ul li 
 body div.md-content ul li ul li ul li ul li {
   list-style-type: square;
 }
-
 
 /* SOCIAL ICONS in FOOTER */
 .md-social svg {
