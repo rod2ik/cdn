@@ -386,15 +386,14 @@ iframe.shadow, iframe.box {
 }
 
 .md-typeset figcaption {
-  display:block;
+  display: block;
   clear:both; // for figcaption centering from markdown
   margin-top: 0.5em;
 }
 
-
 // Positioning
 
-.center, .center *:not(a):not(figcaption):not(table *)  {
+.center, .center *:not(a):not(b):not(em):not(table *)  {
   display:block;
   text-align: center;
   margin: 0 auto;
