@@ -31,6 +31,9 @@ window.MathJax = {
       sssi: '{\\Longleftrightarrow}',
       RR: '{\\bf R}',
       euro: ['{\\unicode \{0x20AC\}}'],
+      leftouterjoin:  ["\\mathbin{\\unicode{x27D5}}"],
+      rightouterjoin: ["\\mathbin{\\unicode{x27D6}}"],
+      fullouterjoin:  ["\\mathbin{\\unicode{x27D7}}"],
       bold: ['{\\bf #1}',1],
       // colors list reference: https://www.w3schools.com/colors/colors_names.asp
       tcolor: ['{\\color\{#1\} #2}',2],
