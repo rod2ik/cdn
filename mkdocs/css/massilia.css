@@ -430,7 +430,7 @@ iframe.shadow, iframe.box {
   margin-top: 0.5em;
 }
 
-.center, .center *:not(a):not(b):not(em):not(table *) {
+.center, .center *:not(table *):not(figcaption *) {
   display: block;
   text-align: center;
   margin: 0 auto;
