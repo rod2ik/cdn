@@ -5,6 +5,74 @@
 @import url("massilia-columns.css");
 @import url("massilia-badges.css");
 @import url("massilia-mermaid.css");
+/* TABLES / TABLEAUX */
+/* TABLES LIGHT THEME, BY DEFAULT / TABLEAUX THEME CLAIR : PAR DÉFAUT*/
+/* ====================================================================== */
+/*                   Normal (NON Maths) XTables                           */
+/* ====================================================================== */
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table) {
+  display: inline-block !important;
+  max-width: 100% !important;
+  border: solid 1.2px var(--table-header-border) !important;
+  border-collapse: separate !important;
+  font-size: 0.87rem !important;
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) {
+  /* display: inline-block !important; */
+  width: auto !important;
+  margin-bottom: 0.5em !important;
+  box-shadow: 7px 7px 7px;
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) th, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) th:not(code table th) {
+  font-weight: 700 !important;
+  border: solid 1.2px var(--table-header-border);
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) th, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) th:not(code table th), .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) tr, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) tr:not(code table tr), .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) td, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) td:not(code table td) {
+  min-width: 3rem;
+  padding: 0.9375rem 1.25rem;
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) th, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) th:not(code table th) {
+  background-color: var(--table-header-background);
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) tr:nth-child(even), .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) tr:nth-child(even):not(code table tr) {
+  background-color: var(--table-row-even-background);
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
+  background-color: var(--table-row-hover-bgcolor);
+  /* for RBL tags on table hover --> inverse rbl */
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover brbl {
+  color: var(--inv-rbl-color);
+  font-weight: 700;
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
+  background-color: var(--table-row-hover-bgcolor);
+  /* for RBL tags on table hover --> inverse rbl */
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover brbl {
+  color: var(--inv-rbl-color);
+  font-weight: 700;
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) td, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) td:not(code table td) {
+  white-space: normal;
+  border: solid 1.2px var(--table-header-border);
+  vertical-align: middle;
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) code, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) code:not(code table code) {
+  background-color: var(--table-code-background) !important;
+}
+.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table) .md-typeset code:not(table code, div.highlight pre[id*=_code_] code) {
+  background-color: var(--code-normal) !important;
+}
+
+/* ====================================================================== */
+/*                           Maths XTables                                */
+/* ====================================================================== */
+table.math, table.maths, table.math-table, table.maths-table {
+  border: solid 1.2px var(--table-header-border);
+  box-shadow: 7px 7px 7px;
+}
+
 /* IMPORT LED BRIGHT */
 @font-face {
   font-family: "24 LED Bright";
@@ -258,73 +326,6 @@ div.clear, clear {
   display: block;
   clear: both;
   margin-top: 1em;
-}
-
-/* TABLES / TABLEAUX */
-/* TABLES LIGHT THEME, BY DEFAULT / TABLEAUX THEME CLAIR : PAR DÉFAUT*/
-/* ====================================================================== */
-/*                   Normal (NON Maths) XTables                           */
-/* ====================================================================== */
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table) {
-  max-width: 100% !important;
-  border: solid 1.2px var(--table-header-border) !important;
-  border-collapse: separate !important;
-  font-size: 0.87rem !important;
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) {
-  /* display: inline-block !important; */
-  width: auto !important;
-  margin-bottom: 0.5em !important;
-  box-shadow: 7px 7px 7px;
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) th, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) th:not(code table th) {
-  font-weight: 700 !important;
-  border: solid 1.2px var(--table-header-border);
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) th, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) th:not(code table th), .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) tr, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) tr:not(code table tr), .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) td, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not(.shrink):not(.small):not(.petit) td:not(code table td) {
-  min-width: 3rem;
-  padding: 0.9375rem 1.25rem;
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) th, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) th:not(code table th) {
-  background-color: var(--table-header-background);
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) tr:nth-child(even), .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable):not([class*=nocolor]) tr:nth-child(even):not(code table tr) {
-  background-color: var(--table-row-even-background);
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover {
-  background-color: var(--table-row-hover-bgcolor);
-  /* for RBL tags on table hover --> inverse rbl */
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):hover brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(odd):not(code table tr):hover brbl {
-  color: var(--inv-rbl-color);
-  font-weight: 700;
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover {
-  background-color: var(--table-row-hover-bgcolor);
-  /* for RBL tags on table hover --> inverse rbl */
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):hover brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover rbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover div.brbl, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) tr:nth-child(even):not(code table tr):hover brbl {
-  color: var(--inv-rbl-color);
-  font-weight: 700;
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) td, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) td:not(code table td) {
-  white-space: normal;
-  border: solid 1.2px var(--table-header-border);
-  vertical-align: middle;
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) code, .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table):not(.highlighttable) code:not(code table code) {
-  background-color: var(--table-code-background) !important;
-}
-.md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table) .md-typeset code:not(table code, div.highlight pre[id*=_code_] code) {
-  background-color: var(--code-normal) !important;
-}
-
-/* ====================================================================== */
-/*                           Maths XTables                                */
-/* ====================================================================== */
-table.math, table.maths, table.math-table, table.maths-table {
-  border: solid 1.2px var(--table-header-border);
-  box-shadow: 7px 7px 7px;
 }
 
 /* COLORS */

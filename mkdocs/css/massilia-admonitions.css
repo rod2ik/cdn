@@ -18,7 +18,7 @@
 
 /* Anec - Anecdote - Funfact */
 :root {
-  --md-admonition-icon--anec: url("../images/funfacts.svg");
+  --md-admonition-icon--anec: url('../images/funfacts.svg');
   --md-admonition-icon--funfact: var(--md-admonition-icon--anec);
   --md-admonition-icon--anecdote: var(--md-admonition-icon--anec);
 }
@@ -55,7 +55,7 @@
 
 /* Ax - Axiom - Axiome */
 :root {
-  --md-admonition-icon--ax: url("../images/funfacts.svg");
+  --md-admonition-icon--ax: url('../images/funfacts.svg');
   --md-admonition-icon--axiom: var(--md-admonition-icon--ax);
   --md-admonition-icon--axiome: var(--md-admonition-icon--ax);
 }
@@ -92,7 +92,7 @@
 
 /* chlg - Challenge */
 :root {
-  --md-admonition-icon--chlg: url("../images/funfacts.svg");
+  --md-admonition-icon--chlg: url('../images/funfacts.svg');
   --md-admonition-icon--challenge: var(--md-admonition-icon--lem);
 }
 
@@ -121,7 +121,7 @@
 
 /* Cons - Consq - Conseq - Consequence - Conséquence */
 :root {
-  --md-admonition-icon--cons: url("../images/funfacts.svg");
+  --md-admonition-icon--cons: url('../images/funfacts.svg');
   --md-admonition-icon--consq: var(--md-admonition-icon--cons);
   --md-admonition-icon--conseq: var(--md-admonition-icon--cons);
   --md-admonition-icon--consequence: var(--md-admonition-icon--cons);
@@ -172,7 +172,7 @@
 
 /* Cor - Corol - Coroll - Corollary - Corollaire */
 :root {
-  --md-admonition-icon--cor: url("../images/funfacts.svg");
+  --md-admonition-icon--cor: url('../images/funfacts.svg');
   --md-admonition-icon--corol: var(--md-admonition-icon--cor);
   --md-admonition-icon--coroll: var(--md-admonition-icon--cor);
   --md-admonition-icon--corollary: var(--md-admonition-icon--cor);
@@ -378,7 +378,7 @@
 
 /* Film / Movie */
 :root {
-  --md-admonition-icon--film: url("../images/film.svg");
+  --md-admonition-icon--film: url('../images/film.svg');
   --md-admonition-icon--movie: var(--md-admonition-icon--film);
 }
 
@@ -406,7 +406,7 @@
 
 /* Iremember / Jeretiens */
 :root {
-  --md-admonition-icon--jeretiens: url("../images/jeretiens.svg");
+  --md-admonition-icon--jeretiens: url('../images/jeretiens.svg');
   --md-admonition-icon--iremember: var(--md-admonition-icon--jeretiens);
 }
 
@@ -553,7 +553,7 @@
 
 /* Prob - Problem - Probleme - Problème */
 :root {
-  --md-admonition-icon--prob: url("../images/funfacts.svg");
+  --md-admonition-icon--prob: url('../images/funfacts.svg');
   --md-admonition-icon--problem: var(--md-admonition-icon--prob);
   --md-admonition-icon--probleme: var(--md-admonition-icon--prob);
   --md-admonition-icon--problème: var(--md-admonition-icon--prob);
@@ -597,7 +597,7 @@
 
 /* Pbst - Problemstatement - Probx - Problematique - Problématique */
 :root {
-  --md-admonition-icon--probx: url("../images/funfacts.svg");
+  --md-admonition-icon--probx: url('../images/funfacts.svg');
   --md-admonition-icon--pbst: var(--md-admonition-icon--probx);
   --md-admonition-icon--problemstatement: var(--md-admonition-icon--probx);
   --md-admonition-icon--problematique: var(--md-admonition-icon--probx);
@@ -886,7 +886,7 @@
 
 /* Ref / Réf / Reference / Référence */
 :root {
-  --md-admonition-icon--ref: url("../images/references.svg");
+  --md-admonition-icon--ref: url('../images/references.svg');
   --md-admonition-icon--réf: var(--md-admonition-icon--ref);
   --md-admonition-icon--reference: var(--md-admonition-icon--ref);
   --md-admonition-icon--référence: var(--md-admonition-icon--ref);
@@ -990,7 +990,7 @@
 
 /* Summary - Res - Rés - Resume - Résumé */
 :root {
-  --md-admonition-icon--res: url("../images/funfacts.svg");
+  --md-admonition-icon--res: url('../images/funfacts.svg');
   --md-admonition-icon--rés: var(--md-admonition-icon--res);
   --md-admonition-icon--resume: var(--md-admonition-icon--res);
   --md-admonition-icon--résumé: var(--md-admonition-icon--res);
@@ -1084,7 +1084,7 @@
 
 /* Ths - Thesis - These - Thèse */
 :root {
-  --md-admonition-icon--ths: url("../images/funfacts.svg");
+  --md-admonition-icon--ths: url('../images/funfacts.svg');
   --md-admonition-icon--thesis: var(--md-admonition-icon--ths);
   --md-admonition-icon--these: var(--md-admonition-icon--ths);
   --md-admonition-icon--thèse: var(--md-admonition-icon--ths);

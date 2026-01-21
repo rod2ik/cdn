@@ -6,6 +6,7 @@
 /*                   Normal (NON Maths) XTables                           */
 /* ====================================================================== */
 .md-typeset table:not(.math):not(.maths):not(.math-table):not(.maths-table) {
+    display: inline-block !important;
     max-width: 100% !important;
     border: solid 1.2px var(--table-header-border) !important;
     border-collapse: separate !important;
