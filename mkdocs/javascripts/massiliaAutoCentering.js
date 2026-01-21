@@ -3,14 +3,50 @@
 export function init(root = document) {
   console.log('[massilia-auto-centering] init');
 
+  // /* ====================================================================== */
+  // /*                    Automatic Centering of Tables                       */
+  // /* ====================================================================== */
+  // document.querySelectorAll(".md-typeset table")
+  //   .forEach(table => { // Table defined in Markdown notation
+  //     table.style.margin = "auto";
+  //     if ((table.parentElement instanceof HTMLDivElement && table.parentElement.classList.contains("md-typeset__table"))
+  //       && (table.parentElement.parentElement instanceof HTMLDivElement && table.parentElement.parentElement.classList.contains("md-typeset__scrollwrap"))) {
+  //       table.parentElement.parentElement.classList.add("center");
+  //     } else if (!table.classList.contains("highlighttable") || !table.parentElement.classList.contains("highlight")) { // HTML Table tag in Markdown, but not code tables
+  //       table.classList.add("center");
+  //     }
+  //   });
+
   /* ====================================================================== */
   /*             Center FIGURE / FIGCAPTION themselves only                 */
   /* ====================================================================== */
+<<<<<<< HEAD
   root.querySelectorAll(".md-content figure, .md-content figcaption").forEach(el => {
     if (el.dataset.massiliaCenteredSelf) return;
     el.classList.add("center");
     el.dataset.massiliaCenteredSelf = "1";
   });
+=======
+  document.querySelectorAll(".md-typeset table")
+    .forEach(table => { // Table defined in Markdown notation
+      // Centrer le tableau uniquement
+      table.style.marginLeft = "auto";
+      table.style.marginRight = "auto";
+
+      // Cas des tableaux Markdown (structure Material / md-typeset)
+      if (
+        (table.parentElement instanceof HTMLDivElement && table.parentElement.classList.contains("md-typeset__table")) &&
+        (table.parentElement.parentElement instanceof HTMLDivElement && table.parentElement.parentElement.classList.contains("md-typeset__scrollwrap"))
+      ) {
+        // IMPORTANT: ne pas ajouter .center au scrollwrap (sinon ça centre aussi le contenu suivant)
+        // On peut éventuellement ajouter une classe au wrapper immédiat du tableau si besoin
+        table.parentElement.classList.add("center"); // <-- au lieu de parentElement.parentElement
+      } else if (!table.classList.contains("highlighttable") || !table.parentElement.classList.contains("highlight")) {
+        // HTML <table> dans le markdown (hors tables de code)
+        table.classList.add("center");
+      }
+    });
+>>>>>>> c4afea8 (maj)
 
   /* ====================================================================== */
   /*                Automatic centering of TABLES ONLY                      */
