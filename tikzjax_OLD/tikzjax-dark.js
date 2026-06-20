@@ -5,7 +5,7 @@ import '../css/container.css';
 // =================================================
 // BASE URL
 // =================================================
-if (!document.currentScript) {
+if (document.currentScript === undefined) {
     const scripts = document.getElementsByTagName('script');
     document.currentScript = scripts[scripts.length - 1];
 }
@@ -34,11 +34,130 @@ let texWorker;
 let observer;
 
 // =================================================
-// SPINNER (UNCHANGED)
+// THEME SUPPORT — MKDOCS 1.x / MATERIAL
+// =================================================
+const getMkdocsTheme = () => {
+    const bodyTheme = document.body?.getAttribute('data-md-color-scheme');
+
+    if (bodyTheme === 'slate') return 'dark';
+
+    return 'light';
+};
+
+const isBlackValue = (value) => {
+    if (!value) return false;
+
+    const v = value.trim().toLowerCase();
+
+    return (
+        v === 'black' ||
+        v === '#000' ||
+        v === '#000000' ||
+        v === 'rgb(0,0,0)' ||
+        v === 'rgb(0, 0, 0)'
+    );
+};
+
+const isWhiteValue = (value) => {
+    if (!value) return false;
+
+    const v = value.trim().toLowerCase();
+
+    return (
+        v === 'white' ||
+        v === '#fff' ||
+        v === '#ffffff' ||
+        v === 'rgb(255,255,255)' ||
+        v === 'rgb(255, 255, 255)'
+    );
+};
+
+const isTextNode = (node) => {
+    const tag = node?.tagName?.toLowerCase();
+
+    return tag === 'text' || tag === 'tspan';
+};
+
+const rememberOriginalAttribute = (node, attr) => {
+    const dataName = `tikzjaxOriginal${attr[0].toUpperCase()}${attr.slice(1)}`;
+
+    if (!node.dataset[dataName] && node.hasAttribute(attr)) {
+        node.dataset[dataName] = node.getAttribute(attr);
+    }
+
+    return node.dataset[dataName];
+};
+
+const applyThemeToTikz = (root = document) => {
+    const isDark = getMkdocsTheme() === 'dark';
+
+    root.querySelectorAll?.('.tikzjax-wrapper').forEach((wrapper) => {
+        wrapper.style.color = isDark ? '#ffffff' : '#000000';
+
+        const svg = wrapper.querySelector('svg');
+        if (!svg) return;
+
+        svg.classList.add('tikzjax', 'tikz');
+        svg.style.color = 'currentColor';
+
+        svg.querySelectorAll('[stroke]').forEach((node) => {
+            const original = rememberOriginalAttribute(node, 'stroke');
+
+            if (isBlackValue(original)) {
+                node.setAttribute('stroke', isDark ? '#ffffff' : '#000000');
+            }
+        });
+
+        svg.querySelectorAll('[fill]').forEach((node) => {
+            const original = rememberOriginalAttribute(node, 'fill');
+
+            if (isTextNode(node)) {
+                node.setAttribute('fill', isDark ? '#ffffff' : '#000000');
+                return;
+            }
+
+            if (isBlackValue(original)) {
+                node.setAttribute('fill', isDark ? '#ffffff' : '#000000');
+                return;
+            }
+
+            if (isWhiteValue(original)) {
+                node.setAttribute('fill', isDark ? 'transparent' : '#ffffff');
+            }
+        });
+
+        svg.querySelectorAll('text, tspan').forEach((node) => {
+            node.setAttribute('fill', isDark ? '#ffffff' : '#000000');
+        });
+    });
+};
+
+const observeTheme = () => {
+    if (!document.body) return;
+
+    const themeObserver = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+            if (
+                mutation.type === 'attributes' &&
+                mutation.attributeName === 'data-md-color-scheme'
+            ) {
+                applyThemeToTikz(document);
+            }
+        }
+    });
+
+    themeObserver.observe(document.body, {
+        attributes: true,
+        attributeFilter: ['data-md-color-scheme']
+    });
+};
+
+// =================================================
+// SPINNER
 // =================================================
 const createLoader = () => {
     const frag = document.createRange().createContextualFragment(`
-<svg width="75" height="75" viewBox="0 0 75 75">
+<svg class="tikzjax-loader" width="75" height="75" viewBox="0 0 75 75">
     <rect width="100%" height="100%" fill="rgba(0,0,0,0.08)"/>
     <circle cx="37.5" cy="37.5" r="14"
         stroke="currentColor" fill="none" stroke-width="3"/>
@@ -58,7 +177,7 @@ const createLoader = () => {
 };
 
 // =================================================
-// SOURCES (UNCHANGED)
+// SOURCES
 // =================================================
 const getTikzSources = (root = document) => {
     const sources = [];
@@ -66,49 +185,26 @@ const getTikzSources = (root = document) => {
     sources.push(...root.querySelectorAll('script[type="text/tikz"]'));
     sources.push(...root.querySelectorAll('pre.language-tikzjax'));
 
-    return sources.filter(el => !el.dataset?.tikzjaxProcessed);
+    return sources.filter((el) => !el.dataset?.tikzjaxProcessed);
 };
 
 // =================================================
-// TEXT EXTRACTION (UNCHANGED)
+// TEXT EXTRACTION
 // =================================================
 const getTikzSourceText = (elt) => {
-    if (elt.tagName === 'SCRIPT') return elt.textContent || '';
+    if (!elt) return '';
+
+    if (elt.tagName === 'SCRIPT') {
+        return elt.textContent || '';
+    }
 
     const code = elt.querySelector('code');
+
     return (code ? code.textContent : elt.textContent || '').trim();
 };
 
 // =================================================
-// 🚀 SVG DARK MODE FIX (NEW CORE ADDITION)
-// =================================================
-const fixSvgColorsForTheme = (svg) => {
-    const isDark =
-        document.body?.getAttribute('data-md-color-scheme') === 'slate';
-
-    if (!isDark) return;
-
-    // 1. Fix black strokes/fills → white
-    svg.querySelectorAll(
-        '[fill="#000"], [fill="black"], [stroke="#000"], [stroke="black"]'
-    ).forEach(el => {
-        el.setAttribute('fill', 'white');
-        el.setAttribute('stroke', 'white');
-    });
-
-    // 2. Fix text visibility
-    svg.querySelectorAll('text, tspan').forEach(el => {
-        el.setAttribute('fill', 'white');
-    });
-
-    // 3. Fix tkz-tab white boxes → transparent
-    svg.querySelectorAll('[fill="#fff"], [fill="white"]').forEach(el => {
-        el.setAttribute('fill', 'transparent');
-    });
-};
-
-// =================================================
-// WRAPPER (UNCHANGED)
+// SVG WRAPPER
 // =================================================
 const wrapSvg = (svg) => {
     const wrapper = document.createElement('span');
@@ -119,14 +215,13 @@ const wrapSvg = (svg) => {
 
     wrapper.appendChild(svg);
 
-    // ensure theme consistency immediately
-    fixSvgColorsForTheme(svg);
+    applyThemeToTikz(wrapper);
 
     return wrapper;
 };
 
 // =================================================
-// ENGINE (UNCHANGED LOGIC + FIX HOOK)
+// ENGINE
 // =================================================
 const processTikzSources = async (sources) => {
     const queue = [];
@@ -149,6 +244,8 @@ const processTikzSources = async (sources) => {
 
         container.replaceWith(wrapper);
         wrapper.appendChild(loader);
+
+        applyThemeToTikz(wrapper);
 
         elt.tikzjaxLoader = wrapper;
 
@@ -173,23 +270,26 @@ const processTikzSources = async (sources) => {
 
         elt.tikzjaxLoader.replaceWith(wrapSvg(svg));
 
-        // 🔥 IMPORTANT: apply dark mode fix after render
-        fixSvgColorsForTheme(svg);
+        applyThemeToTikz(document);
 
         svg.dispatchEvent(
             new Event('tikzjax-load-finished', { bubbles: true })
         );
     };
 
-    for (const s of sources) await load(s);
+    for (const source of sources) {
+        await load(source);
+    }
 
     texWorker = await texWorker;
 
-    for (const elt of queue) await process(elt);
+    for (const elt of queue) {
+        await process(elt);
+    }
 };
 
 // =================================================
-// WORKER (UNCHANGED)
+// WORKER
 // =================================================
 const initializeWorker = async () => {
     const root = url.href.replace(/\/tikzjax\.js(?:\?.*)?$/, '');
@@ -204,25 +304,7 @@ const initializeWorker = async () => {
 };
 
 // =================================================
-// THEME OBSERVER (FIXED HOOK ONLY)
-// =================================================
-const observeTheme = () => {
-    const obs = new MutationObserver(() => {
-        document.querySelectorAll('svg.tikzjax, svg.tikz').forEach(svg => {
-            fixSvgColorsForTheme(svg);
-        });
-    });
-
-    obs.observe(document.body, {
-        attributes: true,
-        attributeFilter: ['data-md-color-scheme']
-    });
-
-    return obs;
-};
-
-// =================================================
-// INIT (UNCHANGED)
+// INIT
 // =================================================
 const initialize = async () => {
     texWorker = await initializeWorker();
@@ -240,6 +322,7 @@ const initialize = async () => {
 
     const boot = () => {
         processTikzSources(getTikzSources(document));
+        applyThemeToTikz(document);
     };
 
     if (document.readyState === 'loading') {
@@ -249,16 +332,30 @@ const initialize = async () => {
     }
 
     observer = new MutationObserver((mutations) => {
-        for (const m of mutations) {
-            for (const node of m.addedNodes) {
-                if (node.nodeType !== 1) continue;
+        const targets = [];
 
-                if (node.matches?.('script[type="text/tikz"]')) scheduleProcess(node);
-                if (node.matches?.('pre.language-tikzjax')) scheduleProcess(node);
+        for (const mutation of mutations) {
+            for (const node of mutation.addedNodes) {
+                if (!node || node.nodeType !== 1) continue;
 
-                node.querySelectorAll?.('script[type="text/tikz"]')?.forEach(scheduleProcess);
-                node.querySelectorAll?.('pre.language-tikzjax')?.forEach(scheduleProcess);
+                if (node.matches?.('script[type="text/tikz"]')) {
+                    targets.push(node);
+                }
+
+                if (node.matches?.('pre.language-tikzjax')) {
+                    targets.push(node);
+                }
+
+                node.querySelectorAll?.('script[type="text/tikz"]')
+                    ?.forEach((child) => targets.push(child));
+
+                node.querySelectorAll?.('pre.language-tikzjax')
+                    ?.forEach((child) => targets.push(child));
             }
+        }
+
+        if (targets.length) {
+            targets.forEach(scheduleProcess);
         }
     });
 
@@ -268,9 +365,11 @@ const initialize = async () => {
     });
 
     observeTheme();
+    applyThemeToTikz(document);
 
     setTimeout(() => {
         processTikzSources(getTikzSources(document));
+        applyThemeToTikz(document);
     }, 300);
 };
 
