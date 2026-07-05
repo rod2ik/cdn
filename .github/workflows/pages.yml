@@ -1,0 +1,97 @@
+name: Deploy CDN to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "tikzjax/**"
+      - ".nojekyll"
+      - ".pages-rebuild"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy CDN
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Inspect CDN files
+        run: |
+          echo "Repository:"
+          pwd
+
+          echo ""
+          echo "Site size:"
+          du -sh .
+
+          echo ""
+          echo "Number of files:"
+          find . -type f | wc -l
+
+          echo ""
+          echo "Largest files:"
+          find . -type f -exec du -h {} + | sort -hr | head -30
+
+          echo ""
+          echo "Symbolic links:"
+          find . -type l -print
+
+          echo ""
+          echo "Hard-linked files:"
+          find . -type f -links +1 -print
+
+      - name: Fail if CDN contains symbolic links
+        run: |
+          if find . -type l | grep .; then
+            echo "GitHub Pages artifacts must not contain symbolic links."
+            exit 1
+          fi
+
+      - name: Fail if CDN contains hard links
+        run: |
+          if find . -type f -links +1 | grep .; then
+            echo "GitHub Pages artifacts must not contain hard links."
+            exit 1
+          fi
+
+      - name: Fail if CDN site is too large
+        run: |
+          size_kb=$(du -sk . | cut -f1)
+          echo "CDN site size: ${size_kb} KB"
+
+          if [ "$size_kb" -gt 1048576 ]; then
+            echo "GitHub Pages published sites should stay under 1 GB."
+            exit 1
+          fi
+
+      - name: Upload CDN artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+
+      - name: Deploy CDN
+        id: deployment
+        uses: actions/deploy-pages@v5
